@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="project2.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <TopLine Value="24"/>
+        <CursorPos X="18" Y="50"/>
+        <UsageCount Value="47"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="common\sdl\units\sdlevents.inc"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="5"/>
+        <CursorPos X="13" Y="22"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="common\sdl\units\sdl.inc"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="38"/>
+        <CursorPos Y="72"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="common\sdl\units\sdlkeycode.inc"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="232"/>
+        <CursorPos X="80" Y="248"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="25">
+      <Position>
+        <Filename Value="project2.lpr"/>
+        <Caret Line="23" Column="92"/>
+      </Position>
+      <Position>
+        <Filename Value="project2.lpr"/>
+        <Caret Line="3"/>
+      </Position>
+      <Position>
+        <Filename Value="project2.lpr"/>
+        <Caret Line="11" Column="202"/>
+      </Position>
+      <Position>
+        <Filename Value="project2.lpr"/>
+        <Caret Line="7" Column="50"/>
+      </Position>
+      <Position>
+        <Filename Value="project2.lpr"/>
+        <Caret Line="3" Column="6"/>
+      </Position>
+      <Position>
+        <Filename Value="project2.lpr"/>
+        <Caret Line="29" Column="19" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="project2.lpr"/>
+        <Caret Line="30" Column="19" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="project2.lpr"/>
+        <Caret Line="32" Column="27" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="project2.lpr"/>
+        <Caret Line="31" Column="38" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="common\sdl\units\sdlevents.inc"/>
+        <Caret Line="65" Column="22" TopLine="50"/>
+      </Position>
+      <Position>
+        <Filename Value="common\sdl\units\sdlevents.inc"/>
+        <Caret Line="572" Column="13" TopLine="542"/>
+      </Position>
+      <Position>
+        <Filename Value="common\sdl\units\sdlevents.inc"/>
+      </Position>
+      <Position>
+        <Filename Value="common\sdl\units\sdlevents.inc"/>
+        <Caret Line="22" Column="92"/>
+      </Position>
+      <Position>
+        <Filename Value="common\sdl\units\sdlevents.inc"/>
+        <Caret Line="58" Column="144" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="common\sdl\units\sdlevents.inc"/>
+        <Caret Line="572" Column="31" TopLine="542"/>
+      </Position>
+      <Position>
+        <Filename Value="common\sdl\units\sdlevents.inc"/>
+        <Caret Line="573" Column="12" TopLine="543"/>
+      </Position>
+      <Position>
+        <Filename Value="project2.lpr"/>
+        <Caret Line="31" Column="38" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="project2.lpr"/>
+        <Caret Line="34" Column="55" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="project2.lpr"/>
+        <Caret Line="41" Column="44" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="project2.lpr"/>
+        <Caret Line="38" Column="43" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="project2.lpr"/>
+      </Position>
+      <Position>
+        <Filename Value="project2.lpr"/>
+        <Caret Line="3" Column="22"/>
+      </Position>
+      <Position>
+        <Filename Value="project2.lpr"/>
+        <Caret Line="13" Column="40"/>
+      </Position>
+      <Position>
+        <Filename Value="project2.lpr"/>
+        <Caret Line="16" Column="34"/>
+      </Position>
+      <Position>
+        <Filename Value="project2.lpr"/>
+        <Caret Line="35" Column="34" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="project2.lpr"/>
+        <Caret Line="50" Column="18" TopLine="24"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
