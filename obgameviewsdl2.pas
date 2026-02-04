@@ -25,13 +25,15 @@ type
 
     function ConvertClip(const ASource: TGameRect) : TSDL_Rect;
   public
-    procedure Paint;
+    procedure BeginFrame; override;
+    procedure EndFrame; override;
+    procedure Paint; // kept for compatibility; calls EndFrame
     procedure CopySprite(ATexture: PGameTexture; ASource, ADestination: TGameRect); override;
   published
   end;
 
 const
-  cFrameMS = 16;
+  cFrameMS = 16; // legacy; frame limiting now handled in the game loop
 
 implementation
 
@@ -74,26 +76,27 @@ begin
   Result.w := ASource.w;
 end;
 
-procedure TGameViewSDL2.Paint;
-var
-  lNow: UInt32;
-  lElapsed: UInt32;
+procedure TGameViewSDL2.BeginFrame;
 begin
-  lNow := SDL_GetTicks;
-  lElapsed := lNow - FTicks;
-  if lElapsed < cFrameMS then
-    SDL_Delay(cFrameMS - lElapsed);
+  SDL_SetRenderDrawColor(FRenderer, 0, 0, 0, 255);
+  SDL_RenderClear(FRenderer);
+end;
 
+procedure TGameViewSDL2.EndFrame;
+begin
   SDL_RenderPresent(FRenderer);
   FTicks := SDL_GetTicks;
+end;
+
+procedure TGameViewSDL2.Paint;
+begin
+  EndFrame;
 end;
 
 procedure TGameViewSDL2.CopySprite(ATexture: PGameTexture; ASource, ADestination: TGameRect);
 var
   lSrcClip, lDestClip: TSDL_Rect;
 begin
-  SDL_SetRenderDrawColor(FRenderer, 0, 0, 0, 255);
-  SDL_RenderClear(FRenderer);
   lSrcClip := ConvertClip(ASource);
   lDestClip := ConvertClip(ADestination);
   SDL_RenderCopy(FRenderer, ATexture^.Data, @lSrcClip, @lDestClip);

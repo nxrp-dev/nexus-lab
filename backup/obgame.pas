@@ -45,11 +45,27 @@ end;
 procedure TGame.Run;
 var
   lEvent: TSDL_Event;
+  lTickPrev: UInt32;
+  lTickNow: UInt32;
+  lDelta: UInt32;
 begin
   FGameRunning := true;
 
+  lTickPrev := SDL_GetTicks;
+
   while FGameRunning do
   begin
+    // Basic fixed-ish timestep: delay to ~60fps, then use the *actual* dt.
+    lTickNow := SDL_GetTicks;
+    lDelta := lTickNow - lTickPrev;
+    if lDelta < 16 then
+    begin
+      SDL_Delay(16 - lDelta);
+      lTickNow := SDL_GetTicks;
+      lDelta := lTickNow - lTickPrev;
+    end;
+    lTickPrev := lTickNow;
+
     while SDL_PollEvent(@lEvent) = 1 do
     begin
       if lEvent.type_ = SDL_QUITEV then
@@ -66,8 +82,11 @@ begin
       end;
     end;
 
-    FPlayer.Paint;
-    FGameView.Paint;
+    FPlayer.Update(lDelta);
+
+    FGameView.BeginFrame;
+    FPlayer.Draw;
+    FGameView.EndFrame;
   end;
 end;
 

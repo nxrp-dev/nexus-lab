@@ -94,6 +94,11 @@ type
 
     procedure CopySprite(ATexture: PGameTexture; ASource, ADestination: TGameRect); virtual; abstract;
 
+    // Optional frame helpers. Backends that need explicit clear/present can override.
+    // (Kept here so the game loop can be backend-agnostic.)
+    procedure BeginFrame; virtual;
+    procedure EndFrame; virtual;
+
     // --- High-level roguelike draw call ---
 //    procedure DrawSpriteAtCell(const ASprite: TSprite; const ACellX, ACellY: Integer); inline;
 
@@ -104,6 +109,16 @@ implementation
 class operator TGameTexture.=(const A, B: TGameTexture): Boolean;
 begin
   Result := (A.Data = B.Data);
+end;
+
+procedure TGameView.BeginFrame;
+begin
+  // default no-op
+end;
+
+procedure TGameView.EndFrame;
+begin
+  // default no-op
 end;
 
 { TTextureMap }
