@@ -1,0 +1,22 @@
+# Lazarus/FreePascal compiled/output files
+*.o
+*.ppu
+*.a
+*.or
+*.rsj
+*.exe
+*.dll
+*.so
+*.dylib
+*.identcache
+*.local
+*.lps
+lib/
+units/
+backup/
+__history/
+*.bak
+*.~*
+*.compiled
+*.dbg
+*.dcu  # if using Delphi compatibility mode
