@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="C:\lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1520655168"/>
-  <Params Value="-MObjFPC -Scghi -O1 -gw3 -gl -l -vewnhibq -FiC:\gitdev\Rogue\lib\x86_64-win64 -FuC:\gitdev\Rogue\ -FuC:\gitdev\Rogue\common\sdl\units -FUC:\gitdev\Rogue\lib\x86_64-win64\ -FEC:\gitdev\Rogue\ -oC:\gitdev\Rogue\project2.exe project2.lpr"/>
-</CONFIG>
