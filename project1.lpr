@@ -9,10 +9,9 @@ uses
   {$IFDEF HASAMIGA}
   athreads,
   {$ENDIF}
-//  Interfaces, // this includes the LCL widgetset
-//  Forms,
   obTileMap, tpTileMap, csTileMap, obGame, obGameView, obTilesetIndex, obPlayer,
-  tpGame, obGameMechanics, obGameViewSDL2, obCharacterIndex, obRecordCache
+  tpGame, obGameMechanics, obGameViewSDL2, obCharacterIndex, obRecordCache,
+  obTerrain, tpGridArray, obGameLayer, obContainers
   { you can add units after this };
 
 {$R *.res}

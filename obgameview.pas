@@ -6,7 +6,7 @@ unit obGameView;
 interface
 
 uses
-  Classes, SysUtils, obGameMechanics, fgl, obRecordCache, tpGame;
+  Classes, SysUtils, obGameMechanics, obRecordCache, tpGame;
 
 type
   { Generic roguelike "view":

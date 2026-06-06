@@ -5,7 +5,7 @@ unit obPlayer;
 interface
 
 uses
-  Classes, SysUtils, tpGame, obGameMechanics, obGameView;
+  Classes, SysUtils, tpGame, obGameMechanics, obGameView, obGameLayer;
 
 type
 
@@ -91,6 +91,20 @@ type
     destructor Destroy; override;
   end;
 
+type
+
+  { TPlayerLayer }
+
+  TPlayerLayer = class(TGameLayer)
+  public
+    procedure InitializeLayer; override;
+    procedure ReleaseLayer; override;
+
+    procedure Update; override;
+    procedure Draw; override;
+  published
+  end;
+
 implementation
 
 procedure TPlayer.SetTarget(AValue: TLocation);
@@ -101,26 +115,6 @@ end;
 
 procedure TPlayer.Move(ADirection: TMoveDirection);
 begin
-  // Original immediate-draw move (kept for comparison):
-  //
-  // var
-  //   lDst: TGameRect;
-  // begin
-  //   case ADirection of
-  //     mdLeft:  FPosition.X := Position.X - 1;
-  //     mdRight: FPosition.X := Position.X + 1;
-  //     mdUp:    FPosition.Y := Position.Y - 1;
-  //     mdDown:  FPosition.Y := Position.Y + 1;
-  //   end;
-  //
-  //   lDst.w := FPixelWidth;
-  //   lDst.h := FPixelHeight;
-  //   lDst.x := Position.X * FGameMechanics.TileWidth;
-  //   lDst.y := Position.Y * FGameMechanics.TileHeight;
-  //
-  //   FGameView.CopySprite(FPlayerTexture, GetTileClip, lDst);
-  // end;
-
   if FIsMoving then
     Exit;
 
@@ -331,6 +325,35 @@ end;
 destructor TPlayer.Destroy;
 begin
   inherited Destroy;
+end;
+
+{ TPlayerLayer }
+
+procedure TPlayerLayer.InitializeLayer;
+begin
+
+end;
+
+procedure TPlayerLayer.ReleaseLayer;
+begin
+
+end;
+
+procedure TPlayerLayer.Update;
+begin
+
+end;
+
+procedure TPlayerLayer.Draw;
+var
+  lDst: TGameRect;
+begin
+  lDst.w := TileWidth;
+  lDst.h := TileHeight;
+  lDst.x := GetDrawX;
+  lDst.y := GetDrawY;
+
+  GameView.CopySprite(FPlayerTexture, GetTileClip, lDst);
 end;
 
 end.

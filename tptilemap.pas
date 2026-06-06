@@ -5,12 +5,13 @@ unit tpTileMap;
 interface
 
 uses
-  Classes, SysUtils;
+  Classes, SysUtils, tpGridArray;
 
 type
   TMapTile = UInt64;
   TTileStateMask = UInt64;
-  TMapField = array of TMapTile;
+//  TMapField = array of TMapTile;
+  TMapTileGrid = specialize TGridArray<TMapTile>;
 
 type
   // --- bit positions for 8 "state" flags (dynamic) ---

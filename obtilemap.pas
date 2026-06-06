@@ -5,24 +5,33 @@ unit obTileMap;
 interface
 
 uses
-  Classes, SysUtils, tpTileMap, csTileMap;
+  Classes, SysUtils, tpTileMap, csTileMap, fpjson, fpjsonrtti;
 
 type
-  TMapHeader = record
-    Width: integer;
-    Height: integer;
-  end;
-  { TMap }
 
-  TMap = class
+  { TTerrainType }
+
+  TTerrainType = class(TPersistent)
   private
-    FTiles: TMapField;
-    FWidth: integer;
-    FHeight: integer;
-  private
-    function GetIndex(AX, AY: integer): integer;
+    FCode: char;
+    FName: string;
   protected
-    // no object oriented behavior.
+  public
+  published
+    property Name: string read FName write FName;
+    property Code: char read FCode write FCode;
+  end;
+
+  { TMap }
+  TMap = class(TPersistent)
+  private
+    FTiles: TMapTileGrid;
+  private
+    function GetHeight: integer;
+    function GetWidth: integer;
+    procedure SetHeight(AValue: integer);
+    procedure SetWidth(AValue: integer);
+  protected
   public
     function HasTrait(ATile: TMapTile; ATrait: TTileTrait): boolean;
 
@@ -54,6 +63,8 @@ type
     constructor Create(const AFilename: string); overload;
     constructor Create(const AStream: TStream); overload;
   published
+    property Height: integer read GetHeight write SetHeight;
+    property Width: integer read GetWidth write SetWidth;
     // no storage/IDE behavior.
   end;
 
@@ -62,9 +73,6 @@ implementation
 constructor TMap.Create;
 begin
   inherited Create;
-  FWidth := 0;
-  FHeight := 0;
-  SetLength(FTiles, 0);
 end;
 
 constructor TMap.Create(AWidth, AHeight: integer);
@@ -75,7 +83,7 @@ end;
 
 constructor TMap.Create(const AFilename: string);
 begin
-  Create;              // calls inherited Create, zeroes fields (your default ctor)
+  Create;
   LoadFromFile(AFilename);
 end;
 
@@ -86,38 +94,33 @@ begin
 end;
 
 procedure TMap.ResizeMap(AWidth, AHeight: integer);
-var
-  lCount: Integer;
 begin
-  FWidth := AWidth;
-  FHeight := AHeight;
-
-  if (FWidth <= 0) or (FHeight <= 0) then
-  begin
-    FWidth := 0;
-    FHeight := 0;
-    SetLength(FTiles, 0);
-    Exit;
-  end;
-
-  lCount := FWidth * FHeight;
-  SetLength(FTiles, lCount);
-
-  // Baseline init: all tiles = 0 (no flags set)
-  // If you want "OOB behaves like wall", you'll likely treat 0 as wall/non-walkable.
-  FillChar(FTiles[0], SizeOf(TMapTile) * lCount, 0);
+  FTiles.Resize(AWidth, AHeight);
 end;
 
-function TMap.GetIndex(AX, AY: integer): integer;
+function TMap.GetHeight: integer;
 begin
-  // Unchecked by contract
-  Result := (AY * FWidth) + AX;
+  Result := FTiles.Height;
+end;
+
+function TMap.GetWidth: integer;
+begin
+  Result := FTiles.Width;
+end;
+
+procedure TMap.SetHeight(AValue: integer);
+begin
+  FTiles.Resize(FTiles.Width, AValue);
+end;
+
+procedure TMap.SetWidth(AValue: integer);
+begin
+  FTiles.Resize(AValue, FTiles.Height);
 end;
 
 function TMap.GetTile(AX, AY: integer): TMapTile;
 begin
-  // Unchecked by contract (your stated philosophy)
-  Result := FTiles[GetIndex(AX, AY)];
+  Result := FTiles[AX, AY];
 end;
 
 function TMap.HasStateMask(ATile: TMapTile; AStateMask: TTileStateMask): boolean;
@@ -201,40 +204,41 @@ end;
 
 procedure TMap.SaveToStream(AStream: TStream);
 var
-  lHeader: TMapHeader;
-  lCount: Int64;
+  Streamer: TJSONStreamer;
+  JSONData: TJSONData;
+  JSONStr: string;
 begin
-  // Header comes from current object state
-  lHeader.Width := FWidth;
-  lHeader.Height := FHeight;
+  Streamer := TJSONStreamer.Create(nil);
+  try
+    Streamer.Options := Streamer.Options + [jsoEnumeratedAsInteger];
 
-  // Write header
-  AStream.WriteBuffer(lHeader, SizeOf(lHeader));
-
-  // Write tiles
-  lCount := Int64(FWidth) * Int64(FHeight);
-  if lCount > 0 then
-    AStream.WriteBuffer(FTiles[0], lCount * SizeOf(TMapTile));
+    JSONData := Streamer.ObjectToJSON(Self);
+    try
+      if JSONData.JSONType = jtObject then
+      begin
+        JSONStr := JSONData.FormatJSON([foUseTabChar, foSingleLineArray, foSkipWhiteSpace]);  // Pretty-print
+        AStream.WriteAnsiString(JSONStr);
+      end
+    finally
+      JSONData.Free;
+    end;
+  finally
+    Streamer.Free;
+  end;
 end;
 
 procedure TMap.LoadFromStream(AStream: TStream);
 var
-  lHeader: TMapHeader;
-  lCount: Int64;
-  lBytesNeeded: Int64;
+  DeStreamer: TJSONDeStreamer;
+  lStr: string;
 begin
-  // Read header
-  AStream.ReadBuffer(lHeader, SizeOf(lHeader));
-
-  // Resize to header dimensions
-  ResizeMap(lHeader.Width, lHeader.Height);
-
-  // Read tiles
-  lCount := Int64(FWidth) * Int64(FHeight);
-  lBytesNeeded := lCount * SizeOf(TMapTile);
-
-  if lBytesNeeded > 0 then
-    AStream.ReadBuffer(FTiles[0], lBytesNeeded);
+  lStr := AStream.ReadAnsiString;
+  DeStreamer := TJSONDeStreamer.Create(nil);
+  try
+    DeStreamer.JSONToObject(lStr, self);
+  finally
+    DeStreamer.Free;
+  end;
 end;
 
 procedure TMap.SaveToFile(const AFilename: string);

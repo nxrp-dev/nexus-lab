@@ -101,6 +101,26 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="obRecordCache"/>
       </Unit>
+      <Unit>
+        <Filename Value="obterrain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="obTerrain"/>
+      </Unit>
+      <Unit>
+        <Filename Value="tpgridarray.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="tpGridArray"/>
+      </Unit>
+      <Unit>
+        <Filename Value="obgamelayer.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="obGameLayer"/>
+      </Unit>
+      <Unit>
+        <Filename Value="obcontainers.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="obContainers"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
