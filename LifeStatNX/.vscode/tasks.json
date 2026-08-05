@@ -1,0 +1,31 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "fpc",
+			"file": "LifeStatNXL.lpr",
+			"buildOption": {
+				"forceRebuild": false,
+				"customOptions": [
+					"-gh"
+				],
+				"includePath": [
+					"..\\output\\LifeStatNXL\\x86_64-win64\\units"
+				],
+				"searchPath": [
+					".",
+					"..",
+					"..\\..\\nexus\\NexusLib\\core\\src",
+					"..\\..\\nexus\\NexusLib\\ui\\src",
+					"..\\..\\common\\sdl\\units",
+					"..\\..\\common\\sdl_ext"
+				],
+				"unitOutputDir": "..\\output\\LifeStatNXL\\x86_64-win64\\units",
+				"targetOS": "win64",
+				"targetCPU": "x86_64",
+				"outputFile": "..\\output\\LifeStatNXL\\x86_64-win64\\LifeStatNXL"
+			},
+			"label": "LifeStatNXL-Default"
+		}
+	]
+}
