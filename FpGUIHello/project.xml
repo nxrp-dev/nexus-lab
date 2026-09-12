@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <name>nexus-lab-fpgui-sample</name>
+  <version>1.0.0</version>
+
+  <build>
+    <mainSource>FpGUIHello.lpr</mainSource>
+    <sourceDirectory>.</sourceDirectory>
+    <executableName>FpGUIHello</executableName>
+    <manualUnitPaths>true</manualUnitPaths>
+    <unitPaths>
+      <path>../../nexus/lib/fpgui/framework/src/main/pascal/corelib</path>
+      <path>../../nexus/lib/fpgui/framework/src/main/pascal/corelib/render/software</path>
+      <path condition="WINDOWS">../../nexus/lib/fpgui/framework/src/main/pascal/corelib/gdi</path>
+      <path condition="LINUX">../../nexus/lib/fpgui/framework/src/main/pascal/corelib/x11</path>
+      <path>../../nexus/lib/fpgui/framework/src/main/pascal/gui</path>
+      <path>../../nexus/lib/fpgui/framework/src/main/resources</path>
+    </unitPaths>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>windows</id>
+      <defines>
+        <define>GDI</define>
+      </defines>
+      <compilerOptions>
+        <option>-WG</option>
+        <option>-gw</option>
+        <option>-gl</option>
+        <option>-O-</option>
+      </compilerOptions>
+    </profile>
+    <profile>
+      <id>unix</id>
+      <defines>
+        <define>X11</define>
+        <define>UseCThreads</define>
+      </defines>
+    </profile>
+  </profiles>
+</project>
