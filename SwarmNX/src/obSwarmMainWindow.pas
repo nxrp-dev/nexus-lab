@@ -5,110 +5,124 @@ unit obSwarmMainWindow;
 interface
 
 uses
-  Classes, SysUtils, obNXApplication, obNXButton, obNXControl, obNXEditBox,
-  obNXFileDialog, obNXGroupBox, obNXLabel, obNXMemo, obNXProgressBar,
-  obNXStatusBar, obNXWindow, tpNXLayout, tpNXPlatform, tpNXWindow,
+  Classes,
+  SysUtils,
+  fpg_button,
+  fpg_dialogs,
+  fpg_edit,
+  fpg_form,
+  fpg_label,
+  fpg_memo,
+  fpg_panel,
+  fpg_progressbar,
+  fpg_widget,
   obSwarmTorrentController, obSwarmTorrentViewModel;
 
 type
-  TSwarmMainWindow = class
+  TSwarmMainWindow = class(TfpgForm)
   private
-    FAdvancedGroup: TNXGroupBox;
-    FAnnounceButton: TNXButton;
-    FAnnounceEdit: TNXEditBox;
-    FConnectButton: TNXButton;
+    FAdvancedGroup: TfpgGroupBox;
+    FAnnounceButton: TfpgButton;
+    FAnnounceEdit: TfpgEdit;
+    FConnectButton: TfpgButton;
     FController: TSwarmTorrentController;
-    FDestinationButton: TNXButton;
-    FDestinationLabel: TNXLabel;
-    FInfoHashLabel: TNXLabel;
-    FLogMemo: TNXMemo;
-    FNameLabel: TNXLabel;
-    FOpenButton: TNXButton;
-    FPauseButton: TNXButton;
-    FPeerHostEdit: TNXEditBox;
-    FPeerPortEdit: TNXEditBox;
-    FPieceIndexEdit: TNXEditBox;
-    FPieceLabel: TNXLabel;
-    FProgressBar: TNXProgressBar;
-    FProgressLabel: TNXLabel;
-    FRootWindow: TNXWindow;
-    FStartButton: TNXButton;
-    FStatusBar: TNXStatusBar;
-    FStateLabel: TNXLabel;
-    FStopButton: TNXButton;
-    FTotalLabel: TNXLabel;
-    FVerifyButton: TNXButton;
+    FDestinationButton: TfpgButton;
+    FDestinationLabel: TfpgLabel;
+    FInfoHashLabel: TfpgLabel;
+    FLogMemo: TfpgMemo;
+    FNameLabel: TfpgLabel;
+    FOpenButton: TfpgButton;
+    FPauseButton: TfpgButton;
+    FPeerHostEdit: TfpgEdit;
+    FPeerPortEdit: TfpgEdit;
+    FPieceIndexEdit: TfpgEdit;
+    FPieceLabel: TfpgLabel;
+    FProgressBar: TfpgProgressBar;
+    FProgressLabel: TfpgLabel;
+    FStartButton: TfpgButton;
+    FStatusBar: TfpgPanel;
+    FStatusLabels: array[0..2] of TfpgLabel;
+    FStateLabel: TfpgLabel;
+    FStopButton: TfpgButton;
+    FTotalLabel: TfpgLabel;
+    FVerifyButton: TfpgButton;
     procedure AddLog(const AText: string);
-    function AddButton(AParent: INXControlParent; const ACaption: string;
-      ALeft, ATop, AWidth: Integer; AHandler: TNXMouseEvent): TNXButton;
-    function AddEdit(AParent: INXControlParent; const AText: string;
-      ALeft, ATop, AWidth: Integer): TNXEditBox;
-    function AddLabel(AParent: INXControlParent; const ACaption: string;
-      ALeft, ATop, AWidth: Integer): TNXLabel;
+    function AddButton(AParent: TComponent; const ACaption: string;
+      ALeft, ATop, AWidth: Integer; AHandler: TNotifyEvent): TfpgButton;
+    function AddEdit(AParent: TComponent; const AText: string;
+      ALeft, ATop, AWidth: Integer): TfpgEdit;
+    function AddLabel(AParent: TComponent; const ACaption: string;
+      ALeft, ATop, AWidth: Integer): TfpgLabel;
     function FormatBytes(AValue: Int64): string;
     function ParseInteger(const AText, AFieldName: string): Integer;
     procedure RefreshView;
     procedure RunCommand(const ADescription: string; ACommand: TNotifyEvent);
+    procedure SetWidgetBounds(AWidget: TfpgWidget; ALeft, ATop, AWidth,
+      AHeight: Integer);
 
-    procedure AnnounceClick(Sender: TObject; X, Y: Integer; Button: TNXMouseButton);
-    procedure ConnectClick(Sender: TObject; X, Y: Integer; Button: TNXMouseButton);
-    procedure DestinationClick(Sender: TObject; X, Y: Integer; Button: TNXMouseButton);
-    procedure DestinationDialogResult(Sender: TObject; AResult: TNXModalResult;
-      const APath: string);
-    procedure OpenClick(Sender: TObject; X, Y: Integer; Button: TNXMouseButton);
-    procedure OpenDialogResult(Sender: TObject; AResult: TNXModalResult;
-      const APath: string);
-    procedure PauseClick(Sender: TObject; X, Y: Integer; Button: TNXMouseButton);
-    procedure StartClick(Sender: TObject; X, Y: Integer; Button: TNXMouseButton);
-    procedure StopClick(Sender: TObject; X, Y: Integer; Button: TNXMouseButton);
-    procedure VerifyClick(Sender: TObject; X, Y: Integer; Button: TNXMouseButton);
+    procedure AnnounceClick(ASender: TObject);
+    procedure ConnectClick(ASender: TObject);
+    procedure DestinationClick(ASender: TObject);
+    procedure OpenClick(ASender: TObject);
+    procedure PauseClick(ASender: TObject);
+    procedure StartClick(ASender: TObject);
+    procedure StopClick(ASender: TObject);
+    procedure VerifyClick(ASender: TObject);
 
-    procedure DoAnnounce(Sender: TObject);
-    procedure DoConnect(Sender: TObject);
-    procedure DoPause(Sender: TObject);
-    procedure DoStart(Sender: TObject);
-    procedure DoStop(Sender: TObject);
-    procedure DoVerify(Sender: TObject);
+    procedure DoAnnounce(ASender: TObject);
+    procedure DoConnect(ASender: TObject);
+    procedure DoPause(ASender: TObject);
+    procedure DoStart(ASender: TObject);
+    procedure DoStop(ASender: TObject);
+    procedure DoVerify(ASender: TObject);
   public
-    constructor Create(ARootWindow: TNXWindow;
-      AController: TSwarmTorrentController);
+    constructor Create(AOwner: TComponent;
+      AController: TSwarmTorrentController); reintroduce;
     procedure Build;
   end;
 
 implementation
 
-constructor TSwarmMainWindow.Create(ARootWindow: TNXWindow;
+constructor TSwarmMainWindow.Create(AOwner: TComponent;
   AController: TSwarmTorrentController);
 begin
-  inherited Create;
-  FRootWindow := ARootWindow;
+  inherited Create(AOwner);
   FController := AController;
 end;
 
-function TSwarmMainWindow.AddButton(AParent: INXControlParent;
+function TSwarmMainWindow.AddButton(AParent: TComponent;
   const ACaption: string; ALeft, ATop, AWidth: Integer;
-  AHandler: TNXMouseEvent): TNXButton;
+  AHandler: TNotifyEvent): TfpgButton;
 begin
-  Result := TNXButton.Create(AParent);
-  Result.SetBounds(ALeft, ATop, AWidth, 26);
-  Result.Caption := ACaption;
-  Result.OnMouseClick := AHandler;
+  Result := TfpgButton.Create(AParent);
+  SetWidgetBounds(Result, ALeft, ATop, AWidth, 26);
+  Result.Text := ACaption;
+  Result.OnClick := AHandler;
 end;
 
-function TSwarmMainWindow.AddEdit(AParent: INXControlParent;
-  const AText: string; ALeft, ATop, AWidth: Integer): TNXEditBox;
+function TSwarmMainWindow.AddEdit(AParent: TComponent;
+  const AText: string; ALeft, ATop, AWidth: Integer): TfpgEdit;
 begin
-  Result := TNXEditBox.Create(AParent);
-  Result.SetBounds(ALeft, ATop, AWidth, 24);
+  Result := TfpgEdit.Create(AParent);
+  SetWidgetBounds(Result, ALeft, ATop, AWidth, 24);
   Result.Text := AText;
 end;
 
-function TSwarmMainWindow.AddLabel(AParent: INXControlParent;
-  const ACaption: string; ALeft, ATop, AWidth: Integer): TNXLabel;
+function TSwarmMainWindow.AddLabel(AParent: TComponent;
+  const ACaption: string; ALeft, ATop, AWidth: Integer): TfpgLabel;
 begin
-  Result := TNXLabel.Create(AParent);
-  Result.SetBounds(ALeft, ATop, AWidth, 22);
-  Result.Caption := ACaption;
+  Result := TfpgLabel.Create(AParent);
+  SetWidgetBounds(Result, ALeft, ATop, AWidth, 22);
+  Result.Text := ACaption;
+end;
+
+procedure TSwarmMainWindow.SetWidgetBounds(AWidget: TfpgWidget; ALeft, ATop,
+  AWidth, AHeight: Integer);
+begin
+  AWidget.Left := ALeft;
+  AWidget.Top := ATop;
+  AWidget.Width := AWidth;
+  AWidget.Height := AHeight;
 end;
 
 function TSwarmMainWindow.FormatBytes(AValue: Int64): string;
@@ -132,81 +146,93 @@ end;
 
 procedure TSwarmMainWindow.Build;
 var
-  lClientGroup: TNXGroupBox;
-  lInfoGroup: TNXGroupBox;
-  lProgressGroup: TNXGroupBox;
+  lClientGroup: TfpgGroupBox;
+  lInfoGroup: TfpgGroupBox;
+  lProgressGroup: TfpgGroupBox;
 begin
-  lClientGroup := TNXGroupBox.Create(FRootWindow, 'Client',
-    MakeNXRect(12, 12, 970, 92));
-  FOpenButton := AddButton(lClientGroup.ContentPanel, 'Load Torrent', 12, 14,
+  Name := 'SwarmMainForm';
+  Width := 1024;
+  Height := 720;
+  MinWidth := 1024;
+  MinHeight := 720;
+  WindowPosition := wpScreenCenter;
+  WindowTitle := 'SwarmNX';
+
+  lClientGroup := TfpgGroupBox.Create(Self);
+  SetWidgetBounds(lClientGroup, 12, 12, 970, 92);
+  lClientGroup.Text := 'Client';
+  FOpenButton := AddButton(lClientGroup, 'Load Torrent', 12, 24,
     120, @OpenClick);
-  FDestinationButton := AddButton(lClientGroup.ContentPanel, 'Destination', 142,
-    14, 120, @DestinationClick);
-  FStartButton := AddButton(lClientGroup.ContentPanel, 'Start', 272, 14, 80,
+  FDestinationButton := AddButton(lClientGroup, 'Destination', 142,
+    24, 120, @DestinationClick);
+  FStartButton := AddButton(lClientGroup, 'Start', 272, 24, 80,
     @StartClick);
-  FPauseButton := AddButton(lClientGroup.ContentPanel, 'Pause', 362, 14, 80,
+  FPauseButton := AddButton(lClientGroup, 'Pause', 362, 24, 80,
     @PauseClick);
-  FStopButton := AddButton(lClientGroup.ContentPanel, 'Stop', 452, 14, 80,
+  FStopButton := AddButton(lClientGroup, 'Stop', 452, 24, 80,
     @StopClick);
-  FDestinationLabel := AddLabel(lClientGroup.ContentPanel,
-    'Destination: not selected', 12, 48, 900);
+  FDestinationLabel := AddLabel(lClientGroup,
+    'Destination: not selected', 12, 56, 900);
 
-  lInfoGroup := TNXGroupBox.Create(FRootWindow, 'Torrent',
-    MakeNXRect(12, 114, 970, 138));
-  FNameLabel := AddLabel(lInfoGroup.ContentPanel, 'Name: none', 12, 14, 920);
-  FInfoHashLabel := AddLabel(lInfoGroup.ContentPanel, 'Info hash:', 12, 42,
+  lInfoGroup := TfpgGroupBox.Create(Self);
+  SetWidgetBounds(lInfoGroup, 12, 114, 970, 138);
+  lInfoGroup.Text := 'Torrent';
+  FNameLabel := AddLabel(lInfoGroup, 'Name: none', 12, 24, 920);
+  FInfoHashLabel := AddLabel(lInfoGroup, 'Info hash:', 12, 52,
     920);
-  FTotalLabel := AddLabel(lInfoGroup.ContentPanel, 'Total: 0 bytes', 12, 70,
+  FTotalLabel := AddLabel(lInfoGroup, 'Total: 0 bytes', 12, 80,
     260);
-  FPieceLabel := AddLabel(lInfoGroup.ContentPanel, 'Pieces: 0', 300, 70, 260);
-  FStateLabel := AddLabel(lInfoGroup.ContentPanel, 'Status: Stopped', 590, 70,
+  FPieceLabel := AddLabel(lInfoGroup, 'Pieces: 0', 300, 80, 260);
+  FStateLabel := AddLabel(lInfoGroup, 'Status: Stopped', 590, 80,
     260);
 
-  lProgressGroup := TNXGroupBox.Create(FRootWindow, 'Progress',
-    MakeNXRect(12, 264, 970, 92));
-  FProgressBar := TNXProgressBar.Create(lProgressGroup.ContentPanel);
-  FProgressBar.SetBounds(12, 18, 930, 24);
-  FProgressLabel := AddLabel(lProgressGroup.ContentPanel,
-    'Progress: 0%  Verified: 0/0', 12, 50, 920);
+  lProgressGroup := TfpgGroupBox.Create(Self);
+  SetWidgetBounds(lProgressGroup, 12, 264, 970, 92);
+  lProgressGroup.Text := 'Progress';
+  FProgressBar := TfpgProgressBar.Create(lProgressGroup);
+  SetWidgetBounds(FProgressBar, 12, 28, 930, 24);
+  FProgressLabel := AddLabel(lProgressGroup,
+    'Progress: 0%  Verified: 0/0', 12, 58, 920);
 
-  FAdvancedGroup := TNXGroupBox.Create(FRootWindow, 'Diagnostics',
-    MakeNXRect(12, 368, 970, 132));
-  AddLabel(FAdvancedGroup.ContentPanel, 'Announce URL', 12, 14, 100);
-  FAnnounceEdit := AddEdit(FAdvancedGroup.ContentPanel, '', 118, 12, 470);
-  FAnnounceButton := AddButton(FAdvancedGroup.ContentPanel, 'Announce', 600, 11,
+  FAdvancedGroup := TfpgGroupBox.Create(Self);
+  SetWidgetBounds(FAdvancedGroup, 12, 368, 970, 132);
+  FAdvancedGroup.Text := 'Diagnostics';
+  AddLabel(FAdvancedGroup, 'Announce URL', 12, 24, 100);
+  FAnnounceEdit := AddEdit(FAdvancedGroup, '', 118, 22, 470);
+  FAnnounceButton := AddButton(FAdvancedGroup, 'Announce', 600, 21,
     100, @AnnounceClick);
 
-  AddLabel(FAdvancedGroup.ContentPanel, 'Peer host', 12, 48, 100);
-  FPeerHostEdit := AddEdit(FAdvancedGroup.ContentPanel, '127.0.0.1', 118, 46,
+  AddLabel(FAdvancedGroup, 'Peer host', 12, 58, 100);
+  FPeerHostEdit := AddEdit(FAdvancedGroup, '127.0.0.1', 118, 56,
     210);
-  AddLabel(FAdvancedGroup.ContentPanel, 'Port', 342, 48, 40);
-  FPeerPortEdit := AddEdit(FAdvancedGroup.ContentPanel, '6881', 386, 46, 74);
-  FConnectButton := AddButton(FAdvancedGroup.ContentPanel, 'Connect To Peer',
-    474, 45, 130, @ConnectClick);
+  AddLabel(FAdvancedGroup, 'Port', 342, 58, 40);
+  FPeerPortEdit := AddEdit(FAdvancedGroup, '6881', 386, 56, 74);
+  FConnectButton := AddButton(FAdvancedGroup, 'Connect To Peer',
+    474, 55, 130, @ConnectClick);
 
-  AddLabel(FAdvancedGroup.ContentPanel, 'Piece index', 12, 82, 100);
-  FPieceIndexEdit := AddEdit(FAdvancedGroup.ContentPanel, '0', 118, 80, 74);
-  FVerifyButton := AddButton(FAdvancedGroup.ContentPanel, 'Verify Piece', 206,
-    79, 110, @VerifyClick);
+  AddLabel(FAdvancedGroup, 'Piece index', 12, 92, 100);
+  FPieceIndexEdit := AddEdit(FAdvancedGroup, '0', 118, 90, 74);
+  FVerifyButton := AddButton(FAdvancedGroup, 'Verify Piece', 206,
+    89, 110, @VerifyClick);
 
-  FLogMemo := TNXMemo.Create(FRootWindow);
-  FLogMemo.SetBounds(12, 512, 970, 172);
+  FLogMemo := TfpgMemo.Create(Self);
+  SetWidgetBounds(FLogMemo, 12, 512, 970, 172);
   FLogMemo.ReadOnly := True;
-  FLogMemo.AddLine('SwarmNX ready.');
+  FLogMemo.Lines.Add('SwarmNX ready.');
 
-  FStatusBar := TNXStatusBar.Create(FRootWindow);
-  FStatusBar.SimplePanel := False;
-  FStatusBar.AddPanel('Ready', 220);
-  FStatusBar.AddPanel('No torrent loaded', 420);
-  FStatusBar.AddPanel('', 180);
+  FStatusBar := TfpgPanel.Create(Self);
+  SetWidgetBounds(FStatusBar, 12, 690, 970, 26);
+  FStatusLabels[0] := AddLabel(FStatusBar, 'Ready', 8, 2, 220);
+  FStatusLabels[1] := AddLabel(FStatusBar, 'No torrent loaded', 236, 2, 420);
+  FStatusLabels[2] := AddLabel(FStatusBar, '', 664, 2, 290);
 
   RefreshView;
 end;
 
 procedure TSwarmMainWindow.AddLog(const AText: string);
 begin
-  FLogMemo.AddLine(FormatDateTime('hh:nn:ss', Now) + '  ' + AText);
-  FStatusBar.Panels[0].Text := AText;
+  FLogMemo.Lines.Add(FormatDateTime('hh:nn:ss', Now) + '  ' + AText);
+  FStatusLabels[0].Text := AText;
 end;
 
 procedure TSwarmMainWindow.RefreshView;
@@ -217,31 +243,31 @@ begin
   try
     if lViewModel.HasTorrent then
     begin
-      FNameLabel.Caption := 'Name: ' + lViewModel.Name;
-      FInfoHashLabel.Caption := 'Info hash: ' + lViewModel.InfoHashHex;
-      FTotalLabel.Caption := 'Total: ' + FormatBytes(lViewModel.TotalBytes);
-      FPieceLabel.Caption := Format('Pieces: %d  Piece length: %s',
+      FNameLabel.Text := 'Name: ' + lViewModel.Name;
+      FInfoHashLabel.Text := 'Info hash: ' + lViewModel.InfoHashHex;
+      FTotalLabel.Text := 'Total: ' + FormatBytes(lViewModel.TotalBytes);
+      FPieceLabel.Text := Format('Pieces: %d  Piece length: %s',
         [lViewModel.PieceCount, FormatBytes(lViewModel.PieceLength)]);
       FAnnounceEdit.Text := lViewModel.AnnounceURL;
-      FStatusBar.Panels[1].Text := ExtractFileName(lViewModel.TorrentPath);
+      FStatusLabels[1].Text := ExtractFileName(lViewModel.TorrentPath);
     end
     else
     begin
-      FNameLabel.Caption := 'Name: none';
-      FInfoHashLabel.Caption := 'Info hash:';
-      FTotalLabel.Caption := 'Total: 0 bytes';
-      FPieceLabel.Caption := 'Pieces: 0';
-      FStatusBar.Panels[1].Text := 'No torrent loaded';
+      FNameLabel.Text := 'Name: none';
+      FInfoHashLabel.Text := 'Info hash:';
+      FTotalLabel.Text := 'Total: 0 bytes';
+      FPieceLabel.Text := 'Pieces: 0';
+      FStatusLabels[1].Text := 'No torrent loaded';
     end;
 
     if lViewModel.HasDestination then
-      FDestinationLabel.Caption := 'Destination: ' + lViewModel.DestinationRoot
+      FDestinationLabel.Text := 'Destination: ' + lViewModel.DestinationRoot
     else
-      FDestinationLabel.Caption := 'Destination: not selected';
+      FDestinationLabel.Text := 'Destination: not selected';
 
-    FStateLabel.Caption := 'Status: ' + lViewModel.StateText;
-    FProgressBar.Value := lViewModel.ProgressPercent;
-    FProgressLabel.Caption := Format('Progress: %d%%  Verified: %d/%d  %s of %s',
+    FStateLabel.Text := 'Status: ' + lViewModel.StateText;
+    FProgressBar.Position := lViewModel.ProgressPercent;
+    FProgressLabel.Text := Format('Progress: %d%%  Verified: %d/%d  %s of %s',
       [lViewModel.ProgressPercent, lViewModel.VerifiedPieces,
       lViewModel.PieceCount, FormatBytes(lViewModel.DownloadedBytes),
       FormatBytes(lViewModel.TotalBytes)]);
@@ -252,7 +278,7 @@ begin
     FAnnounceButton.Enabled := lViewModel.HasTorrent and lViewModel.HasDestination;
     FConnectButton.Enabled := lViewModel.HasTorrent and lViewModel.HasDestination;
     FVerifyButton.Enabled := lViewModel.HasTorrent and lViewModel.HasDestination;
-    FStatusBar.Panels[2].Text := lViewModel.StateText;
+    FStatusLabels[2].Text := lViewModel.StateText;
   finally
     lViewModel.Free;
   end;
@@ -271,23 +297,17 @@ begin
   RefreshView;
 end;
 
-procedure TSwarmMainWindow.OpenClick(Sender: TObject; X, Y: Integer;
-  Button: TNXMouseButton);
+procedure TSwarmMainWindow.OpenClick(ASender: TObject);
+var
+  lPath: string;
 begin
-  if Button <> mbLeft then
-    Exit;
-  TNXFileDialog.ShowOpen('Load Torrent', GetCurrentDir, '*.torrent',
-    @OpenDialogResult);
-end;
-
-procedure TSwarmMainWindow.OpenDialogResult(Sender: TObject;
-  AResult: TNXModalResult; const APath: string);
-begin
-  if AResult <> mrOK then
+  lPath := SelectFileDialog(sfdOpen, 'Torrent files (*.torrent)|*.torrent',
+    GetCurrentDir);
+  if lPath = '' then
     Exit;
   try
-    FController.LoadTorrent(APath);
-    AddLog('Loaded torrent ' + APath);
+    FController.LoadTorrent(lPath);
+    AddLog('Loaded torrent ' + lPath);
   except
     on E: Exception do
       AddLog('Load torrent failed: ' + E.Message);
@@ -295,23 +315,16 @@ begin
   RefreshView;
 end;
 
-procedure TSwarmMainWindow.DestinationClick(Sender: TObject; X, Y: Integer;
-  Button: TNXMouseButton);
+procedure TSwarmMainWindow.DestinationClick(ASender: TObject);
+var
+  lPath: string;
 begin
-  if Button <> mbLeft then
-    Exit;
-  TNXFileDialog.ShowSelectFolder('Select Destination', GetCurrentDir,
-    @DestinationDialogResult);
-end;
-
-procedure TSwarmMainWindow.DestinationDialogResult(Sender: TObject;
-  AResult: TNXModalResult; const APath: string);
-begin
-  if AResult <> mrOK then
+  lPath := SelectDirDialog(GetCurrentDir);
+  if lPath = '' then
     Exit;
   try
-    FController.SetDestinationRoot(APath);
-    AddLog('Destination set to ' + APath);
+    FController.SetDestinationRoot(lPath);
+    AddLog('Destination set to ' + lPath);
   except
     on E: Exception do
       AddLog('Set destination failed: ' + E.Message);
@@ -319,78 +332,66 @@ begin
   RefreshView;
 end;
 
-procedure TSwarmMainWindow.DoStart(Sender: TObject);
+procedure TSwarmMainWindow.DoStart(ASender: TObject);
 begin
   FController.StartSession;
 end;
 
-procedure TSwarmMainWindow.StartClick(Sender: TObject; X, Y: Integer;
-  Button: TNXMouseButton);
+procedure TSwarmMainWindow.StartClick(ASender: TObject);
 begin
-  if Button = mbLeft then
-    RunCommand('Session started', @DoStart);
+  RunCommand('Session started', @DoStart);
 end;
 
-procedure TSwarmMainWindow.DoPause(Sender: TObject);
+procedure TSwarmMainWindow.DoPause(ASender: TObject);
 begin
   FController.PauseSession;
 end;
 
-procedure TSwarmMainWindow.PauseClick(Sender: TObject; X, Y: Integer;
-  Button: TNXMouseButton);
+procedure TSwarmMainWindow.PauseClick(ASender: TObject);
 begin
-  if Button = mbLeft then
-    RunCommand('Session paused', @DoPause);
+  RunCommand('Session paused', @DoPause);
 end;
 
-procedure TSwarmMainWindow.DoStop(Sender: TObject);
+procedure TSwarmMainWindow.DoStop(ASender: TObject);
 begin
   FController.StopSession;
 end;
 
-procedure TSwarmMainWindow.StopClick(Sender: TObject; X, Y: Integer;
-  Button: TNXMouseButton);
+procedure TSwarmMainWindow.StopClick(ASender: TObject);
 begin
-  if Button = mbLeft then
-    RunCommand('Session stopped', @DoStop);
+  RunCommand('Session stopped', @DoStop);
 end;
 
-procedure TSwarmMainWindow.DoVerify(Sender: TObject);
+procedure TSwarmMainWindow.DoVerify(ASender: TObject);
 begin
   FController.VerifyPiece(ParseInteger(FPieceIndexEdit.Text, 'Piece index'));
 end;
 
-procedure TSwarmMainWindow.VerifyClick(Sender: TObject; X, Y: Integer;
-  Button: TNXMouseButton);
+procedure TSwarmMainWindow.VerifyClick(ASender: TObject);
 begin
-  if Button = mbLeft then
-    RunCommand('Piece verified', @DoVerify);
+  RunCommand('Piece verified', @DoVerify);
 end;
 
-procedure TSwarmMainWindow.DoAnnounce(Sender: TObject);
+procedure TSwarmMainWindow.DoAnnounce(ASender: TObject);
 begin
   AddLog(FController.Announce(FAnnounceEdit.Text,
     ParseInteger(FPeerPortEdit.Text, 'Port')));
 end;
 
-procedure TSwarmMainWindow.AnnounceClick(Sender: TObject; X, Y: Integer;
-  Button: TNXMouseButton);
+procedure TSwarmMainWindow.AnnounceClick(ASender: TObject);
 begin
-  if Button = mbLeft then
-    RunCommand('Tracker announce completed', @DoAnnounce);
+  RunCommand('Tracker announce completed', @DoAnnounce);
 end;
 
-procedure TSwarmMainWindow.DoConnect(Sender: TObject);
+procedure TSwarmMainWindow.DoConnect(ASender: TObject);
 begin
   AddLog(FController.ConnectToPeer(FPeerHostEdit.Text,
     ParseInteger(FPeerPortEdit.Text, 'Port')));
 end;
 
-procedure TSwarmMainWindow.ConnectClick(Sender: TObject; X, Y: Integer;
-  Button: TNXMouseButton);
+procedure TSwarmMainWindow.ConnectClick(ASender: TObject);
 begin
-  if Button = mbLeft then
-    RunCommand('Peer connection completed', @DoConnect);
+  RunCommand('Peer connection completed', @DoConnect);
 end;
 
 end.
