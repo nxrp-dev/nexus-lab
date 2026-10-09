@@ -56,8 +56,8 @@
       <Filename Value="..\..\nexus\output\SwarmNX\$(TargetCPU)-$(TargetOS)\SwarmNX"/>
     </Target>
     <SearchPaths>
-      <IncludeFiles Value="$(ProjOutDir);..\..\nexus\packages\gui\external\fpgui\framework\src\main\pascal\corelib;..\..\nexus\packages\gui\external\fpgui\framework\src\main\pascal\corelib\gdi;..\..\nexus\packages\gui\external\fpgui\framework\src\main\resources"/>
-      <OtherUnitFiles Value="src;..\..\nexus\packages\network\torrent\src;..\..\nexus\packages\network\external\synapse;..\..\nexus\packages\gui\external\fpgui\framework\src\main\pascal\corelib;..\..\nexus\packages\gui\external\fpgui\framework\src\main\pascal\corelib\render\software;..\..\nexus\packages\gui\external\fpgui\framework\src\main\pascal\corelib\gdi;..\..\nexus\packages\gui\external\fpgui\framework\src\main\pascal\gui;..\..\nexus\packages\gui\external\fpgui\framework\src\main\resources;C:\lazarus\fpc\3.2.2\units\x86_64-win64\hash"/>
+      <IncludeFiles Value="$(ProjOutDir);..\..\nexus\packages\nexus-packages\gui\external\fpgui\framework\src\main\pascal\corelib;..\..\nexus\packages\nexus-packages\gui\external\fpgui\framework\src\main\pascal\corelib\gdi;..\..\nexus\packages\nexus-packages\gui\external\fpgui\framework\src\main\resources"/>
+      <OtherUnitFiles Value="src;..\..\nexus\packages\nexus-packages\network\torrent\src;..\..\nexus\packages\nexus-packages\network\external\synapse;..\..\nexus\packages\nexus-packages\gui\external\fpgui\framework\src\main\pascal\corelib;..\..\nexus\packages\nexus-packages\gui\external\fpgui\framework\src\main\pascal\corelib\render\software;..\..\nexus\packages\nexus-packages\gui\external\fpgui\framework\src\main\pascal\corelib\gdi;..\..\nexus\packages\nexus-packages\gui\external\fpgui\framework\src\main\pascal\gui;..\..\nexus\packages\nexus-packages\gui\external\fpgui\framework\src\main\resources;C:\lazarus\fpc\3.2.2\units\x86_64-win64\hash"/>
       <UnitOutputDirectory Value="..\..\nexus\output\SwarmNX\$(TargetCPU)-$(TargetOS)\units"/>
     </SearchPaths>
     <Parsing>
