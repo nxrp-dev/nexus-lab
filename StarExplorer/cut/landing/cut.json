@@ -1,0 +1,17 @@
+{
+    "start": {
+        "image": "corona_up.png",
+        "animation": "",
+        "text": "",
+        "audio": "1TouchDown.wav",
+        "music": "leonell-cassio-the-sapphire-city-10450.mp3",
+        "nextChapter": "nextone"
+    },
+    "nextone": {
+        "image": "corona_up.png",
+        "animation": "",
+        "text": "",
+        "audio": "2WithinTheShip.wav",
+        "music": "leonell-cassio-the-sapphire-city-10450.mp3"
+    }
+}

@@ -1,0 +1,93 @@
+{
+    "npc":{
+        "name": "Val",
+        "image": "npc/val/val.png"
+    },
+    "start": {
+        "answers": [
+            {
+                "nextNode": "StillInSpace",
+                "text": "We are still in space?"
+            },
+            {
+                "nextNode": "SuitableSystem",
+                "text": "Have we located a suitable star system?"
+            },
+            {
+                "nextNode": "endnode",
+                "text": "Let's proceed with the mission.",
+                "audio": "LetsProceed.wav"
+            }
+        ],
+        "question": {
+            "text": "I trust you slept well Dr. Vega.  We have arrived at a star system and await your instructions.",
+            "audio":"ITrustYouSleptWell.wav"
+        }
+    },
+    "StillInSpace": {
+        "answers": [
+            {
+                "nextNode": "start",
+                "text": "Understood."
+            }
+        ],
+        "question": {
+            "text": "I apologize for waking you early but all attempts to communicate with Earth have failed.",
+            "audio":"ITrustYouSleptWell.wav"
+        }
+    },
+    "loadGame": {
+        "answers": [
+            {
+                "nextNode": "endnode",
+                "text": "Slot 1"
+            },
+            {
+                "nextNode": "endnode",
+                "text": "Slot 2"
+            }
+        ],
+        "question": "Loading game... Which save slot?"
+    },
+    "mageReady": {
+        "answers": [
+            {
+                "nextNode": "endnode",
+                "text": "Yes"
+            },
+            {
+                "nextNode": "endnode",
+                "text": "No"
+            }
+        ],
+        "question": "You chose Mage. Ready to cast spells?"
+    },
+    "endnode": {
+        "answers": [],
+        "question": "This is the end of the dialog."
+    },
+    "exit": {
+        "answers": [
+            {
+                "text": "Yes"
+            },
+            {
+                "text": "No"
+            }
+        ],
+        "question": "Are you sure you want to exit?"
+    },
+    "warriorReady": {
+        "answers": [
+            {
+                "nextNode": "endnode",
+                "text": "Yes"
+            },
+            {
+                "nextNode": "endnode",
+                "text": "No"
+            }
+        ],
+        "question": "You chose Warrior. Ready to fight?"
+    }
+}

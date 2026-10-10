@@ -1,0 +1,411 @@
+
+File: C:\gitdev\nexus\output\StarExplorerLabProof-20261010\build\plugin_sample.dll
+Format: COFF-x86-64
+Arch: x86_64
+AddressSize: 64bit
+ImageFileHeader {
+  Machine: IMAGE_FILE_MACHINE_AMD64 (0x8664)
+  SectionCount: 10
+  TimeDateStamp: 1970-01-01 00:00:00 (0x0)
+  PointerToSymbolTable: 0x0
+  SymbolCount: 0
+  StringTableSize: 0
+  OptionalHeaderSize: 240
+  Characteristics [ (0x222E)
+    IMAGE_FILE_DEBUG_STRIPPED (0x200)
+    IMAGE_FILE_DLL (0x2000)
+    IMAGE_FILE_EXECUTABLE_IMAGE (0x2)
+    IMAGE_FILE_LARGE_ADDRESS_AWARE (0x20)
+    IMAGE_FILE_LINE_NUMS_STRIPPED (0x4)
+    IMAGE_FILE_LOCAL_SYMS_STRIPPED (0x8)
+  ]
+}
+ImageOptionalHeader {
+  Magic: 0x20B
+  MajorLinkerVersion: 2
+  MinorLinkerVersion: 28
+  SizeOfCode: 620032
+  SizeOfInitializedData: 1304064
+  SizeOfUninitializedData: 12800
+  AddressOfEntryPoint: 0x1E60
+  BaseOfCode: 0x1000
+  ImageBase: 0x10000000
+  SectionAlignment: 4096
+  FileAlignment: 512
+  MajorOperatingSystemVersion: 4
+  MinorOperatingSystemVersion: 0
+  MajorImageVersion: 0
+  MinorImageVersion: 0
+  MajorSubsystemVersion: 5
+  MinorSubsystemVersion: 2
+  SizeOfImage: 1339392
+  SizeOfHeaders: 1024
+  CheckSum: 0x14085A
+  Subsystem: IMAGE_SUBSYSTEM_WINDOWS_CUI (0x3)
+  Characteristics [ (0x0)
+  ]
+  SizeOfStackReserve: 16777216
+  SizeOfStackCommit: 4096
+  SizeOfHeapReserve: 1048576
+  SizeOfHeapCommit: 4096
+  NumberOfRvaAndSize: 16
+  DataDirectory {
+    ExportTableRVA: 0x13C000
+    ExportTableSize: 0x60
+    ImportTableRVA: 0x13D000
+    ImportTableSize: 0x26A4
+    ResourceTableRVA: 0x0
+    ResourceTableSize: 0x0
+    ExceptionTableRVA: 0x116000
+    ExceptionTableSize: 0xE928
+    CertificateTableRVA: 0x0
+    CertificateTableSize: 0x0
+    BaseRelocationTableRVA: 0x141000
+    BaseRelocationTableSize: 0x5CEC
+    DebugRVA: 0x0
+    DebugSize: 0x0
+    ArchitectureRVA: 0x0
+    ArchitectureSize: 0x0
+    GlobalPtrRVA: 0x0
+    GlobalPtrSize: 0x0
+    TLSTableRVA: 0x99070
+    TLSTableSize: 0x28
+    LoadConfigTableRVA: 0x0
+    LoadConfigTableSize: 0x0
+    BoundImportRVA: 0x0
+    BoundImportSize: 0x0
+    IATRVA: 0x13D8F8
+    IATSize: 0x7C8
+    DelayImportDescriptorRVA: 0x0
+    DelayImportDescriptorSize: 0x0
+    CLRRuntimeHeaderRVA: 0x0
+    CLRRuntimeHeaderSize: 0x0
+    ReservedRVA: 0x0
+    ReservedSize: 0x0
+  }
+}
+DOSHeader {
+  Magic: MZ
+  UsedBytesInTheLastPage: 144
+  FileSizeInPages: 3
+  NumberOfRelocationItems: 0
+  HeaderSizeInParagraphs: 4
+  MinimumExtraParagraphs: 0
+  MaximumExtraParagraphs: 65535
+  InitialRelativeSS: 0
+  InitialSP: 184
+  Checksum: 0
+  InitialIP: 0
+  InitialRelativeCS: 0
+  AddressOfRelocationTable: 64
+  OverlayNumber: 0
+  OEMid: 0
+  OEMinfo: 0
+  AddressOfNewExeHeader: 128
+}
+Import {
+  Name: CoronaLabs.Corona.Native.dll
+  ImportLookupTableRVA: 0x13D12C
+  ImportAddressTableRVA: 0x13D8F8
+  Symbol: CoronaLibraryNew (0)
+  Symbol: CoronaLuaDeleteRef (0)
+  Symbol: CoronaLuaDispatchEvent (0)
+  Symbol: CoronaLuaDispatchRuntimeEvent (0)
+  Symbol: CoronaLuaEqualRef (0)
+  Symbol: CoronaLuaGetCoronaThread (0)
+  Symbol: CoronaLuaIsListener (0)
+  Symbol: CoronaLuaNewEvent (0)
+  Symbol: CoronaLuaNewRef (0)
+}
+Import {
+  Name: lua.dll
+  ImportLookupTableRVA: 0x13D180
+  ImportAddressTableRVA: 0x13D948
+  Symbol: luaL_argerror (0)
+  Symbol: luaL_checkinteger (0)
+  Symbol: luaL_checklstring (0)
+  Symbol: luaL_checkudata (0)
+  Symbol: luaL_loadfile (0)
+  Symbol: luaL_loadstring (0)
+  Symbol: luaL_newmetatable (0)
+  Symbol: luaL_newstate (0)
+  Symbol: luaL_openlib (0)
+  Symbol: luaL_optinteger (0)
+  Symbol: luaL_optlstring (0)
+  Symbol: luaL_prepbuffer (0)
+  Symbol: luaL_ref (0)
+  Symbol: luaL_unref (0)
+  Symbol: lua_createtable (0)
+  Symbol: lua_error (0)
+  Symbol: lua_gc (0)
+  Symbol: lua_getfield (0)
+  Symbol: lua_gettop (0)
+  Symbol: lua_newuserdata (0)
+  Symbol: lua_objlen (0)
+  Symbol: lua_pcall (0)
+  Symbol: lua_pushboolean (0)
+  Symbol: lua_pushcclosure (0)
+  Symbol: lua_pushinteger (0)
+  Symbol: lua_pushlstring (0)
+  Symbol: lua_pushnil (0)
+  Symbol: lua_pushnumber (0)
+  Symbol: lua_pushstring (0)
+  Symbol: lua_pushvalue (0)
+  Symbol: lua_rawequal (0)
+  Symbol: lua_rawgeti (0)
+  Symbol: lua_setfield (0)
+  Symbol: lua_setmetatable (0)
+  Symbol: lua_settop (0)
+  Symbol: lua_toboolean (0)
+  Symbol: lua_tointeger (0)
+  Symbol: lua_tolstring (0)
+  Symbol: lua_tonumber (0)
+  Symbol: lua_touserdata (0)
+  Symbol: lua_type (0)
+  Symbol: lua_typename (0)
+}
+Import {
+  Name: kernel32.dll
+  ImportLookupTableRVA: 0x13D2D8
+  ImportAddressTableRVA: 0x13DAA0
+  Symbol: FreeResource (0)
+  Symbol: EnumResourceTypesA (0)
+  Symbol: EnumResourceNamesA (0)
+  Symbol: EnumResourceLanguagesA (0)
+  Symbol: FindResourceA (0)
+  Symbol: FindResourceExA (0)
+  Symbol: LoadResource (0)
+  Symbol: SizeofResource (0)
+  Symbol: LockResource (0)
+}
+Import {
+  Name: kernel32.dll
+  ImportLookupTableRVA: 0x13D328
+  ImportAddressTableRVA: 0x13DAF0
+  Symbol: GetStdHandle (0)
+  Symbol: GetConsoleMode (0)
+  Symbol: TlsGetValue (0)
+}
+Import {
+  Name: kernel32.dll
+  ImportLookupTableRVA: 0x13D348
+  ImportAddressTableRVA: 0x13DB10
+  Symbol: GetCurrentProcessId (0)
+  Symbol: GetCurrentThreadId (0)
+  Symbol: GetCurrentProcess (0)
+  Symbol: ReadProcessMemory (0)
+  Symbol: GetModuleFileNameA (0)
+  Symbol: GetModuleHandleA (0)
+  Symbol: WriteFile (0)
+  Symbol: ReadFile (0)
+  Symbol: CloseHandle (0)
+  Symbol: SetFilePointer (0)
+  Symbol: GetLastError (0)
+  Symbol: SetEndOfFile (0)
+  Symbol: GetSystemInfo (0)
+  Symbol: LoadLibraryW (0)
+  Symbol: LoadLibraryA (0)
+  Symbol: GetProcAddress (0)
+  Symbol: FreeLibrary (0)
+  Symbol: FormatMessageW (0)
+  Symbol: DeleteFileW (0)
+  Symbol: SetLastError (0)
+  Symbol: MoveFileW (0)
+  Symbol: CreateFileW (0)
+  Symbol: GetFileAttributesW (0)
+  Symbol: CreateDirectoryW (0)
+  Symbol: RemoveDirectoryW (0)
+  Symbol: SetCurrentDirectoryW (0)
+  Symbol: GetCurrentDirectoryW (0)
+  Symbol: GetFullPathNameW (0)
+  Symbol: SetEnvironmentVariableW (0)
+  Symbol: RaiseException (0)
+  Symbol: GetConsoleOutputCP (0)
+  Symbol: GetOEMCP (0)
+  Symbol: GetProcessHeap (0)
+  Symbol: HeapAlloc (0)
+  Symbol: HeapFree (0)
+  Symbol: TlsAlloc (0)
+  Symbol: TlsFree (0)
+  Symbol: TlsSetValue (0)
+  Symbol: CreateThread (0)
+  Symbol: GetTickCount (0)
+  Symbol: ExitThread (0)
+  Symbol: LocalAlloc (0)
+  Symbol: LocalFree (0)
+  Symbol: Sleep (0)
+  Symbol: SuspendThread (0)
+  Symbol: ResumeThread (0)
+  Symbol: TerminateThread (0)
+  Symbol: WaitForSingleObject (0)
+  Symbol: SetThreadPriority (0)
+  Symbol: GetThreadPriority (0)
+  Symbol: ExitProcess (0)
+  Symbol: GetCurrentThread (0)
+  Symbol: OpenThread (0)
+  Symbol: IsDebuggerPresent (0)
+  Symbol: CreateEventA (0)
+  Symbol: ResetEvent (0)
+  Symbol: SetEvent (0)
+  Symbol: InitializeCriticalSection (0)
+  Symbol: DeleteCriticalSection (0)
+  Symbol: EnterCriticalSection (0)
+  Symbol: LeaveCriticalSection (0)
+  Symbol: GetStartupInfoA (0)
+  Symbol: TryEnterCriticalSection (0)
+  Symbol: GetEnvironmentStringsW (0)
+  Symbol: FreeEnvironmentStringsW (0)
+  Symbol: MultiByteToWideChar (0)
+  Symbol: WideCharToMultiByte (0)
+  Symbol: GetACP (0)
+  Symbol: GetConsoleCP (0)
+  Symbol: SetConsoleCtrlHandler (0)
+  Symbol: RtlCaptureContext (0)
+  Symbol: RtlCaptureStackBackTrace (0)
+  Symbol: RtlLookupFunctionEntry (0)
+  Symbol: RtlVirtualUnwind (0)
+  Symbol: RtlUnwindEx (0)
+  Symbol: GetCommandLineA (0)
+}
+Import {
+  Name: oleaut32.dll
+  ImportLookupTableRVA: 0x13D5B0
+  ImportAddressTableRVA: 0x13DD78
+  Symbol: SysAllocStringLen (0)
+  Symbol: SysFreeString (0)
+  Symbol: SysReAllocStringLen (0)
+}
+Import {
+  Name: user32.dll
+  ImportLookupTableRVA: 0x13D5D0
+  ImportAddressTableRVA: 0x13DD98
+  Symbol: MessageBoxA (0)
+  Symbol: CharUpperBuffW (0)
+  Symbol: CharLowerBuffW (0)
+}
+Import {
+  Name: ole32.dll
+  ImportLookupTableRVA: 0x13D5F0
+  ImportAddressTableRVA: 0x13DDB8
+  Symbol: CoCreateGuid (0)
+}
+Import {
+  Name: ole32.dll
+  ImportLookupTableRVA: 0x13D600
+  ImportAddressTableRVA: 0x13DDC8
+  Symbol: CoTaskMemFree (0)
+}
+Import {
+  Name: kernel32.dll
+  ImportLookupTableRVA: 0x13D610
+  ImportAddressTableRVA: 0x13DDD8
+  Symbol: GetVersionExA (0)
+  Symbol: CompareStringA (0)
+  Symbol: GetLocaleInfoA (0)
+  Symbol: GetDateFormatA (0)
+  Symbol: EnumCalendarInfoA (0)
+  Symbol: GetShortPathNameW (0)
+  Symbol: GetModuleFileNameW (0)
+  Symbol: GetSystemDirectoryW (0)
+  Symbol: SetFileAttributesW (0)
+  Symbol: CreateProcessW (0)
+  Symbol: FindFirstFileW (0)
+  Symbol: FindNextFileW (0)
+  Symbol: CompareStringW (0)
+  Symbol: GetLocaleInfoW (0)
+  Symbol: GetDateFormatW (0)
+  Symbol: FindFirstFileExW (0)
+  Symbol: GlobalAlloc (0)
+  Symbol: GlobalReAlloc (0)
+  Symbol: GlobalLock (0)
+  Symbol: GlobalHandle (0)
+  Symbol: GlobalUnlock (0)
+  Symbol: GlobalFree (0)
+  Symbol: LocalReAlloc (0)
+  Symbol: VirtualAlloc (0)
+  Symbol: VirtualFree (0)
+  Symbol: VirtualProtect (0)
+  Symbol: GetExitCodeProcess (0)
+  Symbol: GetExitCodeThread (0)
+  Symbol: SetErrorMode (0)
+  Symbol: GetEnvironmentStringsA (0)
+  Symbol: FlushFileBuffers (0)
+  Symbol: DeviceIoControl (0)
+  Symbol: FindClose (0)
+  Symbol: GetFileTime (0)
+  Symbol: SetFileTime (0)
+  Symbol: GetLocalTime (0)
+  Symbol: SystemTimeToTzSpecificLocalTime (0)
+  Symbol: GetTimeZoneInformation (0)
+  Symbol: FileTimeToLocalFileTime (0)
+  Symbol: LocalFileTimeToFileTime (0)
+  Symbol: FileTimeToSystemTime (0)
+  Symbol: FileTimeToDosDateTime (0)
+  Symbol: DosDateTimeToFileTime (0)
+  Symbol: FreeEnvironmentStringsA (0)
+  Symbol: GetCPInfo (0)
+  Symbol: GetThreadLocale (0)
+  Symbol: SetThreadLocale (0)
+  Symbol: GetUserDefaultLCID (0)
+  Symbol: GetTempFileNameA (0)
+  Symbol: GetWindowsDirectoryA (0)
+  Symbol: GetLargestConsoleWindowSize (0)
+  Symbol: GetDiskFreeSpaceA (0)
+}
+Import {
+  Name: user32.dll
+  ImportLookupTableRVA: 0x13D7B8
+  ImportAddressTableRVA: 0x13DF80
+  Symbol: GetDlgCtrlID (0)
+  Symbol: MsgWaitForMultipleObjects (0)
+  Symbol: GetSystemMetrics (0)
+  Symbol: MessageBeep (0)
+  Symbol: InflateRect (0)
+  Symbol: IntersectRect (0)
+  Symbol: UnionRect (0)
+  Symbol: OffsetRect (0)
+  Symbol: GetTopWindow (0)
+  Symbol: GetWindow (0)
+  Symbol: RegisterWindowMessageA (0)
+  Symbol: PeekMessageA (0)
+  Symbol: SendMessageA (0)
+  Symbol: CreateWindowExA (0)
+  Symbol: CreateDialogParamA (0)
+  Symbol: CreateDialogIndirectParamA (0)
+  Symbol: DialogBoxParamA (0)
+  Symbol: DialogBoxIndirectParamA (0)
+  Symbol: CharUpperA (0)
+  Symbol: CharUpperBuffA (0)
+  Symbol: CharLowerA (0)
+  Symbol: CharLowerBuffA (0)
+  Symbol: SetWindowLongA (0)
+  Symbol: FindWindowA (0)
+  Symbol: SendMessageW (0)
+  Symbol: CreateWindowExW (0)
+  Symbol: CreateDialogParamW (0)
+  Symbol: CreateDialogIndirectParamW (0)
+  Symbol: DialogBoxParamW (0)
+  Symbol: DialogBoxIndirectParamW (0)
+}
+Import {
+  Name: version.dll
+  ImportLookupTableRVA: 0x13D8B0
+  ImportAddressTableRVA: 0x13E078
+  Symbol: GetFileVersionInfoSizeA (0)
+  Symbol: GetFileVersionInfoA (0)
+  Symbol: VerQueryValueA (0)
+  Symbol: GetFileVersionInfoSizeW (0)
+  Symbol: GetFileVersionInfoW (0)
+  Symbol: VerQueryValueW (0)
+}
+Import {
+  Name: mpr.dll
+  ImportLookupTableRVA: 0x13D8E8
+  ImportAddressTableRVA: 0x13E0B0
+  Symbol: WNetGetUniversalNameW (0)
+}
+Export {
+  Ordinal: 1
+  Name: luaopen_plugin_sample
+  RVA: 0x1EE0
+}

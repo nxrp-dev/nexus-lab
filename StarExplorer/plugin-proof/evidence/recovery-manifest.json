@@ -1,0 +1,78 @@
+{
+  "historical_validation_date": "2026-10-02",
+  "recovered_date": "2026-10-10",
+  "original_proof_directory": "C:\\gitdev\\nexus\\output\\Solar2DPluginProof",
+  "original_game_directory": "C:/newdev/StarExplorer",
+  "source_repository_commit": "107c0d9ede6d8ea0829bf5d86fd06b9b4439dbec",
+  "files": [
+    {
+      "path": "build/plugin_sample.lpr",
+      "bytes": 388,
+      "sha256": "de2c8d5bec399af8b60dcaf13f394d40b955eb8e17763a6818b7624b80fa1c6a"
+    },
+    {
+      "path": "build/lua.def",
+      "bytes": 1897,
+      "sha256": "346be20e4b55a5ce20f5c0508ee38feae4b630d936f5c4e97f682a1e0142f975"
+    },
+    {
+      "path": "build/CoronaNativeProxy.def",
+      "bytes": 2881,
+      "sha256": "bd68d7364a9f8b5b40081b280d4f67d8ae0a179f0df3fbc9d46b11761469e578"
+    },
+    {
+      "path": "StarExplorer/main.lua",
+      "bytes": 589,
+      "sha256": "52cd0ba732b6ecf9a174e5d2bbac51095909e99cce2da96cb2d8a32d7f4bfc1c"
+    },
+    {
+      "path": "StarExplorer/build.settings",
+      "bytes": 1002,
+      "sha256": "d417b07bc82f9a82f52e28782b577292b14dc7159d2f32e291a7ddd50eab1f93"
+    },
+    {
+      "path": "StarExplorer/scenes/menu.lua",
+      "bytes": 5048,
+      "sha256": "e226398c750eb05afab3b40cb4830ee102d367c65a186940b2b386c14301d606"
+    },
+    {
+      "path": "StarExplorer/plugin/sample.dll",
+      "bytes": 1305088,
+      "sha256": "08087290ff3ba0c9bc4903eceaee04cc3f44b25ced5033af572b99e348e03936"
+    },
+    {
+      "path": "StarExplorer/plugin/CoronaLabs.Corona.Native.dll",
+      "bytes": 33792,
+      "sha256": "62de66b9b82ddec41bdb459807de755d3709b8309bf51c04add736f6f1323ac3"
+    },
+    {
+      "path": "proxy-first-window.png",
+      "bytes": 1328288,
+      "sha256": "6bfc8c97467fc21cda600c499915a4dd1492389fd84c83c20152a0a569777202"
+    }
+  ],
+  "complete_proof_archive": {
+    "path": "C:\\backup\\Nexus2DPluginProof-20261010.zip",
+    "files": 717,
+    "bytes": 240182417,
+    "sha256": "9c1bf8dffadb99e363b5506cc29213159b7a3fbfcc0c7bf61cd986b76c104510",
+    "verification": "ZIP CRC check passed for every entry"
+  },
+  "recovery_rebuild": {
+    "date": "2026-10-10",
+    "compiler": "FPC 3.2.2 native Win64",
+    "runtime_retested": false,
+    "checks": [
+      "forced bridge and sample recompilation",
+      "AMD64 DLL",
+      "luaopen_plugin_sample export",
+      "Lua 5.1 and native proxy imports",
+      "no direct simulator executable import",
+      "cleaned game staged from nexus-lab",
+      "95 retained files byte-identical to original proof",
+      "NPC and cutscene JSON resource references resolve"
+    ],
+    "plugin_sha256": "cab9bf14aaee41e5115ec56a081fe6cd343f237eb986170172bafceae05cbed4",
+    "source_project": "C:\\gitdev\\nexus-lab\\StarExplorer"
+  }
+}

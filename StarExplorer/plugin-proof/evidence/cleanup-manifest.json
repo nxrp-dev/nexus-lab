@@ -1,0 +1,3038 @@
+{
+  "kept_game_files": [
+    "AndroidResources/res/mipmap-anydpi-v26/ic_launcher.xml",
+    "AndroidResources/res/mipmap-hdpi/ic_launcher.png",
+    "AndroidResources/res/mipmap-hdpi/ic_launcher_foreground.png",
+    "AndroidResources/res/mipmap-mdpi/ic_launcher.png",
+    "AndroidResources/res/mipmap-mdpi/ic_launcher_foreground.png",
+    "AndroidResources/res/mipmap-xhdpi/ic_launcher.png",
+    "AndroidResources/res/mipmap-xhdpi/ic_launcher_foreground.png",
+    "AndroidResources/res/mipmap-xxhdpi/ic_launcher.png",
+    "AndroidResources/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+    "AndroidResources/res/mipmap-xxxhdpi/ic_launcher.png",
+    "AndroidResources/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+    "AndroidResources/res/values/values.xml",
+    "GameData.lua",
+    "Icon.png",
+    "Images.xcassets/AppIcon.appiconset/Contents.json",
+    "Images.xcassets/AppIcon.appiconset/Icon-1024.png",
+    "Images.xcassets/AppIcon.appiconset/Icon-120.png",
+    "Images.xcassets/AppIcon.appiconset/Icon-152.png",
+    "Images.xcassets/AppIcon.appiconset/Icon-167.png",
+    "Images.xcassets/AppIcon.appiconset/Icon-180.png",
+    "Images.xcassets/AppIcon.appiconset/Icon-40.png",
+    "Images.xcassets/AppIcon.appiconset/Icon-58.png",
+    "Images.xcassets/AppIcon.appiconset/Icon-76.png",
+    "Images.xcassets/AppIcon.appiconset/Icon-80.png",
+    "Images.xcassets/AppIcon.appiconset/Icon-87.png",
+    "Images.xcassets/Contents.json",
+    "LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib",
+    "LaunchScreen.storyboardc/Info.plist",
+    "LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib",
+    "LaunchScreen.storyboardc/designable.storyboard",
+    "audio/80s-Space-Game_Looping.wav",
+    "audio/ScifiTactics/Ambiance_Dark_Electronic_11.wav",
+    "audio/ScifiTactics/ButtonClick2.wav",
+    "audio/fire.wav",
+    "audio/leonell-cassio-the-sapphire-city-10450.mp3",
+    "background.png",
+    "build.settings",
+    "config.lua",
+    "const.lua",
+    "cut/landing/1TouchDown.wav",
+    "cut/landing/2WithinTheShip.wav",
+    "cut/landing/LetsProceed.wav",
+    "cut/landing/corona_up.png",
+    "cut/landing/cut.json",
+    "cut/landing/leonell-cassio-the-sapphire-city-10450.mp3",
+    "enums/Activity.lua",
+    "enums/PoliticalSystem.lua",
+    "enums/Size.lua",
+    "enums/SpecialResource.lua",
+    "enums/StarSystemNames.lua",
+    "enums/SystemPressure.lua",
+    "enums/TechLevel.lua",
+    "enums/TradeItem.lua",
+    "fonts/Elianto/Elianto-Regular.ttf",
+    "galaxy.lua",
+    "gamegui.lua",
+    "gamemath.lua",
+    "graphics/Buttons/BTNs/Hangar_BTN.png",
+    "graphics/Ship_Parts/Ship_3_1_BTN.png",
+    "graphics/Ship_Parts/Upgrade_BTN.png",
+    "graphics/Ship_Shop/Dot_02_02.png",
+    "graphics/background/BG2.png",
+    "graphics/background/cardX2.png",
+    "graphics/background/cardX5.png",
+    "graphics/background/geometric-art-7441985_1920.jpg",
+    "graphics/backgrounds/corona_up.png",
+    "graphics/backgrounds/readme.txt",
+    "graphics/fantasy-2861815_1280.jpg",
+    "graphics/hologram/Button 1/Button Normal.png",
+    "graphics/hologram/Readme.txt",
+    "graphics/hologram/cardx2/cardx3.png",
+    "graphics/sci-fi-2992797_1920.jpg",
+    "graphics/spaceobjects/14.png",
+    "graphics/woman-8809430_640.jpg",
+    "main.lua",
+    "npc/val/Apologize.wav",
+    "npc/val/Arrived.wav",
+    "npc/val/AttemptToContact.wav",
+    "npc/val/FourPlanets.wav",
+    "npc/val/HowShouldWeProceed.wav",
+    "npc/val/ITrustYouSleptWell.wav",
+    "npc/val/LetsProceed.wav",
+    "npc/val/SleptWell.wav",
+    "npc/val/val.json",
+    "npc/val/val.png",
+    "npcdialog.lua",
+    "progressRing.lua",
+    "scenes/SectorMap.lua",
+    "scenes/cutscene.lua",
+    "scenes/highscores.lua",
+    "scenes/menu.lua",
+    "scenes/newgame.lua",
+    "sfx/holoshift.wav",
+    "sfx/target_2.wav",
+    "title.png"
+  ],
+  "excluded_game_files": [
+    {
+      "path": "188355859-2239b632-588f-4e24-9509-80502612f494.png",
+      "bytes": 2808768,
+      "sha256": "e7435b1bdf8c3dda2e472d5ffe5050cee4cc55d1df89e13e545d8b1fd8af69f7"
+    },
+    {
+      "path": "BalloonTap.code-workspace",
+      "bytes": 106,
+      "sha256": "df231a0468f9e74cdcf67e599eedc184ca7b906146bf86fe3054d38a9e750f5f"
+    },
+    {
+      "path": "fire.png",
+      "bytes": 9006941,
+      "sha256": "de6147f8e26c881caba4f4ffe2742091e38c4d62d7f29a246a41b721a146f32c"
+    },
+    {
+      "path": "gameaudio.lua",
+      "bytes": 160,
+      "sha256": "c54b75a734996767d670b646ca5993d496eea600abc669fa9980368c55183098"
+    },
+    {
+      "path": "gamecut.lua",
+      "bytes": 258,
+      "sha256": "dba58fd524dfa41de6b950d00463ef9304242616d86c899ef255f131da793d15"
+    },
+    {
+      "path": "gameObjects.png",
+      "bytes": 19756,
+      "sha256": "b1dafacda396960392c0cb4fb2e403efa1403ed46f3bc7c0e3a3a8c611592422"
+    },
+    {
+      "path": "audio/Escape_Looping.wav",
+      "bytes": 11385736,
+      "sha256": "25ef70463d4e930bc28ca53dc8b67c6d87f080d9195fcc5b335995c156a7ece6"
+    },
+    {
+      "path": "audio/explosion.wav",
+      "bytes": 44338,
+      "sha256": "a929648dcc922d313ef6555d254f5918c87b7a71244e1b760c38ed30578e59c6"
+    },
+    {
+      "path": "audio/Midnight-Crawlers_Looping.wav",
+      "bytes": 5076388,
+      "sha256": "15a6b40bb5996feadb64a8de96443b6ae1e6c0e38e88f1d9522d4f06705a40c9"
+    },
+    {
+      "path": "audio/mixkit-fast-sci-fi-bleep-903.wav",
+      "bytes": 358874,
+      "sha256": "e19390f1716cf4fafa37583bf1740ffe69b8e4b4deb6e00952eebb0a333390e8"
+    },
+    {
+      "path": "graphics/fantasy-2861815_1920.jpg",
+      "bytes": 475461,
+      "sha256": "ede7f803d0e652718f3f9d99d3566f0e6b6c2b4fcd2d05109e06f6f58eaaf020"
+    },
+    {
+      "path": "graphics/ProjectAppleseed.png",
+      "bytes": 224404,
+      "sha256": "eff452fb947aa7ddefad5672c590cd9d8399c46208398f022283d142c6f39afb"
+    },
+    {
+      "path": "graphics/woman-8809430_640.xcf",
+      "bytes": 530674,
+      "sha256": "17be8ff99d7ce4cb05159866437066c7297fa3a81fcaf1bbe0f3d1aea43b8905"
+    },
+    {
+      "path": "scenes/game.lua",
+      "bytes": 10312,
+      "sha256": "d6df2ac7d4889d177a02b6ca185a7b465ae421bbc677fe53ba7fac67c2598b41"
+    },
+    {
+      "path": "scenes/scene-template.lua",
+      "bytes": 2038,
+      "sha256": "89c1044a8bab3840f3e10bad8f5d76738fafbc467690359e3f39b9b5467cf18a"
+    },
+    {
+      "path": "scenes/StarExplorer.code-workspace",
+      "bytes": 92,
+      "sha256": "46144abc1a11e49b48aaf6caff02f8b61fe4fddc71c2ec4f400a3ed03d3b70e9"
+    },
+    {
+      "path": "sfx/FourPlanets.wav",
+      "bytes": 452252,
+      "sha256": "9ac7d75077a0ebb518c7689c91ae1c12f7dfdd1905430cd5cc6092c8eaed757e"
+    },
+    {
+      "path": "sfx/SleptWell.wav",
+      "bytes": 215562,
+      "sha256": "432aee548c0b9e45d700054e935f81495ed7485f70dacf31a306ac8a8f27d79e"
+    },
+    {
+      "path": "sfx/target.wav",
+      "bytes": 114476,
+      "sha256": "c7caa00352766694485b09852f500e4c17ae689fb7a3f6a60908d9a95e34804d"
+    },
+    {
+      "path": "graphics/Accept/Accept.png",
+      "bytes": 8981,
+      "sha256": "d4fbd6581b3b394eb29d87593b7e754ed39c7a90f5d248dd2fcad286a190b20d"
+    },
+    {
+      "path": "graphics/Accept/Close_BTN.png",
+      "bytes": 15978,
+      "sha256": "80be9c03fd9552952f4f3f2fff3ef300b02d16532145615935b879384d450779"
+    },
+    {
+      "path": "graphics/Accept/FAQ_BTN.png",
+      "bytes": 13760,
+      "sha256": "4a88fc9504d036b46f416094e5abfe95f0d2a3086d1dad8505f3c38c216ab0da"
+    },
+    {
+      "path": "graphics/Accept/Information.png",
+      "bytes": 14158,
+      "sha256": "ebf588395db34ce1da4f0393aa7dc13a7e2216cc804a68deb214f0368323f0a3"
+    },
+    {
+      "path": "graphics/Accept/Ok_BTN.png",
+      "bytes": 14781,
+      "sha256": "89511752324c94b41ecba31d445b536813fadc923bda81d519bce1054b047228"
+    },
+    {
+      "path": "graphics/Accept/Purchase.png",
+      "bytes": 11438,
+      "sha256": "f768b47cc8b64b60d91f76edc24e90d3d6da1e12623d605ed1a73457b3623556"
+    },
+    {
+      "path": "graphics/Accept/Window.png",
+      "bytes": 320667,
+      "sha256": "95c226ec525cf4dacd6f4bc9a3186a7c548bcd7c6356ac55e89cee06cc9ddd1f"
+    },
+    {
+      "path": "graphics/background/BG.png",
+      "bytes": 622486,
+      "sha256": "290676677493e1292c37efba1b2d970e318dd628cf4b472fab97558b7c5caa33"
+    },
+    {
+      "path": "graphics/backgrounds/corona_bk.png",
+      "bytes": 822185,
+      "sha256": "31394f73713a57e351bbd1c5b7f11e66c5f76a0027f56de360f28428062dde52"
+    },
+    {
+      "path": "graphics/backgrounds/corona_dn.png",
+      "bytes": 872623,
+      "sha256": "a969a02d861bd386c761797de91c96506b49041903a75cd004084dfe96ee7751"
+    },
+    {
+      "path": "graphics/backgrounds/corona_ft.png",
+      "bytes": 1015726,
+      "sha256": "c2ac8065e8a9c27a886b9dbb1017589ed0d1bc58e90698c2a22506753b636246"
+    },
+    {
+      "path": "graphics/backgrounds/corona_lf.png",
+      "bytes": 762049,
+      "sha256": "744b1141b6e5ccdc48208d63037f86211976f60b9e6bdc41c088820028468ef9"
+    },
+    {
+      "path": "graphics/backgrounds/corona_rt.png",
+      "bytes": 942213,
+      "sha256": "8f2aa7376b18be54f7c0da5d2a69640ace4825f9dee834bba4b3bde4e58818b7"
+    },
+    {
+      "path": "graphics/backgrounds/redeclipse_bk.png",
+      "bytes": 423862,
+      "sha256": "d4681734989e92360c2556deb54232129249c852bb65c1adae410064c1f2a88b"
+    },
+    {
+      "path": "graphics/backgrounds/redeclipse_dn.png",
+      "bytes": 576948,
+      "sha256": "8d6ff004163539e5b0e63c6b1bc7e61d90ebd3a39a862c546f2ac9d80085c052"
+    },
+    {
+      "path": "graphics/backgrounds/redeclipse_ft.png",
+      "bytes": 549953,
+      "sha256": "04dff797e591b723eb4302d7dd5814db1df7879e22cc312f73a8bc938368c540"
+    },
+    {
+      "path": "graphics/backgrounds/redeclipse_lf.png",
+      "bytes": 560990,
+      "sha256": "a0849dbaeb7bbcdce391c1bfe688e8e13160f639430731975ead512d236a947c"
+    },
+    {
+      "path": "graphics/backgrounds/redeclipse_rt.png",
+      "bytes": 422027,
+      "sha256": "08ab32914f1d36d1e13fc71e0b392ad84f9f9b049607ee5fe04cdf844d8811b9"
+    },
+    {
+      "path": "graphics/backgrounds/redeclipse_up.png",
+      "bytes": 550581,
+      "sha256": "975aa141c0e9fe761f6e5d449321100656b10151419360de048e7d5d74f1a0a8"
+    },
+    {
+      "path": "graphics/Clouds/Cloud_01.png",
+      "bytes": 99716,
+      "sha256": "96b3c6b28769f48d110c9ac32ee5b48b1658cacd705bb0a9ed44ff2d3d675684"
+    },
+    {
+      "path": "graphics/Clouds/Cloud_02.png",
+      "bytes": 53230,
+      "sha256": "fd5f6df29c2512be395bf99ec27be052e0a21d72cec79586ddce696901bcb9a9"
+    },
+    {
+      "path": "graphics/Clouds/Cloud_03.png",
+      "bytes": 60861,
+      "sha256": "211a091a34d77c7f907f66425a64d19efe505d7ff896edd8c91dcf6f011fdeb9"
+    },
+    {
+      "path": "graphics/Clouds/Cloud_04.png",
+      "bytes": 90947,
+      "sha256": "053e9b3c1b16e81caf394309375f764d7a1ef462ea1bb3307f92fc8153d0ea3d"
+    },
+    {
+      "path": "graphics/Hangar/Armor_Icon.png",
+      "bytes": 4482,
+      "sha256": "e7bf867b416a25ac45a8f91ce2516c8ab4cbbf50f63f7562a3278b519b82d8dd"
+    },
+    {
+      "path": "graphics/Hangar/Backward_BTN.png",
+      "bytes": 14704,
+      "sha256": "99085ac5891cdd0290cf5c178cfd16fe2f35613de805e24f6c3292fde781ceb1"
+    },
+    {
+      "path": "graphics/Hangar/Damage_Icon.png",
+      "bytes": 5366,
+      "sha256": "c5c3db14d2c68ed55f99d7cf94ffc2fe245101313db320ef6c092dcdc951d15f"
+    },
+    {
+      "path": "graphics/Hangar/Dot_01.png",
+      "bytes": 3536,
+      "sha256": "6fa012cca3fe6ef67cb4039d3abd56e9fdb08db236f31abec322a04e26f9fcac"
+    },
+    {
+      "path": "graphics/Hangar/Dot_02.png",
+      "bytes": 11830,
+      "sha256": "d023fc4893d81a13e8ed05f0ed2fe882a53d3f2941fccab909ce7cbd15652e9e"
+    },
+    {
+      "path": "graphics/Hangar/Forward_BTN.png",
+      "bytes": 14766,
+      "sha256": "91356e68116a9be560b2638324ffc4694607d44d7f23fafcbf31baa3ac1ca3b1"
+    },
+    {
+      "path": "graphics/Hangar/Header.png",
+      "bytes": 9110,
+      "sha256": "f98948f7293b271c40ad42a9aa795dd81642b78f8956d822f2a33b71932c01b4"
+    },
+    {
+      "path": "graphics/Hangar/HP_Icon.png",
+      "bytes": 4787,
+      "sha256": "245f63a8e5c563d0af67b4b0fcdd87f004f3e69dde0e4e68e8450b0b1761c975"
+    },
+    {
+      "path": "graphics/Hangar/Ship_BTN.png",
+      "bytes": 24757,
+      "sha256": "307a34371b61edcb83dc0a530c1765304b4429ebe48f1f997239f658befc5cee"
+    },
+    {
+      "path": "graphics/Hangar/Speed_Icon.png",
+      "bytes": 5685,
+      "sha256": "1e083ca95473f454a6b7f70e5f5db4ac795d77a8324afda481b802bd367a7346"
+    },
+    {
+      "path": "graphics/Hangar/Table_01.png",
+      "bytes": 14387,
+      "sha256": "825371832bb56d6368d7e9f44277124f6e265cf75b8962772b023fa9a49f0eda"
+    },
+    {
+      "path": "graphics/Hangar/Table_02.png",
+      "bytes": 9584,
+      "sha256": "988db8d7c1210c6072db03f26d4cd563201ab4cf696da93f6e9f095158470e39"
+    },
+    {
+      "path": "graphics/Hangar/Upgrade_BTN.png",
+      "bytes": 15704,
+      "sha256": "b08f950bf761ba5723a902c81e304fbdffb355e85144893ef083588f0cede314"
+    },
+    {
+      "path": "graphics/Hangar/Window.png",
+      "bytes": 426751,
+      "sha256": "86a15af1eba8e9b0d328368595d42f6eea42001afe1ec41f11684b9e8f1b8809"
+    },
+    {
+      "path": "graphics/Hangar/Window_2.png",
+      "bytes": 512168,
+      "sha256": "d314f4e28b7bd5d2ed8021d7ce106c58f757179774baa701d4f184c4cec26f70"
+    },
+    {
+      "path": "graphics/hologram/Assets Wenrexa Bundle 1 +20.000.url",
+      "bytes": 135,
+      "sha256": "ef4aee269e62785adba2f33509e894d419cd404468897a069de6af30f3444c82"
+    },
+    {
+      "path": "graphics/hologram/Assets Wenrexa Bundle 2.url",
+      "bytes": 145,
+      "sha256": "73125aa0394faa4432857df25ed05d24271dbd3b454a3266e55245e740d1dd6a"
+    },
+    {
+      "path": "graphics/hologram/Link Discord Server Wenrexa.url",
+      "bytes": 129,
+      "sha256": "fc9d0636e23aa3928a3852c608dc3552548ece3ce2fab94dedea5ebfd060f02c"
+    },
+    {
+      "path": "graphics/hologram/PUT A RATING!.jpg",
+      "bytes": 42080,
+      "sha256": "80345c5aec872aad7fef079c8d65239550c4821db37922e7486bd2a8d93644b1"
+    },
+    {
+      "path": "graphics/Level_Menu/Close_BTN.png",
+      "bytes": 15978,
+      "sha256": "80be9c03fd9552952f4f3f2fff3ef300b02d16532145615935b879384d450779"
+    },
+    {
+      "path": "graphics/Level_Menu/Hangar_BTN.png",
+      "bytes": 15055,
+      "sha256": "bcda38cfb45eafc53d98275afafe3d1ef6a9c4ceeb935ff127a0da773452a52a"
+    },
+    {
+      "path": "graphics/Level_Menu/Header.png",
+      "bytes": 5821,
+      "sha256": "2d937ce0bd0df937a4899cf438d5adc93e1a23b3c345c31a9115a7eaa6153ad1"
+    },
+    {
+      "path": "graphics/Level_Menu/Play_BTN.png",
+      "bytes": 14265,
+      "sha256": "e660fd173ca89e56ad871855e64ffb11fb120998bf15d37e0abfcbce7942953a"
+    },
+    {
+      "path": "graphics/Level_Menu/Record.png",
+      "bytes": 6857,
+      "sha256": "aabbfb7ea2b2e3052db0315b618cc36a95cb1f6c87df7e42df2673fdc0ecc012"
+    },
+    {
+      "path": "graphics/Level_Menu/Star_01.png",
+      "bytes": 51604,
+      "sha256": "50699a753996627483fb7dc8f325a17169a7537e6bc59057950e2e25ac3f9baf"
+    },
+    {
+      "path": "graphics/Level_Menu/Star_02.png",
+      "bytes": 51468,
+      "sha256": "3f5ead7a5ccbb0ef29761be52a1398953f8886d17fbd337ba624c49411f1521a"
+    },
+    {
+      "path": "graphics/Level_Menu/Star_03.png",
+      "bytes": 63016,
+      "sha256": "52b81c9801b1f3a2db5ebd0c2136321d9e01668ff51dbef3ac468c45f1a158f2"
+    },
+    {
+      "path": "graphics/Level_Menu/Table.png",
+      "bytes": 8235,
+      "sha256": "b221cd4a9a1ae1d10bda021bc2dabeaec393e27ae4431862e9fb1e0968be7776"
+    },
+    {
+      "path": "graphics/Level_Menu/Window.png",
+      "bytes": 409427,
+      "sha256": "50aabdf055d62746cbe52bbfac95d7dc4ed6038018dd45a859acd06e7f809e75"
+    },
+    {
+      "path": "graphics/Loading_Bar/Loading_Bar_1_1.png",
+      "bytes": 536,
+      "sha256": "c9cb1ce11a4d8a156200a227d9f61e08978cb342a76ba3919c7147d294a88a75"
+    },
+    {
+      "path": "graphics/Loading_Bar/Loading_Bar_1_2.png",
+      "bytes": 706,
+      "sha256": "58203baf52b3f9a199a96723fea2f2f62581ae79af8d1cd2ed706183f88d47ef"
+    },
+    {
+      "path": "graphics/Loading_Bar/Loading_Bar_1_3.png",
+      "bytes": 529,
+      "sha256": "d5039985ab41cdfbcbfd631dff5a837cbc5357d02a6bcff4aa7311e1fa394357"
+    },
+    {
+      "path": "graphics/Loading_Bar/Loading_Bar_2_1.png",
+      "bytes": 538,
+      "sha256": "17942b412c5af595c7c8ae1d30b05cab374e2d7da432fba618df30e1d298a20d"
+    },
+    {
+      "path": "graphics/Loading_Bar/Loading_Bar_2_2.png",
+      "bytes": 703,
+      "sha256": "302f5f1c40a69b2afcd2b50d75a1451907c5ca3d83c8f03c896bfdf3c8b84c64"
+    },
+    {
+      "path": "graphics/Loading_Bar/Loading_Bar_2_3.png",
+      "bytes": 532,
+      "sha256": "24dba02fd5d55703eebe716be7c396dd1ba2e85efdbc440abe8a6ddf25cd0e1f"
+    },
+    {
+      "path": "graphics/Loading_Bar/Loading_Bar_3_1.png",
+      "bytes": 543,
+      "sha256": "e160fd724069ecfa25d2c3d941e9aa40a999ffec333063b0a7312d4acafc4a0d"
+    },
+    {
+      "path": "graphics/Loading_Bar/Loading_Bar_3_2.png",
+      "bytes": 700,
+      "sha256": "27456de2a6d3b2d152af4d5bee03a1c48d5d5465184380dd682454b27084fa4d"
+    },
+    {
+      "path": "graphics/Loading_Bar/Loading_Bar_3_3.png",
+      "bytes": 537,
+      "sha256": "8346b4d2b596896ee3dc7f95fabe2aa3873badb1eb012d4df5cd5fa9e664fd07"
+    },
+    {
+      "path": "graphics/Loading_Bar/Table.png",
+      "bytes": 2487,
+      "sha256": "f73bbd8e68b4ffc2f54135d62ecae9e604d566b22173fd671c913c0911505dc6"
+    },
+    {
+      "path": "graphics/Main_Menu/EmptyButton.png",
+      "bytes": 14542,
+      "sha256": "0eaff9110854cdc890d6e8244bce2804af0c66e72b80bd56ae75d4b7e3ac53bb"
+    },
+    {
+      "path": "graphics/Main_Menu/EmptyButton.xcf",
+      "bytes": 48499,
+      "sha256": "16b746f1576a7023e40e0f25399c240f68180a612903d1ca6e06fade48c0ea1f"
+    },
+    {
+      "path": "graphics/Main_Menu/Exit_BTN.png",
+      "bytes": 24617,
+      "sha256": "f9447a08a154482a72dad15d5c315524531b4e23f80e20ff6036b7b2642fbb66"
+    },
+    {
+      "path": "graphics/Main_Menu/Facebook_BTN.png",
+      "bytes": 11741,
+      "sha256": "8b8083f1ad946911c6f81fceb05305586d708288e272c6e8d90e4bb9525008d2"
+    },
+    {
+      "path": "graphics/Main_Menu/FAQ_BTN.png",
+      "bytes": 13760,
+      "sha256": "4a88fc9504d036b46f416094e5abfe95f0d2a3086d1dad8505f3c38c216ab0da"
+    },
+    {
+      "path": "graphics/Main_Menu/Google_BTN.png",
+      "bytes": 14680,
+      "sha256": "1a288a98d34cc0117a41f8c0290a29002bbf6d3bdc2149fff05030e493e265f8"
+    },
+    {
+      "path": "graphics/Main_Menu/Header.png",
+      "bytes": 53268,
+      "sha256": "453f3db37cec48a82b86d95d7dc4781b897e356ba8a1146795449d3f2ead75bc"
+    },
+    {
+      "path": "graphics/Main_Menu/Info_BTN.png",
+      "bytes": 12685,
+      "sha256": "5fb7304eb9507ec5d93f68e1bc812087722d48930c4d0c37bc93ca2105d40b54"
+    },
+    {
+      "path": "graphics/Main_Menu/Map_BTN.png",
+      "bytes": 26370,
+      "sha256": "32ad6589805c72fb4fef0b07ab35c58245da667651a23d7326f6f7ca0a765ef2"
+    },
+    {
+      "path": "graphics/Main_Menu/More_Games_BTN.png",
+      "bytes": 15852,
+      "sha256": "8683bcf3677d27ce2d27ef79bdefcf141b05071ba4cc2efec37b4da9ff008b99"
+    },
+    {
+      "path": "graphics/Main_Menu/Rating_BTN.png",
+      "bytes": 16902,
+      "sha256": "0a218aa44bb8b4ba709a68c597b0140d67ce6a2f91dbbaf9e4928c5be8acc15f"
+    },
+    {
+      "path": "graphics/Main_Menu/Settings_BTN.png",
+      "bytes": 16122,
+      "sha256": "b9e4a401c776bd4c79217780e380248abfa7a03afd37067b8a19b0c590904c40"
+    },
+    {
+      "path": "graphics/Main_Menu/Shop_BTN.png",
+      "bytes": 15312,
+      "sha256": "1f24010076deae6776b7a685e856b87ea681ae29696f7313a6828477d053c441"
+    },
+    {
+      "path": "graphics/Main_Menu/Start_BTN.png",
+      "bytes": 27197,
+      "sha256": "6a895c5674acc21a170b8e0b74cdd48589d820925e0a5b2e2bd0a6bb6f0d68e8"
+    },
+    {
+      "path": "graphics/Main_Menu/Twitter_BTN.png",
+      "bytes": 15921,
+      "sha256": "3b2a0c83aae9781e9d98b862a1440c8ec74a634d80547c6b68c3e28c65633060"
+    },
+    {
+      "path": "graphics/Main_Menu/VK_BTN.png",
+      "bytes": 15135,
+      "sha256": "fb366d7829689bc9a477218546fc32b89d6e1f2685bf8dd0a3c463ab0d152296"
+    },
+    {
+      "path": "graphics/Main_UI/Armor_Bar_Dot.png",
+      "bytes": 1368,
+      "sha256": "e127d6b7b9e48b0b3ecad72ee33f3f69251c12c9c2a936dcd143d7f5e65a0fae"
+    },
+    {
+      "path": "graphics/Main_UI/Armor_Bar_Table.png",
+      "bytes": 10207,
+      "sha256": "bad6eea82a4242fb9ef10ccbad7eb49a5b486bd1ee2a4c828061283a52db037d"
+    },
+    {
+      "path": "graphics/Main_UI/BG.png",
+      "bytes": 622486,
+      "sha256": "290676677493e1292c37efba1b2d970e318dd628cf4b472fab97558b7c5caa33"
+    },
+    {
+      "path": "graphics/Main_UI/Bonus_BTN_01.png",
+      "bytes": 23729,
+      "sha256": "2c253174e938ad36e88cd2d925f40a1421e24d28836e6b9a62580f73835cd690"
+    },
+    {
+      "path": "graphics/Main_UI/Bonus_BTN_02.png",
+      "bytes": 32041,
+      "sha256": "74ebc21d06fb87dfa1ba06f52f7b0ed90366ce27079a3d31832f58fee1d2c362"
+    },
+    {
+      "path": "graphics/Main_UI/Boss_HP_Bar_1.png",
+      "bytes": 386,
+      "sha256": "d68857ab16d0a8c87f116c8c758c733d64202d269c4bca52727a276868369017"
+    },
+    {
+      "path": "graphics/Main_UI/Boss_HP_Bar_2.png",
+      "bytes": 426,
+      "sha256": "384d0cf15034e281f316370aba1bb28392121e6e67092f6f673cdfbcc5beb718"
+    },
+    {
+      "path": "graphics/Main_UI/Boss_HP_Bar_3.png",
+      "bytes": 368,
+      "sha256": "936fac85484206def5d898ed8a620db6cc92bdcbfd384ea051054ab5f47788ac"
+    },
+    {
+      "path": "graphics/Main_UI/Boss_HP_Table.png",
+      "bytes": 7227,
+      "sha256": "3f54daa8f24271091c08a8b943a7e0f59992e091c9f53c903fa213ffc3d4314c"
+    },
+    {
+      "path": "graphics/Main_UI/Boss_Name_Table.png",
+      "bytes": 1746,
+      "sha256": "91756467e6ca89c89c3e3e41397835bc82855a44ef7f35a5d9d7422d2c1b4c63"
+    },
+    {
+      "path": "graphics/Main_UI/Clock_Icon.png",
+      "bytes": 3782,
+      "sha256": "71e56b54eb12f60416794c0bf830c27e288ccc60e660b2fe5974f9bd3bd8afd2"
+    },
+    {
+      "path": "graphics/Main_UI/Cristal_Icon.png",
+      "bytes": 1483,
+      "sha256": "2becd0f4d87fa16b492f42d7a12140741d62a83c232f64efac4426889f8aaac6"
+    },
+    {
+      "path": "graphics/Main_UI/Health_Bar_Table.png",
+      "bytes": 11419,
+      "sha256": "55313e2608b5eb2a62b14eb6e9ceecf016d7b240037fca1d596d65add0afe9aa"
+    },
+    {
+      "path": "graphics/Main_UI/Health_Dot.png",
+      "bytes": 1219,
+      "sha256": "ed062de97a6f2a314aaffb13f87985fab26663d842e31f4f608bbd5b90c2da8e"
+    },
+    {
+      "path": "graphics/Main_UI/Pause_BTN.png",
+      "bytes": 12519,
+      "sha256": "ebba57e3ddb7801ca25b58aa9b4167f93aae4de1d8d0d31a75a89b25b005284d"
+    },
+    {
+      "path": "graphics/Main_UI/Stats_Bar.png",
+      "bytes": 37082,
+      "sha256": "367abc6f301629186f0e0199635e1654802ad381f65db1d9ea193954fe412b6e"
+    },
+    {
+      "path": "graphics/Pause/Hangar_BTN.png",
+      "bytes": 15055,
+      "sha256": "bcda38cfb45eafc53d98275afafe3d1ef6a9c4ceeb935ff127a0da773452a52a"
+    },
+    {
+      "path": "graphics/Pause/Header.png",
+      "bytes": 6824,
+      "sha256": "c5c35b9496d7da9d79756252b12fb2758fd2226f8ee38ec073c445873aee1a8c"
+    },
+    {
+      "path": "graphics/Pause/Map_BTN.png",
+      "bytes": 25712,
+      "sha256": "da674d57b58234d06c9a9eccf72984e776dc22096c2c701dfa92ee1d5cc26c14"
+    },
+    {
+      "path": "graphics/Pause/Menu_BTN.png",
+      "bytes": 13908,
+      "sha256": "56c29ddb9b4238b176b1ac02d3824262c308e109bdbe03ed28d9f269bf998862"
+    },
+    {
+      "path": "graphics/Pause/Ok_BTN.png",
+      "bytes": 14781,
+      "sha256": "89511752324c94b41ecba31d445b536813fadc923bda81d519bce1054b047228"
+    },
+    {
+      "path": "graphics/Pause/Score.png",
+      "bytes": 5733,
+      "sha256": "372e5febc628d9715d8e83f062b2e5cc0f1c258c3a4e146bd5d5aad7034a86a8"
+    },
+    {
+      "path": "graphics/Pause/Settings_BTN.png",
+      "bytes": 16122,
+      "sha256": "b9e4a401c776bd4c79217780e380248abfa7a03afd37067b8a19b0c590904c40"
+    },
+    {
+      "path": "graphics/Pause/Table.png",
+      "bytes": 8235,
+      "sha256": "b221cd4a9a1ae1d10bda021bc2dabeaec393e27ae4431862e9fb1e0968be7776"
+    },
+    {
+      "path": "graphics/Pause/Window.png",
+      "bytes": 409427,
+      "sha256": "50aabdf055d62746cbe52bbfac95d7dc4ed6038018dd45a859acd06e7f809e75"
+    },
+    {
+      "path": "graphics/Rating/Backward_BTN.png",
+      "bytes": 14704,
+      "sha256": "99085ac5891cdd0290cf5c178cfd16fe2f35613de805e24f6c3292fde781ceb1"
+    },
+    {
+      "path": "graphics/Rating/Forward_BTN.png",
+      "bytes": 14766,
+      "sha256": "91356e68116a9be560b2638324ffc4694607d44d7f23fafcbf31baa3ac1ca3b1"
+    },
+    {
+      "path": "graphics/Rating/Header.png",
+      "bytes": 7583,
+      "sha256": "2dcea748be78afe975b86afdb655101c558d0720916fe52d982d502db52aba6a"
+    },
+    {
+      "path": "graphics/Rating/Menu_BTN.png",
+      "bytes": 13908,
+      "sha256": "56c29ddb9b4238b176b1ac02d3824262c308e109bdbe03ed28d9f269bf998862"
+    },
+    {
+      "path": "graphics/Rating/Ok_BTN.png",
+      "bytes": 14781,
+      "sha256": "89511752324c94b41ecba31d445b536813fadc923bda81d519bce1054b047228"
+    },
+    {
+      "path": "graphics/Rating/Table_01.png",
+      "bytes": 34075,
+      "sha256": "a40df518a42059c322743f0d80ac7d5559abf10f9ee5430355261cd32f0fbe92"
+    },
+    {
+      "path": "graphics/Rating/Table_02.png",
+      "bytes": 22158,
+      "sha256": "a3324fb78383d3d39f7de1115bdc6036a17f39a6620e31319ac8516b2645a78e"
+    },
+    {
+      "path": "graphics/Rating/Window.png",
+      "bytes": 426751,
+      "sha256": "86a15af1eba8e9b0d328368595d42f6eea42001afe1ec41f11684b9e8f1b8809"
+    },
+    {
+      "path": "graphics/Rating/Window_2.png",
+      "bytes": 597103,
+      "sha256": "18a9535c7bca9979d8da11225959e761880b3c6cf33ec845e69315f8ded34b9a"
+    },
+    {
+      "path": "graphics/Setting/Close_BTN.png",
+      "bytes": 15978,
+      "sha256": "80be9c03fd9552952f4f3f2fff3ef300b02d16532145615935b879384d450779"
+    },
+    {
+      "path": "graphics/Setting/Header.png",
+      "bytes": 8309,
+      "sha256": "59e263d74364a654f3bacd1008ef769df7783dc18a52b342d0046330d458ad24"
+    },
+    {
+      "path": "graphics/Setting/Menu_BTN.png",
+      "bytes": 13908,
+      "sha256": "56c29ddb9b4238b176b1ac02d3824262c308e109bdbe03ed28d9f269bf998862"
+    },
+    {
+      "path": "graphics/Setting/Music.png",
+      "bytes": 5896,
+      "sha256": "20996c70b815447b227c6a66bd4bd7ad774e78c52e14ba75ec7b4700851b49fa"
+    },
+    {
+      "path": "graphics/Setting/Music_BTN.png",
+      "bytes": 13186,
+      "sha256": "4e5e125339fef259fe213718f46e6edea19739a2618cb302f7175a1ca147139d"
+    },
+    {
+      "path": "graphics/Setting/Notifications.png",
+      "bytes": 10872,
+      "sha256": "9b36c1473c7c44d93c7ed5dbe0fe22729e902375d384d650170a0b40ccddab2f"
+    },
+    {
+      "path": "graphics/Setting/Notifications_BTN.png",
+      "bytes": 13581,
+      "sha256": "b3d658bb2dc7d0a18a88e09cad78e5c77511ce77f9c1220cf7d05f013f741fb4"
+    },
+    {
+      "path": "graphics/Setting/Ok_BTN.png",
+      "bytes": 14781,
+      "sha256": "89511752324c94b41ecba31d445b536813fadc923bda81d519bce1054b047228"
+    },
+    {
+      "path": "graphics/Setting/Sound.png",
+      "bytes": 5981,
+      "sha256": "62caf624e1c841a390cd7780162fd5fa95c4fe0c738e63a822da0d39bf48afd3"
+    },
+    {
+      "path": "graphics/Setting/Sound_BTN.png",
+      "bytes": 15366,
+      "sha256": "6ee95fda63388c5f5525f6817451946e7803bcb1ae8ee1255cc31ed7ba769a12"
+    },
+    {
+      "path": "graphics/Setting/Vibration.png",
+      "bytes": 8570,
+      "sha256": "5f691187a0c974c824547ee0a776e67f88e2b0b4dedb3a8d6b94a7c3b5a5e5c6"
+    },
+    {
+      "path": "graphics/Setting/Vibration_BTN.png",
+      "bytes": 15321,
+      "sha256": "21ed30ecb4e0c8f18c357e03a29abf3c84352c8b5801e7e08acfa908f272b750"
+    },
+    {
+      "path": "graphics/Setting/Window.png",
+      "bytes": 426751,
+      "sha256": "86a15af1eba8e9b0d328368595d42f6eea42001afe1ec41f11684b9e8f1b8809"
+    },
+    {
+      "path": "graphics/Setting/Window_2.png",
+      "bytes": 550387,
+      "sha256": "1d70ee20da5e7b5445785ea3f2cf4c90b26ce96d9820efbb81a2215ecd4b69a4"
+    },
+    {
+      "path": "graphics/Ship_Parts/Armor_Icon.png",
+      "bytes": 4482,
+      "sha256": "e7bf867b416a25ac45a8f91ce2516c8ab4cbbf50f63f7562a3278b519b82d8dd"
+    },
+    {
+      "path": "graphics/Ship_Parts/Close_BTN.png",
+      "bytes": 15978,
+      "sha256": "80be9c03fd9552952f4f3f2fff3ef300b02d16532145615935b879384d450779"
+    },
+    {
+      "path": "graphics/Ship_Parts/Damage_Icon.png",
+      "bytes": 5366,
+      "sha256": "c5c3db14d2c68ed55f99d7cf94ffc2fe245101313db320ef6c092dcdc951d15f"
+    },
+    {
+      "path": "graphics/Ship_Parts/Header.png",
+      "bytes": 9961,
+      "sha256": "9f8936e634518defdf460a5d4d24bbc7e4298304e0b83567d8f9b7809f731b87"
+    },
+    {
+      "path": "graphics/Ship_Parts/HP_Icon.png",
+      "bytes": 4787,
+      "sha256": "245f63a8e5c563d0af67b4b0fcdd87f004f3e69dde0e4e68e8450b0b1761c975"
+    },
+    {
+      "path": "graphics/Ship_Parts/Ok_BTN.png",
+      "bytes": 14781,
+      "sha256": "89511752324c94b41ecba31d445b536813fadc923bda81d519bce1054b047228"
+    },
+    {
+      "path": "graphics/Ship_Parts/Ship_1_1_BTN.png",
+      "bytes": 36390,
+      "sha256": "8597a19422eba2c36056ee9012571a03bb4bf421c2ab1288384c418fe82458dd"
+    },
+    {
+      "path": "graphics/Ship_Parts/Ship_1_2_BTN.png",
+      "bytes": 35506,
+      "sha256": "befb7fece6de99d4ef1ad335a9a3dbbf7b47209b70fff9e4a4dd4938addb84a3"
+    },
+    {
+      "path": "graphics/Ship_Parts/Ship_1_3_BTN.png",
+      "bytes": 39817,
+      "sha256": "f398283ae367a05604dd987c80e2876b0a9ab47e24f5d34cb992d4212cbd3314"
+    },
+    {
+      "path": "graphics/Ship_Parts/Ship_1_4_BTN.png",
+      "bytes": 34699,
+      "sha256": "52ad76edce49988c4dd770e0caa1564d8b4d1d055f1174bf28cb1dc3d6c2d755"
+    },
+    {
+      "path": "graphics/Ship_Parts/Ship_2_1_BTN.png",
+      "bytes": 38104,
+      "sha256": "35e13bae4b80f6770b5585ed80b3ed8c3e699424abf1c74f85b91b10a4ea350c"
+    },
+    {
+      "path": "graphics/Ship_Parts/Ship_2_2_BTN.png",
+      "bytes": 35246,
+      "sha256": "d0fb8f542a5184a0fbfbd7ea96e6ccea436d59b9d1173bb6323d02be5e76ee4b"
+    },
+    {
+      "path": "graphics/Ship_Parts/Ship_2_3_BTN.png",
+      "bytes": 37277,
+      "sha256": "88ecdc2d64609c392984616d67c060460926f0800915071a97316b13a95c62b9"
+    },
+    {
+      "path": "graphics/Ship_Parts/Ship_2_4_BTN.png",
+      "bytes": 34743,
+      "sha256": "8eea58f726ad4a3f75b2cf18cfecb0e883b815cd2615c6f49ad4a08e9e72877f"
+    },
+    {
+      "path": "graphics/Ship_Parts/Ship_3_2_BTN.png",
+      "bytes": 29391,
+      "sha256": "f5a115755adc41302e364a2368aa765f37908c168b76a745184887479d753fed"
+    },
+    {
+      "path": "graphics/Ship_Parts/Ship_3_3_BTN.png",
+      "bytes": 30813,
+      "sha256": "104fe8de2a53a7798513353f90f8ff1bb03b676b2d7c5d42cf784c2376cb8b3b"
+    },
+    {
+      "path": "graphics/Ship_Parts/Ship_3_4_BTN.png",
+      "bytes": 29299,
+      "sha256": "b5168cb57fdd0e740f7b92865ee989f643062e34d625a925a6bbe52bcacd27b4"
+    },
+    {
+      "path": "graphics/Ship_Parts/Ship_Main_Icon.png",
+      "bytes": 77934,
+      "sha256": "4e3dcc86daef16baa609a1659fa0bb78830a6e800c043029897e8df1ec1061e3"
+    },
+    {
+      "path": "graphics/Ship_Parts/Speed_Icon.png",
+      "bytes": 5685,
+      "sha256": "1e083ca95473f454a6b7f70e5f5db4ac795d77a8324afda481b802bd367a7346"
+    },
+    {
+      "path": "graphics/Ship_Parts/Table.png",
+      "bytes": 63483,
+      "sha256": "41094e7c5b8db7497af505311dcc89b96ed0bd6e34725e89496a08045e09f73b"
+    },
+    {
+      "path": "graphics/Ship_Parts/Table_03.png",
+      "bytes": 9899,
+      "sha256": "77d915d7685f3e0760c0f4b93b80ff837756f4b2b991376a88d946672c3c278d"
+    },
+    {
+      "path": "graphics/Ship_Parts/Window.png",
+      "bytes": 426751,
+      "sha256": "86a15af1eba8e9b0d328368595d42f6eea42001afe1ec41f11684b9e8f1b8809"
+    },
+    {
+      "path": "graphics/Ship_Parts/Window_2.png",
+      "bytes": 476760,
+      "sha256": "ce7a174507d37ec9f4e02a4e479ca25427b038dc64074b85c037eb2b0539b700"
+    },
+    {
+      "path": "graphics/Ship_Shop/Backward_BTN.png",
+      "bytes": 14704,
+      "sha256": "99085ac5891cdd0290cf5c178cfd16fe2f35613de805e24f6c3292fde781ceb1"
+    },
+    {
+      "path": "graphics/Ship_Shop/Cristal_Icon.png",
+      "bytes": 1483,
+      "sha256": "2becd0f4d87fa16b492f42d7a12140741d62a83c232f64efac4426889f8aaac6"
+    },
+    {
+      "path": "graphics/Ship_Shop/Dot_01.png",
+      "bytes": 3536,
+      "sha256": "6fa012cca3fe6ef67cb4039d3abd56e9fdb08db236f31abec322a04e26f9fcac"
+    },
+    {
+      "path": "graphics/Ship_Shop/Dot_02.png",
+      "bytes": 11830,
+      "sha256": "d023fc4893d81a13e8ed05f0ed2fe882a53d3f2941fccab909ce7cbd15652e9e"
+    },
+    {
+      "path": "graphics/Ship_Shop/Dot_02.xcf",
+      "bytes": 15387,
+      "sha256": "b98c3230fcb764a63bd62db81a719ddb404d06e8127f1c0e8ac8c95e8b49a15b"
+    },
+    {
+      "path": "graphics/Ship_Shop/Forward_BTN.png",
+      "bytes": 14766,
+      "sha256": "91356e68116a9be560b2638324ffc4694607d44d7f23fafcbf31baa3ac1ca3b1"
+    },
+    {
+      "path": "graphics/Ship_Shop/Header.png",
+      "bytes": 8859,
+      "sha256": "f5e8dc3e5ef148d8ee8383887871ee9e7705e025ee77e6f133580e927e2aac37"
+    },
+    {
+      "path": "graphics/Ship_Shop/Ok_BTN.png",
+      "bytes": 14781,
+      "sha256": "89511752324c94b41ecba31d445b536813fadc923bda81d519bce1054b047228"
+    },
+    {
+      "path": "graphics/Ship_Shop/Ship_Icon.png",
+      "bytes": 77658,
+      "sha256": "4f63e88da266a622284e31c312028f9e473454af24071c783e74fc427bc885c5"
+    },
+    {
+      "path": "graphics/Ship_Shop/Table_01.png",
+      "bytes": 67396,
+      "sha256": "b492a59a2b4d33e2a9879dc10b9dc69a940b4d02d56a4aa00a86bb5ceacffa8b"
+    },
+    {
+      "path": "graphics/Ship_Shop/Table_02.png",
+      "bytes": 7438,
+      "sha256": "ae25d3220cdb11e444aa780e0f348a7ae61f4a0dc817dbb5728688d96ade756e"
+    },
+    {
+      "path": "graphics/Ship_Shop/Window.png",
+      "bytes": 426751,
+      "sha256": "86a15af1eba8e9b0d328368595d42f6eea42001afe1ec41f11684b9e8f1b8809"
+    },
+    {
+      "path": "graphics/Shop/Close_BTN.png",
+      "bytes": 15978,
+      "sha256": "80be9c03fd9552952f4f3f2fff3ef300b02d16532145615935b879384d450779"
+    },
+    {
+      "path": "graphics/Shop/Header.png",
+      "bytes": 5872,
+      "sha256": "59deec9892a7b9821fca631f8f257e7cad4dcc762760dbb1a8deadd6742425f9"
+    },
+    {
+      "path": "graphics/Shop/Menu_BTN.png",
+      "bytes": 13908,
+      "sha256": "56c29ddb9b4238b176b1ac02d3824262c308e109bdbe03ed28d9f269bf998862"
+    },
+    {
+      "path": "graphics/Shop/No_ADS.png",
+      "bytes": 6182,
+      "sha256": "67d34ded1bd2005cfb5d4ead0b88935a6ef36e5ef156c6b1f59ea5b483241a44"
+    },
+    {
+      "path": "graphics/Shop/No_ADS_Icon.png",
+      "bytes": 16147,
+      "sha256": "f59b8e43e6cd000222302c4173d218bb6558cdcdcf5e6bdc18dc934260d3f14b"
+    },
+    {
+      "path": "graphics/Shop/Ok_BTN.png",
+      "bytes": 14781,
+      "sha256": "89511752324c94b41ecba31d445b536813fadc923bda81d519bce1054b047228"
+    },
+    {
+      "path": "graphics/Shop/Prise_BTN_Table.png",
+      "bytes": 6684,
+      "sha256": "0ae03dbb9bf5a73f102c3b81ed43bff75bc167d8bd069c30edfc82fd1c01ce38"
+    },
+    {
+      "path": "graphics/Shop/Shop_Cristal_Icon_01.png",
+      "bytes": 10118,
+      "sha256": "026638320ac2bb2cf37a14d324d99f7dec0c2abaa9504f2e968e85d5e6b52dcc"
+    },
+    {
+      "path": "graphics/Shop/Shop_Cristal_Icon_02.png",
+      "bytes": 17992,
+      "sha256": "6f3cd8801d61c9081ea065280ecb386ae9dd73bca26aa6facb82ea39160ef04d"
+    },
+    {
+      "path": "graphics/Shop/Table_01.png",
+      "bytes": 20711,
+      "sha256": "3943f22851b3fc6cf5efe26cf3fc710adabfa9e37f2a3a9378e95ac8e1bb4385"
+    },
+    {
+      "path": "graphics/Shop/Window.png",
+      "bytes": 426751,
+      "sha256": "86a15af1eba8e9b0d328368595d42f6eea42001afe1ec41f11684b9e8f1b8809"
+    },
+    {
+      "path": "graphics/Shop/Window_2.png",
+      "bytes": 722457,
+      "sha256": "32a7c86e7033e0c3e197f5284212279958273df1a6eee8d0893418dcdbafad69"
+    },
+    {
+      "path": "graphics/Shop/X100.png",
+      "bytes": 4930,
+      "sha256": "d6fe624f756b4b689be09858069bd0a21695a6a9ffa42066605cb2ac79dc16fb"
+    },
+    {
+      "path": "graphics/Shop/X1000.png",
+      "bytes": 5932,
+      "sha256": "66a08b0841eba8f3b683e2d001129f4a29fe2dd5942348d67dd34362f70c9359"
+    },
+    {
+      "path": "graphics/spaceobjects/1.png",
+      "bytes": 171830,
+      "sha256": "f07aedeaeef539ab2d81f139c0ced8c36092fda09f573f737130a1d275a013fe"
+    },
+    {
+      "path": "graphics/spaceobjects/10.png",
+      "bytes": 226786,
+      "sha256": "06147e6ea7c7aaf8ecbbec9fbafe52b1814fcf6e1187078752bc8f6473b8bf5a"
+    },
+    {
+      "path": "graphics/spaceobjects/11.png",
+      "bytes": 301899,
+      "sha256": "ec9e698ce1e822c5c8be91989870fefca877bcd6cae863c83fd01d3e12b7ccc4"
+    },
+    {
+      "path": "graphics/spaceobjects/12.png",
+      "bytes": 234090,
+      "sha256": "468482ffbc7ad4bdb8fe4ccdee6548505fada163a3090f7a8a0f5cedefecc57f"
+    },
+    {
+      "path": "graphics/spaceobjects/13.png",
+      "bytes": 221087,
+      "sha256": "9b03427a70759ef9a05ab01c66823a1d6111e2b0fc805ec2702f8013ad2f5a19"
+    },
+    {
+      "path": "graphics/spaceobjects/15.png",
+      "bytes": 179704,
+      "sha256": "640d3871caa640847cb1c56e458fa59840203a5dbf7a63e076524f126095c985"
+    },
+    {
+      "path": "graphics/spaceobjects/16.png",
+      "bytes": 235211,
+      "sha256": "1cc6574c5e983b6f1502d43d04d3def3fa8a3f92069cc620b4a2359ef121ce94"
+    },
+    {
+      "path": "graphics/spaceobjects/17.png",
+      "bytes": 217271,
+      "sha256": "dfe9f96e962e06253cee26c5c3175ebe74eaffaa2245a184517a51a1a321e79e"
+    },
+    {
+      "path": "graphics/spaceobjects/18.png",
+      "bytes": 465596,
+      "sha256": "a2ff2298162dceed83865212ac36b8e1dfafe99509af3bd9abea66287041f095"
+    },
+    {
+      "path": "graphics/spaceobjects/19.png",
+      "bytes": 301939,
+      "sha256": "a940cff7217bfa762b302ac888b0e7574f0e1f98ea979819bc493c3f46291ea1"
+    },
+    {
+      "path": "graphics/spaceobjects/2.png",
+      "bytes": 218573,
+      "sha256": "ae5753fe03a7452975bfe3c851b1b27bf313b7744eba03bb446edbeb030147cd"
+    },
+    {
+      "path": "graphics/spaceobjects/20.png",
+      "bytes": 257855,
+      "sha256": "0cc01e68dd6f025b3be6afcfdf4762a06da52b152f01f7908ae8ce80c836cb58"
+    },
+    {
+      "path": "graphics/spaceobjects/3.png",
+      "bytes": 197645,
+      "sha256": "ec32f4834cf99c3bd66f7dfbda4f0e09a0e78c66707c6cd587f840bacca7a64e"
+    },
+    {
+      "path": "graphics/spaceobjects/4.png",
+      "bytes": 259422,
+      "sha256": "5c208e2477f16a7c74649ebf66e23312efd22ea547895081f76bf44e95987a4f"
+    },
+    {
+      "path": "graphics/spaceobjects/5.png",
+      "bytes": 219412,
+      "sha256": "ef3aa1b7e53db1cbcf0379bda28def08fbe57a41d93ec5eed74defa4b901c969"
+    },
+    {
+      "path": "graphics/spaceobjects/6.png",
+      "bytes": 203054,
+      "sha256": "f7021242107f3ecbe524234b0c18ea5e7954431d1cc6fcb3bed24d01b78cb232"
+    },
+    {
+      "path": "graphics/spaceobjects/7.png",
+      "bytes": 155629,
+      "sha256": "163aeff3963c4c2027c41a2658226fb5782fbc2798dd2eda577708ada5b03a07"
+    },
+    {
+      "path": "graphics/spaceobjects/8.png",
+      "bytes": 191433,
+      "sha256": "76b1d7264354995cd56573872116d8390996f65572a3c9406d78029f5b1f892c"
+    },
+    {
+      "path": "graphics/spaceobjects/9.png",
+      "bytes": 326548,
+      "sha256": "f7816e0f3e2e175087e753231ae63d4986de734a2cc7f031a81e141f867d80bd"
+    },
+    {
+      "path": "graphics/Upgrade/Armor.png",
+      "bytes": 7088,
+      "sha256": "ab34474d81be958a6249f395957f0149fcbb094bbd3483403d87a1329dca612d"
+    },
+    {
+      "path": "graphics/Upgrade/Armor_Icon.png",
+      "bytes": 8362,
+      "sha256": "bda4ac6f9c814998e55aa1b899c424b8e0b9887212d41d8d9bc318e9978af581"
+    },
+    {
+      "path": "graphics/Upgrade/Close_BTN.png",
+      "bytes": 15978,
+      "sha256": "80be9c03fd9552952f4f3f2fff3ef300b02d16532145615935b879384d450779"
+    },
+    {
+      "path": "graphics/Upgrade/Cristal_Icon.png",
+      "bytes": 1483,
+      "sha256": "2becd0f4d87fa16b492f42d7a12140741d62a83c232f64efac4426889f8aaac6"
+    },
+    {
+      "path": "graphics/Upgrade/Damage.png",
+      "bytes": 7482,
+      "sha256": "5879c19e7e9654c1cf1cef1be5e99ed746b077d02b8e0ef7abfc03464e642cd9"
+    },
+    {
+      "path": "graphics/Upgrade/Damage_Icon.png",
+      "bytes": 10542,
+      "sha256": "bf0807c280c3c751dad8fa077cb584cc2c7d7fa1a7125f4b10748e36e2ae834e"
+    },
+    {
+      "path": "graphics/Upgrade/Header.png",
+      "bytes": 9435,
+      "sha256": "eb9430c1e77bcceca8075d829f9d5d30d4456d273b120ba5bbc8a2e9db8f483b"
+    },
+    {
+      "path": "graphics/Upgrade/Health.png",
+      "bytes": 4253,
+      "sha256": "30d2e498a42b2da7084be9eb91c0b69e93106573fbf8301f8524914bf34a1c9a"
+    },
+    {
+      "path": "graphics/Upgrade/HP_Icon.png",
+      "bytes": 9421,
+      "sha256": "faebddd5d6fcc2808431b7fc4a5475aa0dfcaa3f8400c5931a88a0898a4d8ac3"
+    },
+    {
+      "path": "graphics/Upgrade/Ok_BTN.png",
+      "bytes": 14781,
+      "sha256": "89511752324c94b41ecba31d445b536813fadc923bda81d519bce1054b047228"
+    },
+    {
+      "path": "graphics/Upgrade/Price_BTN_Table.png",
+      "bytes": 7104,
+      "sha256": "22b0d882dfc79fe2c49682bc07d3531bea4ae9cd56b7a68d1108fd355648d677"
+    },
+    {
+      "path": "graphics/Upgrade/Speed.png",
+      "bytes": 4958,
+      "sha256": "693666fbf62c23d1d6fa54c8f8119762542ed71f23fd7e16a95a31d3b9e051b9"
+    },
+    {
+      "path": "graphics/Upgrade/Speed_Icon.png",
+      "bytes": 11975,
+      "sha256": "fd26a5ec4f669e7f958f585ea82ebbd1519129515edc4998bdd5053415c354e8"
+    },
+    {
+      "path": "graphics/Upgrade/Window.png",
+      "bytes": 426751,
+      "sha256": "86a15af1eba8e9b0d328368595d42f6eea42001afe1ec41f11684b9e8f1b8809"
+    },
+    {
+      "path": "graphics/Upgrade/Window_2.png",
+      "bytes": 551931,
+      "sha256": "9bea95038aed4fb6b9e0b96f1cfcb215c4e4f4a1d463e24f4d6c209ce558a305"
+    },
+    {
+      "path": "graphics/You_Lose/Close_BTN.png",
+      "bytes": 15978,
+      "sha256": "80be9c03fd9552952f4f3f2fff3ef300b02d16532145615935b879384d450779"
+    },
+    {
+      "path": "graphics/You_Lose/Header.png",
+      "bytes": 10254,
+      "sha256": "df420af6a6955dfc98a7962abc688e2ff89d20c9c6e4ff6d39107996b4271bf8"
+    },
+    {
+      "path": "graphics/You_Lose/Play_BTN.png",
+      "bytes": 14265,
+      "sha256": "e660fd173ca89e56ad871855e64ffb11fb120998bf15d37e0abfcbce7942953a"
+    },
+    {
+      "path": "graphics/You_Lose/Record.png",
+      "bytes": 6857,
+      "sha256": "aabbfb7ea2b2e3052db0315b618cc36a95cb1f6c87df7e42df2673fdc0ecc012"
+    },
+    {
+      "path": "graphics/You_Lose/Replay_BTN.png",
+      "bytes": 16308,
+      "sha256": "1eae567ff53d42169907518502c6cf7c93081179fb232306b73c989fe256afd6"
+    },
+    {
+      "path": "graphics/You_Lose/Score.png",
+      "bytes": 5730,
+      "sha256": "4dada0fdcea20ad6235759e61bf17b044975a0b3b8c07fd3023a33c6d8860ee9"
+    },
+    {
+      "path": "graphics/You_Lose/Star_01.png",
+      "bytes": 51604,
+      "sha256": "50699a753996627483fb7dc8f325a17169a7537e6bc59057950e2e25ac3f9baf"
+    },
+    {
+      "path": "graphics/You_Lose/Star_02.png",
+      "bytes": 51468,
+      "sha256": "3f5ead7a5ccbb0ef29761be52a1398953f8886d17fbd337ba624c49411f1521a"
+    },
+    {
+      "path": "graphics/You_Lose/Star_03.png",
+      "bytes": 63016,
+      "sha256": "52b81c9801b1f3a2db5ebd0c2136321d9e01668ff51dbef3ac468c45f1a158f2"
+    },
+    {
+      "path": "graphics/You_Lose/Table.png",
+      "bytes": 8235,
+      "sha256": "b221cd4a9a1ae1d10bda021bc2dabeaec393e27ae4431862e9fb1e0968be7776"
+    },
+    {
+      "path": "graphics/You_Lose/Window.png",
+      "bytes": 409427,
+      "sha256": "50aabdf055d62746cbe52bbfac95d7dc4ed6038018dd45a859acd06e7f809e75"
+    },
+    {
+      "path": "graphics/You_Win/Close_BTN.png",
+      "bytes": 15978,
+      "sha256": "80be9c03fd9552952f4f3f2fff3ef300b02d16532145615935b879384d450779"
+    },
+    {
+      "path": "graphics/You_Win/Header.png",
+      "bytes": 10105,
+      "sha256": "62bf242e9ce1bdb531a0d0d30ccc3ceb9f968b113060ca0785d5638c764f14cd"
+    },
+    {
+      "path": "graphics/You_Win/Play_BTN.png",
+      "bytes": 14265,
+      "sha256": "e660fd173ca89e56ad871855e64ffb11fb120998bf15d37e0abfcbce7942953a"
+    },
+    {
+      "path": "graphics/You_Win/Record.png",
+      "bytes": 6857,
+      "sha256": "aabbfb7ea2b2e3052db0315b618cc36a95cb1f6c87df7e42df2673fdc0ecc012"
+    },
+    {
+      "path": "graphics/You_Win/Replay_BTN.png",
+      "bytes": 16308,
+      "sha256": "1eae567ff53d42169907518502c6cf7c93081179fb232306b73c989fe256afd6"
+    },
+    {
+      "path": "graphics/You_Win/Score.png",
+      "bytes": 5730,
+      "sha256": "4dada0fdcea20ad6235759e61bf17b044975a0b3b8c07fd3023a33c6d8860ee9"
+    },
+    {
+      "path": "graphics/You_Win/Star_01.png",
+      "bytes": 51604,
+      "sha256": "50699a753996627483fb7dc8f325a17169a7537e6bc59057950e2e25ac3f9baf"
+    },
+    {
+      "path": "graphics/You_Win/Star_02.png",
+      "bytes": 51468,
+      "sha256": "3f5ead7a5ccbb0ef29761be52a1398953f8886d17fbd337ba624c49411f1521a"
+    },
+    {
+      "path": "graphics/You_Win/Star_03.png",
+      "bytes": 63016,
+      "sha256": "52b81c9801b1f3a2db5ebd0c2136321d9e01668ff51dbef3ac468c45f1a158f2"
+    },
+    {
+      "path": "graphics/You_Win/Table.png",
+      "bytes": 8235,
+      "sha256": "b221cd4a9a1ae1d10bda021bc2dabeaec393e27ae4431862e9fb1e0968be7776"
+    },
+    {
+      "path": "graphics/You_Win/Window.png",
+      "bytes": 409427,
+      "sha256": "50aabdf055d62746cbe52bbfac95d7dc4ed6038018dd45a859acd06e7f809e75"
+    },
+    {
+      "path": "graphics/hologram/Button 1/Button Active.png",
+      "bytes": 2474,
+      "sha256": "20feccce91b33807f99cc4c19566a7dbb173657da2e58b4dce6ab48d600e0ded"
+    },
+    {
+      "path": "graphics/hologram/Button 1/Button Disable.png",
+      "bytes": 1071,
+      "sha256": "2863531867e92adc5c8e43f99c504b134aa79dd107e660043f6d2dca517a7b9f"
+    },
+    {
+      "path": "graphics/hologram/Button 1/Button Hover.png",
+      "bytes": 2311,
+      "sha256": "d568d93525cbe67e29121223797638ddcaa309c5ac983b2a2fe841b183c5e377"
+    },
+    {
+      "path": "graphics/hologram/Card X1/Card X1.png",
+      "bytes": 124767,
+      "sha256": "cb36a7be3383e26287a1c09600e5cc3badee3d2c43ebbe3bb4f201fa1241366b"
+    },
+    {
+      "path": "graphics/hologram/Card X1/Card X2.png",
+      "bytes": 117487,
+      "sha256": "bfd90a0fd661d2ed1bf21c7ae14287397196412ffaa50c88e980d4e28103f50c"
+    },
+    {
+      "path": "graphics/hologram/Card X1/Panel Empty Green.png",
+      "bytes": 2684,
+      "sha256": "57d8976edaa81774e54b9c629c5faae6eee6a8a1fde35678e2ac317582b75124"
+    },
+    {
+      "path": "graphics/hologram/Card X1/Panel Empty.png",
+      "bytes": 2588,
+      "sha256": "1c15f13cf8e52cd26022dc1e6be7b1b92c36e39e6b220c8ecba9e028b0ff2c6e"
+    },
+    {
+      "path": "graphics/hologram/Card X1/Panel Red.png",
+      "bytes": 2696,
+      "sha256": "f75e46ef7a11707e098093f9ef3fa0abc238d64bdbe91e3ac8c17790c60e5430"
+    },
+    {
+      "path": "graphics/hologram/cardx2/cardX2.png",
+      "bytes": 93967,
+      "sha256": "635a459b7f19a9b1e27985605c68d88f5b6ba23af2feb6fc876a6ca3c3133c05"
+    },
+    {
+      "path": "graphics/hologram/cardx2/cardxempty.xcf",
+      "bytes": 190650,
+      "sha256": "9b27ed3da4e843ccc7c295efa68bc916d0f0c9c993a927ded328c3456dd1464a"
+    },
+    {
+      "path": "graphics/hologram/cardx2/cardxempty2.png",
+      "bytes": 85570,
+      "sha256": "dd32d85d656b1ca6b65aa84d14d292df1feea0f3d90489837eac5e6cd6a0ff0d"
+    },
+    {
+      "path": "graphics/hologram/cardx2/cardxempty2.xcf",
+      "bytes": 195117,
+      "sha256": "1763b1e590ac4b3a013650c7ab94ac2aa1ae94b72d1dc16f16001d7ad516eaea"
+    },
+    {
+      "path": "graphics/hologram/cardx2/cardxempty4.png",
+      "bytes": 85520,
+      "sha256": "7a9efb02154a24ab26e664a28abd8a1530776d6e4e752bd484f81455d1b5a9ef"
+    },
+    {
+      "path": "graphics/hologram/cardx2/cardxempty4.xcf",
+      "bytes": 194548,
+      "sha256": "0b854eefde86d14f21f8f409c0cf5e7eb97ee29a797cb6ea25c877bf772efff2"
+    },
+    {
+      "path": "graphics/hologram/cardx3/Card X6.png",
+      "bytes": 72838,
+      "sha256": "f8ae58d2f0353a65e7c4a53b46168a288facacfebde63734a4c63c041d600190"
+    },
+    {
+      "path": "graphics/hologram/cardx3/cardX5.png",
+      "bytes": 62531,
+      "sha256": "bb67c6997613c4c8710b125df1cd851a1bc62efececd6b94243d0f1cdd8c3182"
+    },
+    {
+      "path": "graphics/hologram/Icons/01.png",
+      "bytes": 197,
+      "sha256": "76e0afced9c62a61938d1c782cf08505d0fa125b6e4272fcd3c540faf51d119c"
+    },
+    {
+      "path": "graphics/hologram/Icons/02.png",
+      "bytes": 105,
+      "sha256": "5d6d9a58e8f1e9a61ccf524bf4a17856138415cad60cbcb98ce07fea49412991"
+    },
+    {
+      "path": "graphics/hologram/Icons/03.png",
+      "bytes": 367,
+      "sha256": "84c5fca495b54d7ed9c0c72677fc977ea039e384dc961d1d9a7817db46d7445f"
+    },
+    {
+      "path": "graphics/hologram/Icons/04.png",
+      "bytes": 504,
+      "sha256": "cbe0e0376b4dcb888cfaeb85f4cf393290c3d7f42f227d1150b2a08d5ee6119b"
+    },
+    {
+      "path": "graphics/hologram/Icons/05.png",
+      "bytes": 197,
+      "sha256": "39e5c862f61a4e10ac5a39c17f98a9362989422437db4b926a965b8d54f36dfb"
+    },
+    {
+      "path": "graphics/hologram/Icons/06.png",
+      "bytes": 565,
+      "sha256": "bcf44128cdb18ee8e0cc1f9fe4e23b56b0c71d1ed7416116a21425277efa5d9f"
+    },
+    {
+      "path": "graphics/hologram/Icons/07.png",
+      "bytes": 600,
+      "sha256": "a72bc7167f2a663b09b30a76c86fbf6f02a0933a33378da23eff5bfcb124dd9d"
+    },
+    {
+      "path": "graphics/hologram/Icons/08.png",
+      "bytes": 522,
+      "sha256": "ecdcbb0f1ca98beead8bbe57c3259975179f011a2be9d5405a4df830f149fef8"
+    },
+    {
+      "path": "graphics/hologram/Icons/09.png",
+      "bytes": 426,
+      "sha256": "e1272eacabeff1b136a221ae1eff3e730ef9d1243e43c74cddf005204c780a4e"
+    },
+    {
+      "path": "graphics/hologram/Icons/10.png",
+      "bytes": 424,
+      "sha256": "63bc793f5329a0bf3713b9179a03cd3c4e78fe126a0adb679dd239aeafe93c81"
+    },
+    {
+      "path": "graphics/hologram/Icons/11.png",
+      "bytes": 447,
+      "sha256": "366857903dd0c643f80fc7630148d0deecc818133ec706819428e5a5ff30ca06"
+    },
+    {
+      "path": "graphics/hologram/Icons/12.png",
+      "bytes": 525,
+      "sha256": "3a88d1a155a7242b16c82bd51f811f38a1272631e3c5b88c8b46a6cc6a7270c8"
+    },
+    {
+      "path": "graphics/hologram/Icons/13.png",
+      "bytes": 246,
+      "sha256": "aaa24c7aae8b88c9a55f281168764b39ee6c1d67675894e1332fcae054ccfd11"
+    },
+    {
+      "path": "graphics/hologram/Icons/14.png",
+      "bytes": 345,
+      "sha256": "0a0c6b2956acc194d0e68676a0f85581cc407b99a090bde73f124ba30fc44a67"
+    },
+    {
+      "path": "graphics/hologram/Icons/15.png",
+      "bytes": 664,
+      "sha256": "1c12f5aae0165d164b3ebbf3051a7b858bf45c1a4f5a5284d32af08b3eef7fae"
+    },
+    {
+      "path": "graphics/hologram/Icons/16.png",
+      "bytes": 746,
+      "sha256": "338d5fb162d93759cc1e3dec909897bb0cbf6e0bcc114a4ac6c46d44f3cd2f4b"
+    },
+    {
+      "path": "graphics/hologram/Icons/17.png",
+      "bytes": 781,
+      "sha256": "13c634276a8fa91fdbd8b498e17683fcb32cab882ad1eb053dcbdf8fc8554461"
+    },
+    {
+      "path": "graphics/hologram/Icons/18.png",
+      "bytes": 715,
+      "sha256": "3622d771f56ef7f85ed1c37882931427c705ffd5f7073847231c2c3931bcef9a"
+    },
+    {
+      "path": "graphics/hologram/Icons/19.png",
+      "bytes": 404,
+      "sha256": "55c0fd8ef0a5c066bcbadeacb5a9aeaffc2aeef0589d7262f0449087d5ea9040"
+    },
+    {
+      "path": "graphics/hologram/Icons/20.png",
+      "bytes": 231,
+      "sha256": "f87900c6be3700d644405790cc9dbb96327dfacf17db57c7de8f7af40ea026bd"
+    },
+    {
+      "path": "graphics/hologram/Icons/21.png",
+      "bytes": 384,
+      "sha256": "9af18f43756495927ef2403ad1833a38cb526867a42585e677d341717d042a9f"
+    },
+    {
+      "path": "graphics/hologram/Icons/22.png",
+      "bytes": 670,
+      "sha256": "6298cfe34f4608a25148074547f830c26c1458cbecf994cf5b790a76c5da93a3"
+    },
+    {
+      "path": "graphics/hologram/Icons/23.png",
+      "bytes": 393,
+      "sha256": "c0084b4ca344da5e5d4e59bc0ed6b38f6f6e59c029eb823efaf43a29be7dafa4"
+    },
+    {
+      "path": "graphics/hologram/Icons/24.png",
+      "bytes": 735,
+      "sha256": "0ffb3c20b296fba94aace96eb53bfddef4ca4cea1b1529ff314c33b061eaaed9"
+    },
+    {
+      "path": "graphics/hologram/Icons/25.png",
+      "bytes": 473,
+      "sha256": "1ece73036105409888438a3539c97d7509e023335b05e81a28c36dbe2727cd34"
+    },
+    {
+      "path": "graphics/hologram/Icons/26.png",
+      "bytes": 653,
+      "sha256": "9393012afa2ddf9d3faf48b5a6b89b7fc487cf07f494386000c930a6497332bc"
+    },
+    {
+      "path": "graphics/hologram/Icons/27.png",
+      "bytes": 569,
+      "sha256": "05df147dbd4e24caa44bca5b8300462ca0b7f3f1c78801bd04b68bf496e15618"
+    },
+    {
+      "path": "graphics/hologram/Icons/28.png",
+      "bytes": 408,
+      "sha256": "e2278a8690d48f5648a77995915964c328bc6a00592ef90eac0611b5b69235c6"
+    },
+    {
+      "path": "graphics/hologram/Icons/29.png",
+      "bytes": 424,
+      "sha256": "5666da0259ab97ed5783b9ffd7eafa6cbc6af74374bd92316b17438c33395f9f"
+    },
+    {
+      "path": "graphics/hologram/Icons/30.png",
+      "bytes": 515,
+      "sha256": "4cf9547ce4468abe55e71ab1a7bac06c9cc8ced1a3245a9366dc139059223d8d"
+    },
+    {
+      "path": "graphics/hologram/Icons/31.png",
+      "bytes": 648,
+      "sha256": "62912e6602c9e9dbe52f117b15558079b5215e88c1df0bcc42947c1f26ba5fa2"
+    },
+    {
+      "path": "graphics/hologram/Icons/32.png",
+      "bytes": 619,
+      "sha256": "33c4ca87de54dd6158f2281176c7763c99b89465d2068769f459d36445e2008b"
+    },
+    {
+      "path": "graphics/hologram/Icons/33.png",
+      "bytes": 676,
+      "sha256": "07444987ea118ea71d7340903bc6dcfb12a30010164dc67e07f204a0543a828d"
+    },
+    {
+      "path": "graphics/hologram/Icons/34.png",
+      "bytes": 592,
+      "sha256": "bd3d7eeb4ddab524b5ce91dac0db8b3fc46f360519c108922f10fce6a2c09d2d"
+    },
+    {
+      "path": "graphics/hologram/Icons/35.png",
+      "bytes": 582,
+      "sha256": "529022a03e395006256cd07e07b70cbd1fe8c5b1b125c17e5db07b13bf3aa4b9"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/Backward_BTN.png",
+      "bytes": 14704,
+      "sha256": "99085ac5891cdd0290cf5c178cfd16fe2f35613de805e24f6c3292fde781ceb1"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/Close_BTN.png",
+      "bytes": 15978,
+      "sha256": "80be9c03fd9552952f4f3f2fff3ef300b02d16532145615935b879384d450779"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/Facebook_BTN.png",
+      "bytes": 11741,
+      "sha256": "8b8083f1ad946911c6f81fceb05305586d708288e272c6e8d90e4bb9525008d2"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/FAQ_BTN.png",
+      "bytes": 13760,
+      "sha256": "4a88fc9504d036b46f416094e5abfe95f0d2a3086d1dad8505f3c38c216ab0da"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/Forward_BTN.png",
+      "bytes": 14766,
+      "sha256": "91356e68116a9be560b2638324ffc4694607d44d7f23fafcbf31baa3ac1ca3b1"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/Google_BTN.png",
+      "bytes": 14680,
+      "sha256": "1a288a98d34cc0117a41f8c0290a29002bbf6d3bdc2149fff05030e493e265f8"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/Info_BTN.png",
+      "bytes": 12685,
+      "sha256": "5fb7304eb9507ec5d93f68e1bc812087722d48930c4d0c37bc93ca2105d40b54"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/Menu_BTN.png",
+      "bytes": 13908,
+      "sha256": "56c29ddb9b4238b176b1ac02d3824262c308e109bdbe03ed28d9f269bf998862"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/More_Games_BTN.png",
+      "bytes": 15852,
+      "sha256": "8683bcf3677d27ce2d27ef79bdefcf141b05071ba4cc2efec37b4da9ff008b99"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/Music_BTN.png",
+      "bytes": 13186,
+      "sha256": "4e5e125339fef259fe213718f46e6edea19739a2618cb302f7175a1ca147139d"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/Notifications_BTN.png",
+      "bytes": 13581,
+      "sha256": "b3d658bb2dc7d0a18a88e09cad78e5c77511ce77f9c1220cf7d05f013f741fb4"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/Ok_BTN.png",
+      "bytes": 14781,
+      "sha256": "89511752324c94b41ecba31d445b536813fadc923bda81d519bce1054b047228"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/Pause_BTN.png",
+      "bytes": 12519,
+      "sha256": "ebba57e3ddb7801ca25b58aa9b4167f93aae4de1d8d0d31a75a89b25b005284d"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/Play_BTN.png",
+      "bytes": 14265,
+      "sha256": "e660fd173ca89e56ad871855e64ffb11fb120998bf15d37e0abfcbce7942953a"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/Rating_BTN.png",
+      "bytes": 16902,
+      "sha256": "0a218aa44bb8b4ba709a68c597b0140d67ce6a2f91dbbaf9e4928c5be8acc15f"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/Replay_BTN.png",
+      "bytes": 16308,
+      "sha256": "1eae567ff53d42169907518502c6cf7c93081179fb232306b73c989fe256afd6"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/Settings_BTN.png",
+      "bytes": 16122,
+      "sha256": "b9e4a401c776bd4c79217780e380248abfa7a03afd37067b8a19b0c590904c40"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/Shop_BTN.png",
+      "bytes": 15312,
+      "sha256": "1f24010076deae6776b7a685e856b87ea681ae29696f7313a6828477d053c441"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/Sound_BTN.png",
+      "bytes": 15366,
+      "sha256": "6ee95fda63388c5f5525f6817451946e7803bcb1ae8ee1255cc31ed7ba769a12"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/Twitter_BTN.png",
+      "bytes": 15921,
+      "sha256": "3b2a0c83aae9781e9d98b862a1440c8ec74a634d80547c6b68c3e28c65633060"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/Upgrade_BTN.png",
+      "bytes": 15704,
+      "sha256": "b08f950bf761ba5723a902c81e304fbdffb355e85144893ef083588f0cede314"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/Vibration_BTN.png",
+      "bytes": 15321,
+      "sha256": "21ed30ecb4e0c8f18c357e03a29abf3c84352c8b5801e7e08acfa908f272b750"
+    },
+    {
+      "path": "graphics/Buttons/BTNs/VK_BTN.png",
+      "bytes": 15135,
+      "sha256": "fb366d7829689bc9a477218546fc32b89d6e1f2685bf8dd0a3c463ab0d152296"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Backward_BTN.png",
+      "bytes": 13875,
+      "sha256": "02ec281c76cb32c53cadcbce01c553c7f3c0e9dd817a0ce32cc631d3602cf15a"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Close_BTN.png",
+      "bytes": 15378,
+      "sha256": "ecaed11f62497416871c22b08e8d77600eefe33febd20e38043b46b337287455"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Facebook_BTN.png",
+      "bytes": 11167,
+      "sha256": "7aeb5da848a7abd1e116ed06e95c4ff48fde52b2215f66e30e296f71c29c9c7a"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/FAQ_BTN.png",
+      "bytes": 12985,
+      "sha256": "65fb5395c963c5a11afb1c6fb6944808f3d71778c2c136a34f55e6ae87f5e6fe"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Forward_BTN.png",
+      "bytes": 14029,
+      "sha256": "0017725d4183b78f38290ab46e29b31cd626448a79ebfc6041ed79552aa38500"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Google_BTN.png",
+      "bytes": 14278,
+      "sha256": "4792683a054224217f648f0936cd30f4c44346480d009fbd349bef7664197a5e"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Hangar_BTN.png",
+      "bytes": 14564,
+      "sha256": "0d1384b2a95bba02e2c480706384782bd37503a461c583ab684a300937e5c7aa"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Info_BTN.png",
+      "bytes": 12216,
+      "sha256": "59143e150431e3878b61b54773b4abe33b8adf77db0923f2295d4e2ed1ad70a3"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Menu_BTN.png",
+      "bytes": 13294,
+      "sha256": "d65c0d55b165ba770da346a704128522834c0613d3a152ac1eaba24b41e1dbe4"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/More_Games_BTN.png",
+      "bytes": 15396,
+      "sha256": "02db54a23e5408b6798b6ebe2c5002c982fcd450f3e894d71ed4dd836ecd0509"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Music_BTN.png",
+      "bytes": 12658,
+      "sha256": "b34f8e6c801085812a1082379dc7e89b372b4b38dd5c061c4298e26f50abb4d4"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Notifications_BTN.png",
+      "bytes": 12963,
+      "sha256": "238e3da59f42f5e55113579b76f17feafe5428d1b88b957a0e7985254e31cb9a"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Ok_BTN.png",
+      "bytes": 14078,
+      "sha256": "b6bfbf061c80530de38b845427eea92c67bbbac31fb06932df4b55284b07e8cf"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Pause_BTN.png",
+      "bytes": 11834,
+      "sha256": "a677218dd5ca3f9c37ed7b251dfc7fc547da2cddbda41ea3e06ec98c9ff6dd93"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Play_BTN.png",
+      "bytes": 13494,
+      "sha256": "dea24150da41b44441cdbe25074dd59e82e9cb30b8d90ebce5a003aedc78b255"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Rating_BTN.png",
+      "bytes": 16397,
+      "sha256": "1a7a7beae05da65174b36cfd99d0f6766035ce501527f22bde3a1893b3eada6a"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Replay_BTN.png",
+      "bytes": 15545,
+      "sha256": "218edc89d88a1c9d7831f9ddcd06076ae4a61a6cfbf2744d5a2dfbfecae572da"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Settings_BTN.png",
+      "bytes": 15551,
+      "sha256": "f463d24900ba3dc93a06acad9a392a0e0402ceff76c6922fad1d647b62f72fd9"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Shop_BTN.png",
+      "bytes": 14637,
+      "sha256": "eaaf7394107656e302839c271485ff403fa1708b6ab66e118e892277db05f86e"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Sound_BTN.png",
+      "bytes": 15026,
+      "sha256": "224c1b36f695fff4b7817e42b290ff409de97f8dfb34733025fbac7db78222e3"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Twitter_BTN.png",
+      "bytes": 15407,
+      "sha256": "44aa4f3b3471fbb5477156423721537e10a5f01def6fd3d3392cb125a00425bc"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Upgrade_BTN.png",
+      "bytes": 15396,
+      "sha256": "56f94b56954b2ae9ec8af69fdd1722b92767ad299542cd26650d45ab1a4df17c"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/Vibration_BTN.png",
+      "bytes": 15454,
+      "sha256": "1265ebcb101893486b1d0d7cebd09e65222cc112c78660978ce56eb3a91b0973"
+    },
+    {
+      "path": "graphics/Buttons/BTNs_Active/VK_BTN.png",
+      "bytes": 14507,
+      "sha256": "24a4425a4f1c5357fbe0a4d6531ce4b2245fb4cc1d0b9f9e97f8f6a9137cb8f1"
+    },
+    {
+      "path": "gfx/button/btn_normal.png",
+      "bytes": 1320,
+      "sha256": "5a348b7d1420ddd72beb0c1d699f9d083e6dea9f28a05da44a1f764076265d00"
+    },
+    {
+      "path": "fonts/Elianto/Elianto-Regular.otf",
+      "bytes": 18400,
+      "sha256": "8f7bad1b6d862d665fb5358150790da49060592c0c7e130ff75fc0c5f637b9f4"
+    },
+    {
+      "path": "fonts/nidus/nidsans-demo.html",
+      "bytes": 35261,
+      "sha256": "250c5bb43c6e69bb20d038d9b6c348992797b75f63e2350b313168e16d1e05d8"
+    },
+    {
+      "path": "fonts/nidus/nidsans-webfont.eot",
+      "bytes": 12525,
+      "sha256": "45734702999e486173c172d31cb857e3619cc40f28aee511cfe747bbdb5573f9"
+    },
+    {
+      "path": "fonts/nidus/nidsans-webfont.svg",
+      "bytes": 127174,
+      "sha256": "83ab21ab3e1da8b339ea7708efa1e82c0510a89b09e789d68fd063f9e95fc9e9"
+    },
+    {
+      "path": "fonts/nidus/nidsans-webfont.ttf",
+      "bytes": 36784,
+      "sha256": "c7c93eeaab83aed18b04ee158e955b18b2aab3f152897134474afb006073109e"
+    },
+    {
+      "path": "fonts/nidus/nidsans-webfont.woff",
+      "bytes": 14388,
+      "sha256": "03299cc9aef11ff378a4e3b5a636878c9e6553d7481c6e674c5e081fcf869fde"
+    },
+    {
+      "path": "fonts/nidus/nidsans-webfont.woff2",
+      "bytes": 11172,
+      "sha256": "a9861a20191c6dedb1a4cd81417a05803b5c1dfe23752dcecf8fcf5ad395715f"
+    },
+    {
+      "path": "fonts/nidus/stylesheet.css",
+      "bytes": 526,
+      "sha256": "0770e0df3c87b852d0b809c2939c62495f61b22d1a9de0eb05ee2e59cd0650ee"
+    },
+    {
+      "path": "audio/ScifiTactics/Ambiance_Dark_Electronic_1.wav",
+      "bytes": 4042732,
+      "sha256": "0c8fabb12b296f8b6251287bbde2f5fb36e34f17f1041e36b423c623454599c3"
+    },
+    {
+      "path": "audio/ScifiTactics/Ambiance_Dark_Electronic_2.wav",
+      "bytes": 2354044,
+      "sha256": "64343bdde74586f4d75bba3d64ef51f169b56fc1913c5a2e3bdcc49f6af82aab"
+    },
+    {
+      "path": "audio/ScifiTactics/Ambiance_Machinery.wav",
+      "bytes": 2179492,
+      "sha256": "ae6adc781c98c9b4cf5429f1796005f744b4ce732b6b3531f2235282b80ad250"
+    },
+    {
+      "path": "audio/ScifiTactics/Ambiance_Machinery_Electronic.wav",
+      "bytes": 3239698,
+      "sha256": "55a4744fe19289ea12f84641b09f7af2a190ac4acdf18f9dd678d33025e301fd"
+    },
+    {
+      "path": "audio/ScifiTactics/Ambiance_Subtle_Chatter.wav",
+      "bytes": 2174974,
+      "sha256": "d7007f8f47f6b0e46d9316fb9b79dcafae712ed545460f20327066ee69c11796"
+    },
+    {
+      "path": "audio/ScifiTactics/Ambiance_Ventilation.wav",
+      "bytes": 2368540,
+      "sha256": "858930e69943e122a9cef3a7831ed91ecb4bbcba44fa85d76f6cea5bc6356b29"
+    },
+    {
+      "path": "audio/ScifiTactics/Attack_Shock.wav",
+      "bytes": 603946,
+      "sha256": "518d0d8bada1ed48fe0a84314ee38e4df94b07d968c1ff1adfed76666f64b010"
+    },
+    {
+      "path": "audio/ScifiTactics/ButtonClick.wav",
+      "bytes": 134608,
+      "sha256": "92934a6272b8935b4fc3803acf685d91883923690dd304d439e66b5f0b940814"
+    },
+    {
+      "path": "audio/ScifiTactics/Character_Drag_1.wav",
+      "bytes": 591838,
+      "sha256": "a6432819eaa24883e1830aa87374d1eefd5ac6f07951ead03d30161f6beb77b1"
+    },
+    {
+      "path": "audio/ScifiTactics/Character_Drag_2.wav",
+      "bytes": 540730,
+      "sha256": "de121d034fa13ca19915f0a37ddf29d66040842d48fe6e017e462b6cd73f746e"
+    },
+    {
+      "path": "audio/ScifiTactics/Character_Drag_3.wav",
+      "bytes": 466762,
+      "sha256": "22028b71d35bfc3dd45921e89ace6c071be0becf2d94add49f82910b4b45c81d"
+    },
+    {
+      "path": "audio/ScifiTactics/Character_InsertPlug.wav",
+      "bytes": 200458,
+      "sha256": "23b93202c09c187dcc63c04a68a7916ce292beba32c4368851970c8f9345da68"
+    },
+    {
+      "path": "audio/ScifiTactics/Character_RemovePlug.wav",
+      "bytes": 232738,
+      "sha256": "77fb51414ece4754359877b19284ab70ec8bfac1a3845d33c8a954f9968ed8e3"
+    },
+    {
+      "path": "audio/ScifiTactics/Object_Beam.wav",
+      "bytes": 2625412,
+      "sha256": "fc3eb65de4a152d6f845bcae16e5b2c52d6436b0a6f8ccff460d9331f0336ad0"
+    },
+    {
+      "path": "audio/ScifiTactics/Object_Container_Open.wav",
+      "bytes": 421630,
+      "sha256": "5937143ff3aa3fec2813f0f357013f57f746a5d75819cda45667247ec753a847"
+    },
+    {
+      "path": "audio/ScifiTactics/Object_Door_Close.wav",
+      "bytes": 313438,
+      "sha256": "42cd7f6d28b294e6d6eeaf0da599b1f88c83a68be8b26c4953c9082aa4b11bd1"
+    },
+    {
+      "path": "audio/ScifiTactics/Object_Door_Open.wav",
+      "bytes": 309820,
+      "sha256": "eb488e63cf77795d6e5554e2c87356c4a9bd83c54afd1fc3611cf8476435495b"
+    },
+    {
+      "path": "audio/ScifiTactics/Object_EnergyField_Disable_1.wav",
+      "bytes": 380440,
+      "sha256": "a082d874496d11c28d3b0ab5f3f41e1cbca7fbd2d7430947abd21e985a42a794"
+    },
+    {
+      "path": "audio/ScifiTactics/Object_EnergyField_Disable_2.wav",
+      "bytes": 512494,
+      "sha256": "1ad22454b40526dbae4bbb461062b7706e44bed7090988cb2a37c6022b911c3c"
+    },
+    {
+      "path": "audio/ScifiTactics/Object_EnergyField_Disable_3.wav",
+      "bytes": 517864,
+      "sha256": "c67516951c1dee04f94307adbef11f113465545f866c6119e9352e5f3b0b9489"
+    },
+    {
+      "path": "audio/ScifiTactics/Object_ItemGain.wav",
+      "bytes": 306406,
+      "sha256": "b5b4956194e35218466a40dfb5c90cb0c898511d6fc1b62fe631a5f03eb1647d"
+    },
+    {
+      "path": "audio/ScifiTactics/Object_LargeDoor_Close.wav",
+      "bytes": 614200,
+      "sha256": "524e5c27da661aaf6e60f22f4df0ad8bc3c353c2fa89fab48216f9d01e665e97"
+    },
+    {
+      "path": "audio/ScifiTactics/Object_ScifiDoodad.wav",
+      "bytes": 523618,
+      "sha256": "63e7cd78a1a781b4bf68f052f12c4ba0e41fc7ffe59129933c8f4f27014371fd"
+    },
+    {
+      "path": "audio/ScifiTactics/Radar_Blip_1.wav",
+      "bytes": 180280,
+      "sha256": "6e8d85c25dad96bf55c16094296d8e8a93fd6ae195c9083191f33d0f32ca7a28"
+    },
+    {
+      "path": "audio/ScifiTactics/Radar_Blip_2.wav",
+      "bytes": 158044,
+      "sha256": "9b597965bd8425acdedd273c738fd5f8b98a3b9be332e8897ca2cb519ec3177b"
+    },
+    {
+      "path": "audio/ScifiTactics/Radar_Blip_3.wav",
+      "bytes": 148006,
+      "sha256": "2151f11caf79731a84afc3d04919e009bd5abb0ad9767f9397db8a842dfcee83"
+    },
+    {
+      "path": "audio/ScifiTactics/Sting_Discovery.wav",
+      "bytes": 648328,
+      "sha256": "a7dd0ddd2836c6de19d48fae536d93a28dafd228a27950feaceb9beaccccee88"
+    },
+    {
+      "path": "audio/ScifiTactics/Sting_Discovery_Electronic.wav",
+      "bytes": 412726,
+      "sha256": "f5b7899d7e35970e4f18defa36ad6a1f0c15cf05b7319c12fb166b8677a3dad1"
+    },
+    {
+      "path": "audio/ScifiTactics/Sting_Electronic_Machinery.wav",
+      "bytes": 542800,
+      "sha256": "8bbdf03476cf10f68c6cb81b68089cc2df4668c3093e27bd9a125ea3eb92fd1b"
+    },
+    {
+      "path": "audio/ScifiTactics/Sting_Electronic_RevealV2_1.wav",
+      "bytes": 706006,
+      "sha256": "975ab40525f90b38a56323643a40cddfb93725058eb68940838fa3ee727aa199"
+    },
+    {
+      "path": "audio/ScifiTactics/Sting_Electronic_RevealV2_2.wav",
+      "bytes": 630226,
+      "sha256": "3bb2cd2a021d4ffd5c3ef3f6863c8ee957a0df1171c0a204cdc8951e8e2aa48e"
+    },
+    {
+      "path": "audio/ScifiTactics/Sting_Electronic_RevealV2_3.wav",
+      "bytes": 702124,
+      "sha256": "7cfabb35b09a8212996903f689e1a261dcff834090207d590b4a337ac3db4754"
+    },
+    {
+      "path": "audio/ScifiTactics/Sting_Electronic_Reveal_1.wav",
+      "bytes": 230050,
+      "sha256": "bf71296589ddc3efc99873317b8cc0e45108a37e96579b5be6c19791a0e8fe2e"
+    },
+    {
+      "path": "audio/ScifiTactics/Sting_Electronic_Reveal_2.wav",
+      "bytes": 201808,
+      "sha256": "26dbdec5b4a3c493949975e301fac045fdca58f19b7cacb5a9ce362dd09c5735"
+    },
+    {
+      "path": "audio/ScifiTactics/Sting_Electronic_Reveal_3.wav",
+      "bytes": 193738,
+      "sha256": "e4a86c6f53a1e785264ac11d0ec0f1d4f656b98a961fa596393dc8fdd165359e"
+    },
+    {
+      "path": "audio/ScifiTactics/Sting_Energy_Gain_1.wav",
+      "bytes": 270400,
+      "sha256": "afd74e3f66523483f3370aafe10bd05cfac28ea56a2579a6ae98ab0a2a4945e7"
+    },
+    {
+      "path": "audio/ScifiTactics/Sting_Energy_Gain_2.wav",
+      "bytes": 330922,
+      "sha256": "f9f806d2c541b540c6970ebe50549434c6ace3ae4dca562dd8a8eee4aee4d4fc"
+    },
+    {
+      "path": "audio/ScifiTactics/Sting_Energy_Gain_3.wav",
+      "bytes": 316126,
+      "sha256": "dbad561ae01d463136b7a9f2aec5a58ce788a37324f5a7343daa0b53ff97dedb"
+    },
+    {
+      "path": "audio/ScifiTactics/Sting_IncomeGain.wav",
+      "bytes": 303766,
+      "sha256": "c34c8f49ccf67a0a488f1cf70f8e8e9543af2b6abdb6a3da52047306011d6966"
+    },
+    {
+      "path": "audio/ScifiTactics/Teleporter_Buildup_Long.wav",
+      "bytes": 1935454,
+      "sha256": "89179468ba94c9f793a5dfbba5e9e22cf7f92b76735bb20d55e78066d3cc088e"
+    },
+    {
+      "path": "audio/ScifiTactics/Teleporter_Buildup_Short.wav",
+      "bytes": 722302,
+      "sha256": "55182b50579a2f70396c96fe69bb7aa44cede2d964f5965367b2ea467db1e9bc"
+    },
+    {
+      "path": "audio/ScifiTactics/Teleport_1.wav",
+      "bytes": 521902,
+      "sha256": "4433165afcc852066139219f1d58b56ab1344f03e2cd2615cff0cac058d5a14d"
+    },
+    {
+      "path": "audio/ScifiTactics/Teleport_2.wav",
+      "bytes": 618742,
+      "sha256": "3f022b942dd1e7184d8b4fc9d21e53eb523c14ca4f3bc5b8dbb1dcd2f6795164"
+    },
+    {
+      "path": "audio/ScifiTactics/Teleport_3.wav",
+      "bytes": 629500,
+      "sha256": "05b14ac274a501fd88ecf9b058492582fbe7a77863c1977ac57ff2e5ead4012c"
+    },
+    {
+      "path": "audio/ScifiTactics/Text_Chatter_1.wav",
+      "bytes": 628906,
+      "sha256": "4519672bd16f95873a2d46d6324dea39e404bc99362e62c258a5e2d6147fca6d"
+    },
+    {
+      "path": "audio/ScifiTactics/Text_Chatter_2.wav",
+      "bytes": 562252,
+      "sha256": "ead2e175336d25a5d15e21b5f328517b75cd6f371fb37b8054d03fa369bb5519"
+    },
+    {
+      "path": "audio/ScifiTactics/Text_Chatter_3.wav",
+      "bytes": 570322,
+      "sha256": "47babce1ac2291af1ff4ddebce4b3f644a6db1dd13dec7b01d56700c9a4b8eb2"
+    },
+    {
+      "path": "audio/ScifiTactics/Travel_StealthJet.wav",
+      "bytes": 1044262,
+      "sha256": "f6039fa1f396267d838d9e3f09298d3a3e111cd4b52356174d368040e1854d96"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_EnemyTurn.wav",
+      "bytes": 370288,
+      "sha256": "6a6c9240e4458eab961348467f0e40755c57352cf8e7d9fd5337ee113ce3a5fb"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_MajorAlert.wav",
+      "bytes": 518626,
+      "sha256": "90e83332ac07b1de4c58b9d65d78273d5f129926f9a4c635668511e2de8989ff"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_MinorAlert.wav",
+      "bytes": 310564,
+      "sha256": "f3fb98b8c2b8bd829aa8b3502406e784d2d330c66622024e35444e8787c03f5f"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_MouseoverV2_1.wav",
+      "bytes": 60130,
+      "sha256": "11595db3537d41669e57a7e1aa951b81ae66929beb13596c2fd4b1f3fb637cac"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_MouseoverV2_2.wav",
+      "bytes": 56098,
+      "sha256": "a0ee8367eda595612a362bee324c04740eb1289b3dc4fa8fcfccbc4fd3fc0e49"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_MouseoverV2_3.wav",
+      "bytes": 57892,
+      "sha256": "bc889b3a85c1bb396ac962f06ecbc8e1b44a95c393e4992b352e53cbf3791541"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_Mouseover_1.wav",
+      "bytes": 141286,
+      "sha256": "552cbbceca7b94074f9fa6bf16dd89d7f9b3958f21b84477f502550d6741253a"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_Mouseover_2.wav",
+      "bytes": 174898,
+      "sha256": "32ebd8eee54dd6e5fad58d943608f3770098f0a10ffd0affda8a1e1c68fa9f2e"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_Mouseover_21.wav",
+      "bytes": 113912,
+      "sha256": "22d8003ae4ce0d82a6aa2b83480954da792eb16da597083071552848eed71252"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_Mouseover_3.wav",
+      "bytes": 138592,
+      "sha256": "d8f2deb39b61ea5f939b291b211ddb77abc6e61aedcc4c8b99bce8be8f27acda"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_Progress.wav",
+      "bytes": 214120,
+      "sha256": "8ad9a00bc0d3189de5de74cae2f5fb9ae104ec48f401da1355c7d0057ff0a2dd"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_ScreenOverlay_Off.wav",
+      "bytes": 160132,
+      "sha256": "989a3c53e02083e2a849adfc446494e2c7c7fcd7d715cce2b8a2949a239ae488"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_ScreenOverlay_On.wav",
+      "bytes": 162994,
+      "sha256": "b66c25b351e8f8e9e82fd10f6f14f72f691ef5813f0d684a2222b20ba0d5ea23"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_Selection.wav",
+      "bytes": 139678,
+      "sha256": "ea2f02612cc7db0461d94075950a0f2ff1e6b89ffa6968c3d5d81b60f26c2879"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_TacticalView_Off_1.wav",
+      "bytes": 203926,
+      "sha256": "0d25e3419c54c192cce55d34c433e324f5446f7406c8bacb80ffbc02f2a7fe11"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_TacticalView_Off_2.wav",
+      "bytes": 271726,
+      "sha256": "662ead46b7785d4b750a12217e9f7bdea5aa00a24fecb8d73daed064f5d7e0af"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_TacticalView_Off_3.wav",
+      "bytes": 293362,
+      "sha256": "1a1afc4d61d2cdf8426e862e32701a058c84cf3a138d31f0597cc10d65c38367"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_TacticalView_On_1.wav",
+      "bytes": 158794,
+      "sha256": "0556abf079bc40f566a49638ace64ce5342a0496be64d90bf992b0809151747b"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_TacticalView_On_2.wav",
+      "bytes": 174988,
+      "sha256": "f9d33b04e2e4d91e3f1ff04827349319e107a419cab46ad6307f52c5310ac58a"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_TacticalView_On_3.wav",
+      "bytes": 200440,
+      "sha256": "f3650f0d7b7e9fd4e43da72146cf27493aba684b79e27eae640d9898f3bd807f"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_Toggle.wav",
+      "bytes": 313774,
+      "sha256": "c6c3f672c10e3e1dafa1feefe13ec08cc4998018f78ccab6a989a306046c1c0e"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_Unlock_1.wav",
+      "bytes": 439864,
+      "sha256": "d2e239de20c95a8e6268a64b42c505753dfcbb2ec3a117b5051bae7a31c57ea9"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_Unlock_2.wav",
+      "bytes": 455998,
+      "sha256": "9fc6188ce799873767edadd14d20ba3da23f58cc76810481e79536fe811c915d"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_Unlock_3.wav",
+      "bytes": 441832,
+      "sha256": "075b7bae8f3357f48eeb0bcf0a6d3ba6d8b16f0b112909de281260c5fb1663e7"
+    },
+    {
+      "path": "audio/ScifiTactics/UI_ViewShift.wav",
+      "bytes": 290824,
+      "sha256": "c3efeb2c0ba9d5fe5c4bbaa041774c966fb1efc8fc69d57491625c7dd6d38308"
+    },
+    {
+      "path": "audio/shapeforms/20 Percent Off Coupon.txt",
+      "bytes": 365,
+      "sha256": "0d7cdc0b2a59bac4179ae06b1730a60702f4e0ea7c36af17e25792ac14ff654c"
+    },
+    {
+      "path": "audio/shapeforms/BUTTON_03.wav",
+      "bytes": 175234,
+      "sha256": "04f69885d54b2064c679d28edf8a671be70a759893f5dd817e51b2e0b9d94b1c"
+    },
+    {
+      "path": "audio/shapeforms/Get all in the 2021 Complete Collection.url",
+      "bytes": 81,
+      "sha256": "ea5668a46ef3f37c74535871952fc5e17d2987475abb8701240244142b116d18"
+    },
+    {
+      "path": "audio/shapeforms/Shapeforms License Agreement.pdf",
+      "bytes": 48893,
+      "sha256": "3de2441e4bdb691d616c036650858c257c29393c934c00e3708243968fd26e38"
+    },
+    {
+      "path": "audio/shapeforms/Arcane Activations Preview/Arcane Activations Thanks and Info.pdf",
+      "bytes": 374155,
+      "sha256": "270a867943b0a5e4a77e46a40fd256d79bbca068bf9ef7af3021caa0a15d2a67"
+    },
+    {
+      "path": "audio/shapeforms/Cassette Preview/Cassette Full Library.pdf",
+      "bytes": 231463,
+      "sha256": "40e501ba18d4c271cdc7ea322d8790bb5a31adc592650ef84131bc3f3deceea5"
+    },
+    {
+      "path": "audio/shapeforms/Dystopia \u2013 Ambience and Drone Preview/Dystopia Full Library.pdf",
+      "bytes": 277605,
+      "sha256": "3df055eb4665f5c0cf5c298dd1be1954cc79aae44d16e6ff808fc3f5ad8a8767"
+    },
+    {
+      "path": "audio/shapeforms/Future UI Preview/Future UI info.txt",
+      "bytes": 893,
+      "sha256": "2246ce52f50145ca3526c31a874a4859f37fd86c4518f1c0c7fa0e20d5e4e83e"
+    },
+    {
+      "path": "audio/shapeforms/Hit and Punch Preview/Hit and Punch Full Library.pdf",
+      "bytes": 326848,
+      "sha256": "5435bf421b052a659985d92e6ada1ba1517772e61ae7005f1ad8f5429442108a"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/Sci Fi Weapons Full Library.pdf",
+      "bytes": 1353883,
+      "sha256": "6901994b1b0110e85b7a600b519cedca6f0d6900f4abe0a948e5ab98d903c489"
+    },
+    {
+      "path": "audio/shapeforms/The Mint \u2013 Coins and Money Preview/The Mint Full Library.pdf",
+      "bytes": 498649,
+      "sha256": "76cd6f84d2fb467ce59dae90a671cb33369ce7edc81dfb47f645c220a0dbfd23"
+    },
+    {
+      "path": "audio/shapeforms/Type Preview/Apple Keyboard/Apple Keyboard_Typing Long_02.wav",
+      "bytes": 2375820,
+      "sha256": "0904ec037507e89efce07a7f8185e35b805ae57c20e6c52c19213d0dc69f2b39"
+    },
+    {
+      "path": "audio/shapeforms/Type Preview/Laptop/Laptop_Brush Keyboard_12.wav",
+      "bytes": 101540,
+      "sha256": "43c9f25a2efb7e6b41bcee0f0bf0c8615f3a3427b623c25ae4c9d0ed57466c16"
+    },
+    {
+      "path": "audio/shapeforms/Type Preview/Laptop/Laptop_Keystroke_82.wav",
+      "bytes": 56088,
+      "sha256": "6be2fdbe6f5693fcace7161e686e045a7b047451c6fd439863be882410fe2794"
+    },
+    {
+      "path": "audio/shapeforms/Type Preview/Laptop/Laptop_Spacebar_06.wav",
+      "bytes": 41744,
+      "sha256": "4038ce21d50a464151dc2783bdaa7bf3c8e92cb544b6d8ce47cef5ac8fcf4782"
+    },
+    {
+      "path": "audio/shapeforms/Type Preview/Laptop/Laptop_Typing Short_04.wav",
+      "bytes": 141040,
+      "sha256": "f1172298db7717ebd3ae14b028699dc0d1969fa20f163d7bbc96edb27bf1b0cd"
+    },
+    {
+      "path": "audio/shapeforms/Type Preview/PC Keyboard/PC Keyboard_Brush_18.wav",
+      "bytes": 83900,
+      "sha256": "7b41ad1aba19b43d8b7c2e768a914afafaee13b996b854ee7272f4103215ad74"
+    },
+    {
+      "path": "audio/shapeforms/Type Preview/PC Keyboard/PC Keyboard_Keystroke_28.wav",
+      "bytes": 59204,
+      "sha256": "3ff9f8d1b34488b3e022247763e917e67a79ec6756f213c3af4cb9557c26887d"
+    },
+    {
+      "path": "audio/shapeforms/Type Preview/PC Keyboard/PC Keyboard_Spacebar_06.wav",
+      "bytes": 44816,
+      "sha256": "d7a9ae5b85d1fd069cbce743924ffe74cb575f0037e591497facfe32866f9221"
+    },
+    {
+      "path": "audio/shapeforms/Type Preview/Tablet/Tablet_Swipe_01.wav",
+      "bytes": 60964,
+      "sha256": "cc6ac70912d969ec56da1b5e0e3733b6a76dd4d84f199b7fb62dd28ccc93726b"
+    },
+    {
+      "path": "audio/shapeforms/Type Preview/Tablet/Tablet_Tap_07.wav",
+      "bytes": 31640,
+      "sha256": "436085185f798cf19fa025d68b7934a74e4456a150cb542c67870934344e3d68"
+    },
+    {
+      "path": "audio/shapeforms/Type Preview/Tablet/Tablet_Typing_01.wav",
+      "bytes": 81188,
+      "sha256": "3bdaccc861d17d3a2be55a27fbeea9b0158e738050ad04313b6f39eda78a5c10"
+    },
+    {
+      "path": "audio/shapeforms/Type Preview/Tablet/Tablet_Typing_06.wav",
+      "bytes": 593928,
+      "sha256": "877d0807b6b3f50a4642a4dd5355e0d9438023b999e1e5153b334c0dd5d7a27d"
+    },
+    {
+      "path": "audio/shapeforms/The Mint \u2013 Coins and Money Preview/AUDIO/Bank Card Placed Down 03.wav",
+      "bytes": 46890,
+      "sha256": "e78343362522eff27841aa8d4b53891b9947246400ae5e88e6c7c9b3080fa19d"
+    },
+    {
+      "path": "audio/shapeforms/The Mint \u2013 Coins and Money Preview/AUDIO/Coin Counter Loop 01.wav",
+      "bytes": 69038,
+      "sha256": "9863f167c8a4c8824bdc3bf7d1a95b12b82f00252611ba3595d1cfff36fc1eb7"
+    },
+    {
+      "path": "audio/shapeforms/The Mint \u2013 Coins and Money Preview/AUDIO/Coin Dropped on Ceramic Dish.wav",
+      "bytes": 110432,
+      "sha256": "d0f7191ce57f4df8626557f409eebfd2d94fec0480a2a1dfb7a5ae1f76028056"
+    },
+    {
+      "path": "audio/shapeforms/The Mint \u2013 Coins and Money Preview/AUDIO/Coin Dropped on Wood Rattle.wav",
+      "bytes": 99918,
+      "sha256": "618eed628ebfa404337650d66756735f0e2b90bf16839988b41dae015dce4376"
+    },
+    {
+      "path": "audio/shapeforms/The Mint \u2013 Coins and Money Preview/AUDIO/Coin Flung.wav",
+      "bytes": 228404,
+      "sha256": "14b6fcdce9e483acf56d1c33d0b3e56421edc2bcedc5a43fa0fd748294647c57"
+    },
+    {
+      "path": "audio/shapeforms/The Mint \u2013 Coins and Money Preview/AUDIO/Coin Hardcover Spin Loop.wav",
+      "bytes": 208402,
+      "sha256": "40f06e814267448be1cefa6d85ad5713971625e8d98a23dfb350f6f35432d977"
+    },
+    {
+      "path": "audio/shapeforms/The Mint \u2013 Coins and Money Preview/AUDIO/Coin Slid Along Wood.wav",
+      "bytes": 85822,
+      "sha256": "d7b2329ba7eced438dffae0212e333fd915a0415f957fe311a56dbc1a914efed"
+    },
+    {
+      "path": "audio/shapeforms/The Mint \u2013 Coins and Money Preview/AUDIO/Coins in Sack Dropped on Soft Surface.wav",
+      "bytes": 99960,
+      "sha256": "ce7a67ce3662f051f7a737219f2fb8401fb4dfba9ab8a6bb90633685c42208f7"
+    },
+    {
+      "path": "audio/shapeforms/The Mint \u2013 Coins and Money Preview/AUDIO/Coins In Sack Dropped on Wood.wav",
+      "bytes": 100870,
+      "sha256": "6863423d8b2f0574d201f260b56249b848c6cc640d3f46bb1bb1471b31e9fa57"
+    },
+    {
+      "path": "audio/shapeforms/The Mint \u2013 Coins and Money Preview/AUDIO/Coins_Bottlecaps_Drop.wav",
+      "bytes": 154460,
+      "sha256": "5282def8b8cfc71f692eb97a8aceccd78415943f0e44fbcc0d01993611fc2c92"
+    },
+    {
+      "path": "audio/shapeforms/The Mint \u2013 Coins and Money Preview/AUDIO/Coins_Placed_Down_Hardcover_Pitched.wav",
+      "bytes": 112454,
+      "sha256": "ea3fa49a11238c9e0051b35f83f2108621512983d3140e5c7003b157dcec04b8"
+    },
+    {
+      "path": "audio/shapeforms/The Mint \u2013 Coins and Money Preview/AUDIO/Notes Scrunched In Wallet.wav",
+      "bytes": 154874,
+      "sha256": "7c998dd8d35b0026d722cfa7a848f25d62437b19db89d20d89a7039c3376c143"
+    },
+    {
+      "path": "audio/shapeforms/The Mint \u2013 Coins and Money Preview/AUDIO/Receipt Handled 03.wav",
+      "bytes": 128208,
+      "sha256": "6678385972fa8153a27116c45e71b0e70c3853b91113daf219a43ff085bc5f64"
+    },
+    {
+      "path": "audio/shapeforms/The Mint \u2013 Coins and Money Preview/AUDIO/Wallet Close.wav",
+      "bytes": 53968,
+      "sha256": "a76c9029edde818de78cfebf16f0b5c96d354e1d490010e592ce1e2e9d612e1c"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/ANMLBat_Creature Vocalisation_01.wav",
+      "bytes": 200258,
+      "sha256": "f750b41cada5e8a6fbf6e8efceb9919abc75d1391ebb050e38ee79d0a7cf96b6"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BEEPTimer_Anticipation Beeps_05.wav",
+      "bytes": 450344,
+      "sha256": "fba95494ad65c267ce4021c8517605bd0155376ee53f71dfaad0f57d30a6b0cd"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BEEP_Targeting Loop_06.wav",
+      "bytes": 172974,
+      "sha256": "afe1936f91e75d80d7b47a93ede0fb6beea7d4622c02b82705f64ed16bfe46cc"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BLLTBy_Bullet By Centred Fast_02.wav",
+      "bytes": 234172,
+      "sha256": "9443661124ca4c22d5860e5326490ceeb482516a70dbaba2fc72125ff536df0b"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BLLTImpt_Hit Marker_07.wav",
+      "bytes": 38780,
+      "sha256": "b1f9ce39090ce3fa39b644fbf58792393bc8a27514abd5506249cd4591ac6f78"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BLLTRico_Metallic_11.wav",
+      "bytes": 228864,
+      "sha256": "5db2e6b82a156c9525af512fd0167daaceeead5bdfd97cf6eabc5b227471c535"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BLLTRico_Ricochet Metallic_04.wav",
+      "bytes": 70736,
+      "sha256": "2980cbf9141b130be73ce92acd4ab270235147348ca8b64b7c518232850bf7ed"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BLLTShel_Shell Eject_02.wav",
+      "bytes": 73936,
+      "sha256": "a165940f25869d516b9b498356523606a97bc7dcd04eddb72994690f4410d207"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/CREAMnstr_Beast Vocalisation_09.wav",
+      "bytes": 455926,
+      "sha256": "64d5774b57e18ff96404110e4c6a7021413eeb2758c9579a6c539ac5ca6c0c9e"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/DSGNStngr_Kill Confirm Metallic_02.wav",
+      "bytes": 957442,
+      "sha256": "752fa8e8a1c2245004ce71aac8181a8436d755cd4f99db1911c61f4e7b30eec3"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/EXPLDsgn_Explosion Impact_14.wav",
+      "bytes": 389280,
+      "sha256": "0bd838dc00a5a3babf3c3680cd78ebf8c392c74ee09d36e404a3a78746d1d58e"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/EXPLDsgn_Explosion Rumble Distorted_01.wav",
+      "bytes": 672846,
+      "sha256": "06ef3f002c857a4c9f4f84447c710d719641dd2a9889ba6149b42f071fe631d9"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/EXPLDsgn_Implode_15.wav",
+      "bytes": 1704324,
+      "sha256": "74dcc976907fee1c162bde99eade92f4ee2e1844a27e127054e23c8be782599a"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GORESplt_Giblet Splatter_02.wav",
+      "bytes": 325086,
+      "sha256": "e3cb061d78a50813083696bd819e2cbc36ea8b46c238ea2fa7a7ed407a549432"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNArtl_Grenade Launcher Fire_05.wav",
+      "bytes": 310358,
+      "sha256": "fcfbda9b7e42d2c0056a5fa126b6a19936ba2499c8d785047bb21707dbe1d329"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNArtl_Rocket Launcher Fire_02.wav",
+      "bytes": 453272,
+      "sha256": "99cf505367e5b0527ab5f6cfe9defde10fe91cd325414a456e21755081a4de9f"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNAuto_Assault Rifle A Fire_01.wav",
+      "bytes": 45192,
+      "sha256": "ef690f7ad2b27c95f46d749a24c991d8318ca1fc7601307fc5672e483cc628cb"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNAuto_Assault Rifle D Burst_05.wav",
+      "bytes": 154434,
+      "sha256": "6a135c94c740d51291cd74c1b83c7307fffdd61890fadbaff2b180dba1ebf471"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNAuto_Plasmid Machinegun Burst_07.wav",
+      "bytes": 427770,
+      "sha256": "3375f76bfa7dba81c6101f7cfc4820166def577ef3210773a29b3f6d48c0d4f8"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNAuto_RPU Mk2 Burst_04.wav",
+      "bytes": 240954,
+      "sha256": "11262303699221d78886c27b48195f08b96fe4cd841e260907974a8b92218091"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNAuto_Sci Fi Shotgun Burst_03.wav",
+      "bytes": 391884,
+      "sha256": "b0cf6ba6a2748af8fa94f3b9c8e06d576f5f3a1f23124eab7ba87ed84b83b3fe"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNCano_Quad Cannon Fire Double_01.wav",
+      "bytes": 320578,
+      "sha256": "abfe786dd71f6f717b8bc577491f089b1a3769f12cb11967d91fd77db958b1d2"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNMech_Arm Weapon Rattle_10.wav",
+      "bytes": 62250,
+      "sha256": "330d601f5cde7aa57b9e023b36e2e9809a90c5b7890b8f199634defd39a7b3f8"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNMech_Empty Clip Burst B_01.wav",
+      "bytes": 156136,
+      "sha256": "6145f6a3cf8b1955815e80cd17548054265b87586c750795be990b4ff504fea3"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNMech_Insert Clip_04.wav",
+      "bytes": 159696,
+      "sha256": "f5a4caa5abff46504c6a347209941b2923ab006b615c95975d766819eea5d2de"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNMech_Mechanical_12.wav",
+      "bytes": 45094,
+      "sha256": "c8a5fcdfff2ec168fcece8823448ba8f4a0ef7f2e77494b8df9960fd76c87158"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNMech_Scope Deactivate_06.wav",
+      "bytes": 48130,
+      "sha256": "166690d7def2c397e908ec10d21d525967b32555efccef53c635917048c651d6"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNMech_Scope Deactivate_11.wav",
+      "bytes": 119808,
+      "sha256": "fb5aa6a36e0168137799d91fca2208d7f76abe8b4ba876f0d3ad5c46cbeb9d61"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNPis_Pistol Fire Longer Tail_05.wav",
+      "bytes": 203126,
+      "sha256": "fd255daf7d43272b1e34b4d49ce2854b62a06ba17aeefed463d8d99df0acd84a"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNSupr_Silenced Pistol Fire Short_01.wav",
+      "bytes": 74298,
+      "sha256": "ec15e6dd564f779150568ad699f3938e0e22d5ab1c79946e87b6ceeefe47a6ab"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNTech_Sci Fi Shotgun Fire_04.wav",
+      "bytes": 205454,
+      "sha256": "f6918271f3894e6c7eb76274f3729b2777d4079dfe6bdee8dcfa7325213a2bea"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNTech_Tormentor Shotgun Fire_05.wav",
+      "bytes": 296944,
+      "sha256": "f2f7042e02acaf005903b01a3fd91a2c7f16840892764d73395b8aa4c7231322"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRBeam_Plasma Loop_01.wav",
+      "bytes": 614848,
+      "sha256": "fcd1cfa771029dc30c1c56bafa9b9518c0bfe635d66a7b862267e276210a86ce"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Alien Handgun Burst_03.wav",
+      "bytes": 210416,
+      "sha256": "e0064f67cf0740053b79148b451d97e221cc83e34256948f82f0cb7d4cb07d9c"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Classic Blaster A Fire_03.wav",
+      "bytes": 146688,
+      "sha256": "1603a3bd2e3fe30d78fd75601c9681bc0a426b72f53ceed82ca0dceabf692160"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Electron Impeller Charged Fire_02.wav",
+      "bytes": 406576,
+      "sha256": "4f9fbfd5e78f5abf32ae0e3b5a78869544013b123763bd7b4ad44afda3486401"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Electron Impeller Fire_07.wav",
+      "bytes": 468848,
+      "sha256": "fe1401eeb18b4f298cd5464f0e9c6f1b0174c0ef10e3d23f534d892e11d05417"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Ion Pistol C Burst_02.wav",
+      "bytes": 413274,
+      "sha256": "0d0aad7a2a46011cafbaac4e6e71c00ae039b4a4c56c04a92dd51ea7a9e8cef3"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Particle Compressor Fire_01.wav",
+      "bytes": 154186,
+      "sha256": "8fe2c1f29073a1729bb6357b161c959badefbc6e9c592af54e26ce5c55ba4018"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Plasma Rifle Bullet Stream_02.wav",
+      "bytes": 576886,
+      "sha256": "8864a4077c3b4dedb09e3ad906e931499f4f7a03006a4776e6143ea412538b73"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Plasma Rifle Fire_03.wav",
+      "bytes": 165770,
+      "sha256": "3b16cb0ea8ec624de19766794d683dcf07aab25bbf40af51e7888e22010871be"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LIQImpt_Goo Splatter_09.wav",
+      "bytes": 111474,
+      "sha256": "53c76b5129e85b5f6e2fd2fa0f427f6a1b125a1f2ed0f0371afaeba078013b38"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/MECHClik_Mine Deploy_02.wav",
+      "bytes": 72650,
+      "sha256": "d3b42495b8fb4433a354fc1dae00c65f90426443514ddebfd4340bbea48219cd"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/MOTRSrvo_Plasma Rifle Arm_01.wav",
+      "bytes": 118200,
+      "sha256": "cdd4edc754b7430c6902c3a44a43801e439e1b73397154632f5c5361bbb1585f"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/SCIEnrg_Energy Orb_05.wav",
+      "bytes": 535306,
+      "sha256": "0b8cf8251b6ca7979c1398255ba4dc23a8474c5b1f98e86c29195d43f5944798"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/SCIEnrg_Shield Activate Deactivate_02.wav",
+      "bytes": 2015372,
+      "sha256": "f8f83efb25b4ea2d784933fc6f4e36de062a3eba09e1d486651347ac7af4d865"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/SCIMisc_Arm Weapon Heavy_01.wav",
+      "bytes": 165100,
+      "sha256": "132810df26c0acb5ed60af6140856318f3bb2a86d0b4bc4995aa295e7b5980ef"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/SCIMisc_Reload Alien Tech_02.wav",
+      "bytes": 144644,
+      "sha256": "97c53adff1f27a0a7e16fbddf3e6050c3fb2b1d603a1ffea408f8daeac61f615"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/UIBeep_Lock On_05.wav",
+      "bytes": 63660,
+      "sha256": "2ba4fe3b86d3c0d30b71385e4fbdca695b8c7363cd8ce29f6f5311b6312a64bb"
+    },
+    {
+      "path": "audio/shapeforms/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/UIGlitch_Error Tone_03.wav",
+      "bytes": 49508,
+      "sha256": "98ed959491d35f18a303b7a5847b1599aa7b05d9a9743eba23b0245015c47f9d"
+    },
+    {
+      "path": "audio/shapeforms/Hit and Punch Preview/AUDIO/CLOTHING_MATERIAL_MOVEMENT_01.wav",
+      "bytes": 204528,
+      "sha256": "66907f3a13e8e8996dea2546fa82360f6e1b7376dd1450ad7f52720d23ced1dd"
+    },
+    {
+      "path": "audio/shapeforms/Hit and Punch Preview/AUDIO/HIGH_SNAP_02.wav",
+      "bytes": 115492,
+      "sha256": "9e71495bf685325e3095082dd98a5cf088b9eeb473e53cb5b0561408276718ca"
+    },
+    {
+      "path": "audio/shapeforms/Hit and Punch Preview/AUDIO/HIT_METAL_WRENCH_HEAVIEST_02.wav",
+      "bytes": 187814,
+      "sha256": "5cbf2026210278045a5be90ade7ad2ea4e1b1d01542a8f25c155daf4282862d1"
+    },
+    {
+      "path": "audio/shapeforms/Hit and Punch Preview/AUDIO/HIT_SHORT_04.wav",
+      "bytes": 49634,
+      "sha256": "752023a98dda0296bf0df89fe261613338664a0c48fd7796d2608ea0fcdf732b"
+    },
+    {
+      "path": "audio/shapeforms/Hit and Punch Preview/AUDIO/HIT_SLAP_07.wav",
+      "bytes": 76744,
+      "sha256": "b72276716741550e166a20f0333c311f7b51df973ba02e350e0e3f042d89f8b0"
+    },
+    {
+      "path": "audio/shapeforms/Hit and Punch Preview/AUDIO/PUNCH_CLEAN_HEAVY_10.wav",
+      "bytes": 109968,
+      "sha256": "867a320bec3d0fc7f76488d4b7500c02d4e9011ee5a62f6c7f89253cf2277497"
+    },
+    {
+      "path": "audio/shapeforms/Hit and Punch Preview/AUDIO/PUNCH_DESIGNED_HEAVY_23.wav",
+      "bytes": 274902,
+      "sha256": "74e60f76ba622c3081cb41e4de486dbbdb6721650da7717e9a0f0aca4d7b50ee"
+    },
+    {
+      "path": "audio/shapeforms/Hit and Punch Preview/AUDIO/PUNCH_DESIGNED_HEAVY_74.wav",
+      "bytes": 150270,
+      "sha256": "3710055cb29bb3a099bbb4786f267617766c8ac1780bc038236df22f96982f7b"
+    },
+    {
+      "path": "audio/shapeforms/Hit and Punch Preview/AUDIO/PUNCH_DESIGNED_HEAVY_86.wav",
+      "bytes": 303450,
+      "sha256": "b960c874ec978d1773943ff4e75ee08c37aec855725f04f66ec513bcfb48223b"
+    },
+    {
+      "path": "audio/shapeforms/Hit and Punch Preview/AUDIO/PUNCH_ELECTRIC_HEAVY_02.wav",
+      "bytes": 538404,
+      "sha256": "10ec827d643c0eb97891479414d32c438867edbde18c4ead790b6e81d3ce7144"
+    },
+    {
+      "path": "audio/shapeforms/Hit and Punch Preview/AUDIO/PUNCH_ELECTRIC_HEAVY_05.wav",
+      "bytes": 775860,
+      "sha256": "96ce877e2ad4d16123ee0afc327aef35417aebc70b488b6c8113aa7d0892d957"
+    },
+    {
+      "path": "audio/shapeforms/Hit and Punch Preview/AUDIO/PUNCH_INTENSE_HEAVY_03.wav",
+      "bytes": 359974,
+      "sha256": "24262a67186f0e63eb5ee8e89ca552cd553641bf34a460a15abe534a6952b0a1"
+    },
+    {
+      "path": "audio/shapeforms/Hit and Punch Preview/AUDIO/PUNCH_PERCUSSIVE_HEAVY_08.wav",
+      "bytes": 102710,
+      "sha256": "72f9afd386eec62ba3206cc28ffb7da892666c281b6fd12f40c1a8c5418b6483"
+    },
+    {
+      "path": "audio/shapeforms/Hit and Punch Preview/AUDIO/PUNCH_PERCUSSIVE_HEAVY_09.wav",
+      "bytes": 188726,
+      "sha256": "de1a737e8b27e677f181562140ee926cfddfe8978db1852038f9a51f6a40d793"
+    },
+    {
+      "path": "audio/shapeforms/Hit and Punch Preview/AUDIO/PUNCH_SQUELCH_HEAVY_01.wav",
+      "bytes": 377178,
+      "sha256": "61a8ca4a9eec2f2091f543ae38bed7e9cf6f70e3ffcc7993a0974cc7da3a1de3"
+    },
+    {
+      "path": "audio/shapeforms/Hit and Punch Preview/AUDIO/PUNCH_SQUELCH_HEAVY_05.wav",
+      "bytes": 243726,
+      "sha256": "717962e63a79e5f16d66a953886c0ab5f8317c500db1fb1fc0b087cc60d8ebdc"
+    },
+    {
+      "path": "audio/shapeforms/Hit and Punch Preview/AUDIO/WHOOSH_AIRY_FLUTTER_01.wav",
+      "bytes": 444828,
+      "sha256": "5dccbd2d024fe1d8ec73ed6d62f83dccd797466d7c0710df0db9b1736c26afaa"
+    },
+    {
+      "path": "audio/shapeforms/Hit and Punch Preview/AUDIO/WHOOSH_ARM_SWING_01.wav",
+      "bytes": 220102,
+      "sha256": "21d2f452e2ba2cee5b7c670560e38d023931ad872639fda27d4844c912462244"
+    },
+    {
+      "path": "audio/shapeforms/Future UI Preview/Audio/Error Triplet-5.wav",
+      "bytes": 65898,
+      "sha256": "a6f7d83dd5f39425bcf456f666c25bd50aa8fa13f916d78ee5daee8000d3f469"
+    },
+    {
+      "path": "audio/shapeforms/Future UI Preview/Audio/FUI Button Beep Clean.wav",
+      "bytes": 129668,
+      "sha256": "dfc770a3881a69d6c31573cbd22db38f2178d36e88aca8d3235cb7fc2dde657c"
+    },
+    {
+      "path": "audio/shapeforms/Future UI Preview/Audio/FUI Holographic Button Press-1.wav",
+      "bytes": 136350,
+      "sha256": "871876e44be5dccb01702e363af5b5c7f26409eb1882b572217072841c82bd41"
+    },
+    {
+      "path": "audio/shapeforms/Future UI Preview/Audio/FUI Holographic Interaction Radiate.wav",
+      "bytes": 267400,
+      "sha256": "9d9c6511326d1c9a499841834244df253ce9a3fdba0eb43f741785296af5ba55"
+    },
+    {
+      "path": "audio/shapeforms/Future UI Preview/Audio/FUI Navigation Tone Stereo Flutter.wav",
+      "bytes": 90550,
+      "sha256": "f3ee53221c2c39ea93f7e2a93009bbebd42d3f859b0284a99a10e24d97890348"
+    },
+    {
+      "path": "audio/shapeforms/Future UI Preview/Audio/FUI Ping Triplet Echo.wav",
+      "bytes": 132724,
+      "sha256": "3034789088e8346f8a3834b92afde539e3fd31a89038236287233674226fbcb3"
+    },
+    {
+      "path": "audio/shapeforms/Future UI Preview/Audio/High-Tech Gadget Activate.wav",
+      "bytes": 152046,
+      "sha256": "4f71edc2794e6203b7165bd5906f0156ceb0738ec30700ad9d2e1b6189a7347d"
+    },
+    {
+      "path": "audio/shapeforms/Future UI Preview/Audio/Hologram Menu Open-2.wav",
+      "bytes": 142146,
+      "sha256": "c50bc45b9f7645e34731fbbba6c8f4279a1ced55857be6cb533fa5e2bb82d78c"
+    },
+    {
+      "path": "audio/shapeforms/Future UI Preview/Audio/Holographic Interaction-32.wav",
+      "bytes": 290842,
+      "sha256": "77e3ee0431038cf23d6a5d00f72daff606854577732e1096e63f1b864222941f"
+    },
+    {
+      "path": "audio/shapeforms/Future UI Preview/Audio/Holographic Tap Interaction.wav",
+      "bytes": 126198,
+      "sha256": "5f90e1119cabe315362c4bcb83e3b818c01d01b9657f91e79ea9d3eaca9d7681"
+    },
+    {
+      "path": "audio/shapeforms/Future UI Preview/Audio/Old Terminal Alarm Loop.wav",
+      "bytes": 324062,
+      "sha256": "09d7149221810a9fd62be83c2e24917e044134be27b565fb266b3c8fbcea36e9"
+    },
+    {
+      "path": "audio/shapeforms/Future UI Preview/Audio/Old Terminal Computing-3.wav",
+      "bytes": 167694,
+      "sha256": "00511f2f23f1c79cd36429c5b4e5bdff81d5c090e9daf060ad3ebcb85e5922ce"
+    },
+    {
+      "path": "audio/shapeforms/Future UI Preview/Audio/Old Terminal Popup Appear Low.wav",
+      "bytes": 128034,
+      "sha256": "d9a616acb91ba41ad670e0827066b431b3686aa999137a701cd92077bc4376dc"
+    },
+    {
+      "path": "audio/shapeforms/Future UI Preview/Audio/Static Glitch Short.wav",
+      "bytes": 93222,
+      "sha256": "a178a043aec73b25fb4cacdb588e573fbc53f70d18b63ae1d9516e7de7351334"
+    },
+    {
+      "path": "audio/shapeforms/Future UI Preview/Audio/Telemetry Ticker Loop-2.wav",
+      "bytes": 118446,
+      "sha256": "5c64fb655e4c0af5c5e9cfca4ef4d6baf67efdf4090b6e22f6174ac90fe6b814"
+    },
+    {
+      "path": "audio/shapeforms/Dystopia \u2013 Ambience and Drone Preview/AUDIO/AMBIENCE_HEARTBEAT_LOOP.wav",
+      "bytes": 2740900,
+      "sha256": "b3b4b6168f44ce1b84a9481b8835fa6b7ff868456f629d4d8c8c1de8408272fa"
+    },
+    {
+      "path": "audio/shapeforms/Dystopia \u2013 Ambience and Drone Preview/AUDIO/AMBIENCE_SIGNAL_LOOP.wav",
+      "bytes": 5466042,
+      "sha256": "3473b7382040cf6c653650e3cc6157152d269782af8c73ffb39ecc56a4e20ed8"
+    },
+    {
+      "path": "audio/shapeforms/Dystopia \u2013 Ambience and Drone Preview/AUDIO/AMBIENCE_SPACECRAFT_HOLD_LOOP.wav",
+      "bytes": 2986430,
+      "sha256": "1b75614e734b2d821c09c1771b45ec48242702e31d9db0508ffe8ce484f0622d"
+    },
+    {
+      "path": "audio/shapeforms/Dystopia \u2013 Ambience and Drone Preview/AUDIO/AMBIENCE_TUNDRA_LOOP_01.wav",
+      "bytes": 6578010,
+      "sha256": "675e98e600f62531bd25eaec18190698d4520e012ee3e0b2a1395fbede49fcfe"
+    },
+    {
+      "path": "audio/shapeforms/Dystopia \u2013 Ambience and Drone Preview/AUDIO/AMBIENCE_TUNNEL_WIND_LOOP.wav",
+      "bytes": 9078470,
+      "sha256": "08eb79a32830737be5353cbecde2756c8aab071acee07e4090e5f1c55ce8d88f"
+    },
+    {
+      "path": "audio/shapeforms/Dystopia \u2013 Ambience and Drone Preview/AUDIO/AMBIENCE_UNDERGROUND_POWER_STATION_LOOP.wav",
+      "bytes": 2718584,
+      "sha256": "0651435f55c85e76e06a9d0e4e6161d744e970a17f0f223fe8ec333e766c684b"
+    },
+    {
+      "path": "audio/shapeforms/Dystopia \u2013 Ambience and Drone Preview/AUDIO/ONE_SHOT_CINEMATIC_EFFECT_10.wav",
+      "bytes": 2743092,
+      "sha256": "3563f0dbe00c2f875f32e8d6b870bf840648dfa260aa9cd39c748078b8273b0c"
+    },
+    {
+      "path": "audio/shapeforms/Dystopia \u2013 Ambience and Drone Preview/AUDIO/ONE_SHOT_SPACE_TEAR.wav",
+      "bytes": 2577370,
+      "sha256": "ce3aaf1cab7396d4333acc7646dee233e5c91215e1c2ebe447af74570a20263b"
+    },
+    {
+      "path": "audio/shapeforms/Dystopia \u2013 Ambience and Drone Preview/AUDIO/SUB_DROP_DEEP.wav",
+      "bytes": 1062512,
+      "sha256": "158eaf41fde4c8e63a093a022ce8910c4d80f1eb44a64e2a696c89c0607906ef"
+    },
+    {
+      "path": "audio/shapeforms/Cassette Preview/AUDIO/BUTTON_03.wav",
+      "bytes": 175234,
+      "sha256": "04f69885d54b2064c679d28edf8a671be70a759893f5dd817e51b2e0b9d94b1c"
+    },
+    {
+      "path": "audio/shapeforms/Cassette Preview/AUDIO/BUTTON_05.wav",
+      "bytes": 239122,
+      "sha256": "bbba5e5d36ba2f8f94a2ed10dfb6bd9a84474d77b1438f938032348a22254198"
+    },
+    {
+      "path": "audio/shapeforms/Cassette Preview/AUDIO/BUTTON_12.wav",
+      "bytes": 125422,
+      "sha256": "784cc2a7dcdbcfb2ebf44a774b5f9b18316bcd5ceec9fc155efa1d490dcbe771"
+    },
+    {
+      "path": "audio/shapeforms/Cassette Preview/AUDIO/BUTTON_STOP_02.wav",
+      "bytes": 242518,
+      "sha256": "42407535a0d9fefe9cd64c9d72a1f65c6d0a84982237dc5d70905daf2d4fb265"
+    },
+    {
+      "path": "audio/shapeforms/Cassette Preview/AUDIO/CASSETTE_RATTLE_12.wav",
+      "bytes": 273270,
+      "sha256": "d36b27a58cf31ed2bb91bd94f662deef35ee14564d058e6aab0fd191f531ea8c"
+    },
+    {
+      "path": "audio/shapeforms/Cassette Preview/AUDIO/CASSETTE_RATTLE_20.wav",
+      "bytes": 399360,
+      "sha256": "ad723ab0852a659de9dd3c1641ec0136f70238ae766fbe3510a28ceabf5782bd"
+    },
+    {
+      "path": "audio/shapeforms/Cassette Preview/AUDIO/EMF_TAPE_RECORDING_06.wav",
+      "bytes": 2106290,
+      "sha256": "2a983361091267d0bab717d7a80c05e92dd36715ca1deaecf92223b8ad6ceca1"
+    },
+    {
+      "path": "audio/shapeforms/Cassette Preview/AUDIO/FAST_FORWARD_LOOP_02.wav",
+      "bytes": 1767126,
+      "sha256": "81a9dbe1c37762a4379dc7f67cbd2f29dedee74c3a9364206a695edfaf478659"
+    },
+    {
+      "path": "audio/shapeforms/Cassette Preview/AUDIO/LOAD_CASSETTE_08.wav",
+      "bytes": 391176,
+      "sha256": "debe630512621280f7e5766424e339fa3e51f341bb52e0fb526db6a64226429e"
+    },
+    {
+      "path": "audio/shapeforms/Cassette Preview/AUDIO/LOOP_01.wav",
+      "bytes": 807760,
+      "sha256": "2ff71e52cdc41e14faadc0e724fd8834ff2e2d5ae50cab060a7b5a552934c98c"
+    },
+    {
+      "path": "audio/shapeforms/Cassette Preview/AUDIO/OPEN_CASE_02.wav",
+      "bytes": 267108,
+      "sha256": "9951bdf3bc51fde697f42f780f489674e82407742ea34d98f4e5ba0349ce6acb"
+    },
+    {
+      "path": "audio/shapeforms/Cassette Preview/AUDIO/REMOVE_CASSETTE_07.wav",
+      "bytes": 420858,
+      "sha256": "88562df914bd85ce7d554df99ec618c9de1535fca1fca185cd6d15bfd8303864"
+    },
+    {
+      "path": "audio/shapeforms/Cassette Preview/AUDIO/REWIND_FAST_FORWARD_09.wav",
+      "bytes": 343848,
+      "sha256": "b126f4c19552c204fe24473d377936d732bb5e24aec0866a0c74a9cb2565ef2a"
+    },
+    {
+      "path": "audio/shapeforms/Cassette Preview/AUDIO/SLOW DOWN SPEED UP_05.wav",
+      "bytes": 610676,
+      "sha256": "9360456dacdc8d0ac297ddf1d53593c76c3c580ff0125a4a6aae4f309327b9d4"
+    },
+    {
+      "path": "audio/shapeforms/Cassette Preview/AUDIO/TAPE STOP_15.wav",
+      "bytes": 465076,
+      "sha256": "d8c364f57fd7671be19cee51eae6a5ff5b10b5e8ea008062cf0e7c238027953c"
+    },
+    {
+      "path": "audio/shapeforms/Cassette Preview/AUDIO/TAPE_NOISE_01.wav",
+      "bytes": 1359420,
+      "sha256": "b43c016dfb337e785429f65863fcb4dc7567a9cf07c3a193727b514bb3b70311"
+    },
+    {
+      "path": "audio/shapeforms/Arcane Activations Preview/AUDIO/Activate Glyph Forcefield.wav",
+      "bytes": 711568,
+      "sha256": "c72ba70dff17dcf534810d395cdc24396e789f8bf3cff11076afba62aa1649a9"
+    },
+    {
+      "path": "audio/shapeforms/Arcane Activations Preview/AUDIO/Activate Plinth 03.wav",
+      "bytes": 1124792,
+      "sha256": "ff4fb6d333cdc062b552c8b0317427533ccbae3ed61ded089c504d2ab2e83a58"
+    },
+    {
+      "path": "audio/shapeforms/Arcane Activations Preview/AUDIO/Arcane Beacon.wav",
+      "bytes": 387540,
+      "sha256": "dbcc09da8eb9c68397607bb42bb211eec0795491e55dbf8cbac132e7a8bdcd1b"
+    },
+    {
+      "path": "audio/shapeforms/Arcane Activations Preview/AUDIO/Arcane Symbol Activate 01.wav",
+      "bytes": 957532,
+      "sha256": "a7a5bf33731c36c258531aaf19a008b5ff3245bec486208be6a37a419d80fb83"
+    },
+    {
+      "path": "audio/shapeforms/Arcane Activations Preview/AUDIO/Arcane Wind Chime Gust.wav",
+      "bytes": 1396456,
+      "sha256": "cbf1b6c8d29192b824c8fc1add2c1757d779d014118845739d8e1c9af632b268"
+    },
+    {
+      "path": "audio/shapeforms/Arcane Activations Preview/AUDIO/Glyph Activation Light 01.wav",
+      "bytes": 633518,
+      "sha256": "c0389f40c0789b7970e70f3113f0a65890f0e7d38001e073126dfc3951600eb0"
+    },
+    {
+      "path": "audio/shapeforms/Arcane Activations Preview/AUDIO/Glyph Activation Warm Aura.wav",
+      "bytes": 1928020,
+      "sha256": "4b5dc02f7cbeebc1c9057906f87481c93cda9960ee54dcc54788b72e50febb38"
+    },
+    {
+      "path": "audio/shapeforms/Arcane Activations Preview/AUDIO/Raise Stone Pillar Long.wav",
+      "bytes": 886484,
+      "sha256": "b346f517268890fba38397e0421eb6a6c4dc545d1f0a717ae4679c81b63055b2"
+    },
+    {
+      "path": "audio/shapeforms/Arcane Activations Preview/AUDIO/Rotate Stone 03.wav",
+      "bytes": 137852,
+      "sha256": "33f38ae15cf51a6327e6bb67b611dae6e64c83e8b8baa1249a2d37170193964d"
+    },
+    {
+      "path": "audio/shapeforms/Arcane Activations Preview/AUDIO/UI Message Appear 01.wav",
+      "bytes": 126416,
+      "sha256": "b15529c2f70f872c7a9295b4fd345c4bccf524aa358edb78275fd64e7fca2a07"
+    }
+  ],
+  "existing_missing_literal_resources": [],
+  "source": "C:\\gitdev\\nexus\\output\\Solar2DPluginProof\\StarExplorer",
+  "archive": {
+    "path": "C:\\backup\\Nexus2DPluginProof-20261010.zip",
+    "files": 717,
+    "bytes": 240182417,
+    "sha256": "9c1bf8dffadb99e363b5506cc29213159b7a3fbfcc0c7bf61cd986b76c104510",
+    "verification": "ZIP CRC check passed for every entry"
+  },
+  "selection_basis": "Local require/composer dependencies from main.lua, literal targets supplied to menu scene helpers, asset paths in reachable modules; retain complete data-driven npc/cut folders, declared mobile inputs and asset notices.",
+  "retained_dynamic_assets": "Whole npc and cut folders retained rather than guessing which data-driven entries may run.",
+  "excluded_reason": "Not referenced by the current game dependency closure or retained data/platform/notice groups. Original remains in the complete proof archive."
+}

@@ -1,0 +1,18 @@
+Free Pascal Compiler version 3.2.2 [2025/05/03] for x86_64
+Copyright (c) 1993-2021 by Florian Klaempfl and others
+Target OS: Win64 for x64
+Compiling C:\gitdev\nexus-lab\StarExplorer\plugin-proof\plugin_sample.lpr
+Compiling C:\gitdev\nexus\packages\nexus-packages\lua\src\bindings\Lua51.pas
+Lua51.pas(368,3) Note: Call to subroutine "procedure lua_setglobal(L:Pointer;AName:PChar);" marked as inline is not inlined
+Compiling C:\gitdev\nexus\packages\nexus-packages\solar2d\src\Solar2D.Plugin.pas
+Solar2D.Plugin.pas(23,3) Warning: Unit "Rtti" is experimental
+Compiling C:\gitdev\nexus\packages\nexus-packages\lua\src\Lua.Plugin.pas
+Lua.Plugin.pas(24,3) Warning: Unit "Rtti" is experimental
+Compiling C:\gitdev\nexus\packages\nexus-packages\solar2d\src\Solar2D.Corona.pas
+Solar2D.Plugin.pas(41,5) Warning: Constructor should be public
+Compiling C:\gitdev\nexus\packages\nexus-packages\solar2d\sample\Sample.Plugin.pas
+Linking C:\gitdev\nexus\output\StarExplorerLabProof-20261010\build\plugin_sample.dll
+C:\gitdev\nexus\output\StarExplorerLabProof-20261010\build\dlltool.exe: Path components stripped from dllname, 'C:\gitdev\nexus\output\StarExplorerLabProof-20261010\build\plugin_sample.dll'.
+2140 lines compiled, 4.9 sec
+3 warning(s) issued
+1 note(s) issued
