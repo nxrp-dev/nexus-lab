@@ -96,7 +96,7 @@ sourcedirs=19
  ${FPCDIR}src/rtl/unix/
  ${FPCDIR}src/rtl/linux/
  ${FPCDIR}src/rtl/inc/
- ${FPGUI}/examples/apps/ide/src/
+ ${FPGUI}/framework/src/main/pascal/gui/
  ./
 defines=0
 progparameters=--style="plastic dark"
@@ -135,7 +135,7 @@ targetfile=aboutdialog${EXEEXT}
 makecommand=${COMPILER}
 makedir=
 unitdirs=16
- ${FPGUI}/examples/apps/ide/src
+ ${FPGUI}/framework/src/main/pascal/gui
  ${EPIKTMR}
  ${FPTEST}/fpGUI
  ${FPTEST}
