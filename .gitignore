@@ -20,3 +20,19 @@ __history/
 *.compiled
 *.dbg
 *.dcu  # if using Delphi compatibility mode
+
+# Nexus example build products
+/output/
+*.nxu
+*.nxp
+
+# Original imported demonstration metadata and runtime assets.
+!/examples/text/regular-expressions/TRegExprClass/TRegExprClass.lps
+!/examples/text/regular-expressions/TRegExprRoutines/TRegExprRoutins.lps
+!/examples/text/regular-expressions/Text2HTML/Text2HTML.lps
+!/examples/graphics/angle/Asteroids/d3dcompiler_46.dll
+!/examples/graphics/angle/Asteroids/dlls/ARM/D3Dcompiler_46.dll
+!/examples/graphics/angle/Asteroids/dlls/Win32/D3Dcompiler_46.dll
+!/examples/graphics/angle/Asteroids/dlls/Win32/d3dcompiler_47.dll
+!/examples/graphics/angle/d3dcompiler/ARM/D3Dcompiler_46.dll
+!/examples/graphics/angle/d3dcompiler/Win32/D3Dcompiler_46.dll

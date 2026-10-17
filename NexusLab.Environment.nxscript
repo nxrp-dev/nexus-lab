@@ -1,0 +1,9 @@
+// Copyright (c) 2026 Kevin Collins.
+// SPDX-License-Identifier: MPL-2.0-no-copyleft-exception
+
+module "../nexus/projects/nxbuild/nxbuild.environment.nxscript";
+
+Environment Lab {
+    Platform Native TargetOS[linux] { GUIBackend: "x11"; GUIDefine: "X11"; PluginLibraryPaths: []; }
+    Platform Native TargetOS[win64] { GUIBackend: "gdi"; GUIDefine: "GDI"; PluginLibraryPaths: ["../nexus-mobile/platform/windows/Corona.Native.Library.Win32/Release.Simulator/x64/Corona.Native.Library.Win32"]; }
+}
