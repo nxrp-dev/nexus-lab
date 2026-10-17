@@ -18,7 +18,7 @@ program mdtest;
 {$mode objfpc}{$h+}
 
 uses
-  SysUtils, md5;
+  SysUtils, HlpHashFactory, HlpIHash;
 
 const
   Suite: array[1..7] of string = (
@@ -31,7 +31,7 @@ const
     '12345678901234567890123456789012345678901234567890123456789012345678901234567890'
     );
 
-  Results: array[TMDVersion, Low(Suite)..High(Suite)] of string = (
+  Results: array[0..2, Low(Suite)..High(Suite)] of string = (
     // MD_VERSION_2
     ('8350e5a3e24c153df2275c9f80692773',
      '32ec01ec4a6dac72c0ab96fb34c0b5d1',
@@ -60,57 +60,24 @@ const
      '57edf4a22be3c955ac49da2e2107b67a')
   );
 
-function performTest(const Ver: TMDVersion; const Verbose: boolean): boolean;
-// Runs test and returns success or failure
+procedure CheckSuite(const AHash: IHash; ARow: Integer);
 var
-  I: Integer;
-  S: String;
+  lIndex: Integer;
+  lDigest: string;
 begin
-  result := false;
-  for I := Low(Suite) to High(Suite) do
+  for lIndex := Low(Suite) to High(Suite) do
   begin
-    S := LowerCase(MDPrint(MDString(Suite[I], Ver)));
-    if S = Results[Ver, I] then
-      result := true;
-    if Verbose then WriteLn('  "', Suite[I], '" = ', S);
+    lDigest := LowerCase(AHash.ComputeString(Suite[lIndex], TEncoding.UTF8).ToString(False));
+    WriteLn('  "', Suite[lIndex], '" = ', lDigest);
+    if lDigest <> Results[ARow, lIndex] then Halt(1);
   end;
 end;
 
-var
-  i: integer;
 begin
-  i:=0;
-  Writeln('Executing RFC 1319 test suite ...');
-  if performTest(MD_VERSION_2,true) then
-    Write('RFC 1319 test suite passed  ')
-  else
-  begin
-    Write('RFC 1319 test suite failed  ');
-    i:=i or 1;
-  end;
-  Writeln;
-  Writeln;
-
-  Writeln('Executing RFC 1320 test suite ...');
-  if performTest(MD_VERSION_4,true) then
-    Write('RFC 1320 test suite passed  ')
-  else
-  begin
-    Write('RFC 1320 test suite failed  ');
-    i:=i or 2;
-  end;
-  Writeln;
-  Writeln;
-
-  Writeln('Executing RFC 1321 test suite ...');
-  if performTest(MD_VERSION_5,true) then
-    Write('RFC 1321 test suite passed  ')
-  else
-  begin
-    Write('RFC 1321 test suite failed  ');
-    i:=i or 4;
-  end;
-  Writeln;
-  Writeln;
-  halt(i); //halt with error code 0 if everything ok
+  WriteLn('Executing RFC 1319 test suite ...');
+  CheckSuite(THashFactory.TCrypto.CreateMD2, 0);
+  WriteLn('Executing RFC 1320 test suite ...');
+  CheckSuite(THashFactory.TCrypto.CreateMD4, 1);
+  WriteLn('Executing RFC 1321 test suite ...');
+  CheckSuite(THashFactory.TCrypto.CreateMD5, 2);
 end.

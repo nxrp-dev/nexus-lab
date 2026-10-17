@@ -42,7 +42,7 @@ implementation
 
 uses
   frm_main,
-  sha1;
+  HlpHashFactory;
 
 const
   RecSize = 2048;
@@ -120,11 +120,9 @@ end;
 
 procedure TWorkerThread.Checksum;
 var
-  s: TSHA1Digest;
   hash: string;
 begin
-  s := SHA1File(FFile);
-  hash := SHA1Print(s);
+  hash := LowerCase(THashFactory.TCrypto.CreateSHA1.ComputeFile(FFile).ToString(False));
   { Queue the result for main-thread delivery }
   FResultLock.Acquire;
   try

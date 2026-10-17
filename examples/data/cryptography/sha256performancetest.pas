@@ -6,7 +6,7 @@ uses
   {$IFDEF UNIX}{$IFDEF UseCThreads}
   cthreads,
   {$ENDIF}{$ENDIF}
-  SysUtils,Classes,fpsha256;
+  SysUtils,Classes,HlpHashFactory;
 
 var
   StartTime: TDateTime;
@@ -16,7 +16,6 @@ var
   SB : TBytes;
 begin
   writeln('SHA256 of a million "a" symbols');
-  Writeln('compile fpsha256 unit with -dSHA256PASCAL to use generic pascal implementation');
   SetLength(s, 1000000);
   for i := 1 to 1000000 do s[i] := 'a';
   SB:=TEncoding.UTF8.GetAnsiBytes(S);
@@ -24,7 +23,7 @@ begin
   StartTime:=now;
   for i := 0 to 1000 do
   begin
-    TSHA256.DigestHexa(SB, ss);
+    ss := THashFactory.TCrypto.CreateSHA2_256.ComputeBytes(SB).ToString(False);
     ss := LowerCase(ss);
   end;
   EndTime:=now;

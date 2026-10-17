@@ -9,7 +9,7 @@ uses
   cthreads,
   {$ENDIF}
   {$ENDIF}
-  SysUtils,Classes,md5,dateutils;
+  SysUtils,Classes,HlpHashFactory,dateutils;
 
 var
   StartTime: TDateTime;
@@ -19,13 +19,12 @@ var
   s,ss: RawByteString;
 begin
   writeln('MD5 of a million "a" symbols');
-  Writeln('x86 only: compile md5 unit with -dMD5SLOW to use unoptimized original version');
   SetLength(s, 1000000);
   for i := 1 to 1000000 do s[i] := 'a';
 
   StartTime:=now;
   for i := 0 to 1000 do
-    ss := LowerCase(MDPrint(MDString(s, MD_VERSION_5)));
+    ss := LowerCase(THashFactory.TCrypto.CreateMD5.ComputeUntyped(s[1], Length(s)).ToString(False));
   EndTime:=now;
   writeln('Performance test finished. Elapsed time:');
   DateTimeToString(TimeTaken, 'S.ZZ', EndTime-StartTime);
