@@ -23,7 +23,7 @@ Project NexusXMPPConsole {
         Files Paths {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
             UnitPaths: [
-                @Tools.NexusFPC.SourcePath + "/packages/fcl-net/src",
+                "../nexus/packages/nexus-packages/network/fcl-net/src",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
                 @Tools.NexusFPC.SourcePath + "/packages/pthreads/src",

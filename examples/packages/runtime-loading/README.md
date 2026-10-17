@@ -16,10 +16,11 @@ startup units and run both example applications:
 
 ```powershell
 & ..\..\nexus\output\NexusForge-next\x86_64-win64\nxforge.exe /input=NexusFPC.Forge.nxscript /targets=Build:Bootstrap
-./scripts/Build-NexusFPCPackageSDK.ps1 -RunExamples
+./tests/dynamic-packages/Build-NexusFPCPackageSDK.ps1 -RunExamples
 ```
 
-Run this from the sibling `nexus-fpc` checkout root; examples are read from
+Run this from an isolated `nexus-fpc` checkout under `dev/worktree` so generated
+files stay outside source checkouts. Examples are read from
 `../nexus-lab/examples/packages/runtime-loading`. Supply `-ExampleRoot` when
 using another source layout. Requirements are Windows x64, NexusForge,
 and LLVM `clang.exe` and `lld-link.exe` on PATH. The initial Forge bootstrap uses
@@ -153,7 +154,7 @@ Use the generation reported by Forge when running or copying an application.
 Existing source-tree example/test callers retain a thin PowerShell adapter:
 
 ```powershell
-./scripts/Invoke-NexusFPCPackageCompile.ps1 -SdkRoot C:\project\sdk -Kind Package `
+./tests/dynamic-packages/Invoke-NexusFPCPackageCompile.ps1 -SdkRoot C:\project\sdk -Kind Package `
     -Source C:\project\mypackage.nxpk -OutputDirectory C:\project\distribution
 ```
 
@@ -181,7 +182,7 @@ Do not add ordinary-build RTL unit directories to a package application's path.
 Build a real plugin example against an existing SDK:
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File scripts\Build-NexusFPCLatePackageExamples.ps1 -SdkRoot C:\project\sdk -OutputRoot C:\project\late-examples -RunExamples
+powershell -NoProfile -ExecutionPolicy Bypass -File tests\dynamic-packages\Build-NexusFPCLatePackageExamples.ps1 -SdkRoot C:\project\sdk -OutputRoot C:\project\late-examples -RunExamples
 ```
 
 This additionally requires `llvm-rc.exe`. The console and GUI hosts import a

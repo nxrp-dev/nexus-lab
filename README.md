@@ -34,6 +34,7 @@ From this repository, for example:
 ```sh
 ../nexus/output/nxbuild-next/x86_64-linux/nxbuild /action=build /project=examples/build/native/Hello.nxproject
 ../nexus/output/nxbuild-next/x86_64-linux/nxbuild /action=build /project=examples/graphics/images/FCLImageExamples.nxproject
+../nexus/output/nxbuild-next/x86_64-linux/nxbuild /action=build /project=examples/system/registry/RegistryExamples.nxproject
 ```
 
 `NexusLab.Forge.nxscript` groups the Nexus example projects. Generated outputs

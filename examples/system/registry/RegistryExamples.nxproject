@@ -1,0 +1,41 @@
+// Copyright (c) 2026 Kevin Collins.
+// SPDX-License-Identifier: MPL-2.0-no-copyleft-exception
+
+dialect "../../../../nexus/projects/nxbuild/language/nxbuild.Language.nxscript";
+module "../../../NexusLab.Environment.nxscript";
+
+Project RegistryExamples {
+    RootDirectory: "../../..";
+    OutputRoot: "output/RegistryExamples/" + @Tools.Native.Name;
+    FPC Application TargetOS[linux] {
+        CompilerPath: @Tools.Native.FPCCompiler;
+        SourceFiles: [
+            "examples/runtime/base/txmlreg.pas",
+            "examples/runtime/base/testreg.pas",
+            "examples/system/registry/testunicode.pas",
+            "examples/system/registry/testunicode2.pas"
+        ];
+        OutputPath: @RegistryExamples.OutputRoot;
+        RawOptions: ["-dXMLRegfile_in_CurDir"];
+        Config Options { DisableDefaultConfigFiles: True; }
+        Language Pascal { Mode: ObjFPC; }
+        Assembler Native { OutputFormat: "as-clang"; }
+        Files Paths {
+            CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
+            UnitPaths: [
+                @Tools.Native.RTLPath,
+                "../nexus/packages/nexus-packages/fcl-registry/src",
+                "../nexus/packages/nexus-packages/serialization/fcl-xml/src",
+                @Tools.NexusFPC.SourcePath + "/packages/iconvenc/src",
+                @Tools.NexusFPC.SourcePath + "/packages/fcl-base/src",
+                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/inc",
+                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform
+            ];
+            IncludePaths: [
+                "../nexus/packages/nexus-packages/fcl-registry/src",
+                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
+                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64"
+            ];
+        }
+    }
+}

@@ -2,7 +2,7 @@
 {$h+}
 program txmlreg;
 
-uses xmlreg;
+uses {$ifdef UNIX}cwstring,{$endif} xmlreg;
 
 Var
   S : AnsiString;

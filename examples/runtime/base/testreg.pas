@@ -15,7 +15,7 @@ Program TestReg;
 
 {$mode objfpc} {$H+}
 
-Uses registry, SysUtils;
+Uses {$ifdef UNIX}cwstring,{$endif} registry, SysUtils;
 
 Const
   SInteger    = 'Integer';
