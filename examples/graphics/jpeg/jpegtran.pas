@@ -8,9 +8,11 @@ Program JpegTran;
 
 {$define TWO_FILE_COMMANDLINE}
 
+// Nexus, 2026-10-17: use the codec's TStream file interface.
 {$I jconfig.inc}
 
 uses
+  Classes, SysUtils,
   jdeferr,
   jerror,
   jmorecfg,
@@ -461,8 +463,8 @@ var
   src_coef_arrays,
   dst_coef_arrays : jvirt_barray_tbl_ptr;
   file_index : int;
-  input_file : FILE;
-  output_file : FILE;
+  input_file : TStream;
+  output_file : TStream;
 begin
   { On Mac, fetch a command line. }
 {$ifdef USE_CCOMMAND}
@@ -524,45 +526,11 @@ begin
   end;
 {$endif} { TWO_FILE_COMMANDLINE }
 
-  { Open the input file. }
-  if (file_index < ParamCount) then
-  begin
-    assign(input_file, ParamStr(file_index));
-{$push}{$I-}
-    reset(input_file, 1);
-{$pop}
-    if (IOresult <> 0) then
-    begin
-      WriteLn(output, progname, ': can''t open ', ParamStr(file_index));
-      Stop(EXIT_FAILURE);
-    end;
-  end
-  else
-  begin
-    { default input file is stdin }
-    assign(input_file, '');
-    reset(input_file, 1);
-  end;
-
-  { Open the output file. }
-  if (outfilename <> '') then
-  begin
-    assign(output_file, outfilename);
-{$push}{$I-}
-    rewrite(output_file, 1);
-{$pop}
-    if (IOresult <> 0) then
-    begin
-      WriteLn(output, progname, ': can''t open ', outfilename);
-      Stop(EXIT_FAILURE);
-    end;
-  end
-  else
-  begin
-    { default output file is stdout }
-    assign(output_file, '');
-    rewrite(output_file, 1);
-  end;
+  { Nexus: the library's FILEptr is a pointer to a TStream variable. }
+  if (file_index > ParamCount) or (outfilename = '') then
+    usage;
+  input_file := TFileStream.Create(ParamStr(file_index), fmOpenRead or fmShareDenyWrite);
+  output_file := TFileStream.Create(outfilename, fmCreate);
 
 {$ifdef PROGRESS_REPORT}
   start_progress_monitor(j_common_ptr(@dstinfo), @progress);
@@ -627,8 +595,8 @@ begin
   jpeg_destroy_decompress(@srcinfo);
 
   { Close files, if we opened them }
-  close(input_file);
-  close(output_file);
+  input_file.Free;
+  output_file.Free;
 
 {$ifdef PROGRESS_REPORT}
   end_progress_monitor(j_common_ptr(@dstinfo));

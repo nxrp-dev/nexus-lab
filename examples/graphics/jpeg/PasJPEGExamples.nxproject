@@ -1,0 +1,31 @@
+// Copyright (c) 2026 Kevin Collins.
+// SPDX-License-Identifier: MPL-2.0-no-copyleft-exception
+// Build the portable JPEG command-line demonstrations.
+dialect "../../../../nexus/projects/nxbuild/language/nxbuild.Language.nxscript";
+module "../../../NexusLab.Environment.nxscript";
+Project PasJPEGExamples {
+    RootDirectory: "../../..";
+    SourceRoot: "examples/graphics/jpeg";
+    OutputRoot: "../nexus/output/PasJPEGExamples/" + @Tools.Native.Name;
+    FPC Applications {
+        CompilerPath: @Tools.Native.FPCCompiler;
+        SourceFiles: [
+            @PasJPEGExamples.SourceRoot + "/cjpeg.pas",
+            @PasJPEGExamples.SourceRoot + "/djpeg.pas",
+            @PasJPEGExamples.SourceRoot + "/jpegtran.pas",
+            @PasJPEGExamples.SourceRoot + "/demo.pas",
+            @PasJPEGExamples.SourceRoot + "/rdjpgcom.pas"
+        ];
+        OutputPath: @PasJPEGExamples.OutputRoot;
+        Config Options { DisableDefaultConfigFiles: True; }
+        Language Pascal { Mode: Delphi; }
+        Assembler Native TargetOS[linux] { OutputFormat: "as-clang"; }
+        Files Paths {
+            CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
+            UnitPaths: [@Tools.Native.RTLPath,
+                "../nexus/packages/nexus-packages/graphics/pasjpeg/src",
+                @PasJPEGExamples.SourceRoot];
+            IncludePaths: ["../nexus/packages/nexus-packages/graphics/pasjpeg/src"];
+        }
+    }
+}

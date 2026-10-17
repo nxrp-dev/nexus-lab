@@ -1,0 +1,65 @@
+// Copyright (c) 2026 Kevin Collins.
+//
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+//
+// This Source Code Form is "Incompatible With Secondary Licenses",
+// as defined by the Mozilla Public License, v. 2.0.
+//
+// SPDX-License-Identifier: MPL-2.0-no-copyleft-exception
+
+dialect "../../../../../nexus/projects/nxbuild/language/nxbuild.Language.nxscript";
+module "../../../../../nexus/projects/nxbuild/nxbuild.environment.nxscript";
+
+Project PasZLibExamples {
+    RootDirectory: "../../../../../nexus";
+    OutputRoot: "output/PasZLibExamples/" + @Tools.Native.Name;
+    FPC Tests {
+        CompilerPath: @Tools.Native.FPCCompiler;
+        SourceFiles: [
+            "../nexus-lab/examples/data/compression/paszlib/example.pas",
+            "../nexus-lab/examples/data/compression/paszlib/example2.pas",
+            "../nexus-lab/examples/data/compression/paszlib/extractodt.pas",
+            "../nexus-lab/examples/data/compression/paszlib/fpunzipper.lpr",
+            "../nexus-lab/examples/data/compression/paszlib/fpzipper.lpr",
+            "../nexus-lab/examples/data/compression/paszlib/minigzip.pas",
+            "../nexus-lab/examples/data/compression/paszlib/miniunz.pas",
+            "../nexus-lab/examples/data/compression/paszlib/minizip.pas",
+            "../nexus-lab/examples/data/compression/paszlib/testgzstream.pas",
+            "../nexus-lab/examples/data/compression/paszlib/testsingle.pas"
+        ];
+        OutputPath: @PasZLibExamples.OutputRoot;
+        RawOptions: ["-Sa", "-Cr", "-Co", "-Ci", "-gl"];
+        Target Platform { OperatingSystem: @Tools.Native.OS; }
+        Config Options { DisableDefaultConfigFiles: True; }
+        Language Pascal { Mode: ObjFPC; }
+        Assembler Native TargetOS[linux] { OutputFormat: "as-clang"; }
+        Files Paths {
+            CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
+            UnitPaths: [
+                @PasZLibExamples.OutputRoot,
+                @Tools.Native.RTLPath,
+                "packages/nexus-packages/serialization/fcl-xml/src",
+                @Tools.NexusFPC.SourcePath + "/packages/paszlib/src",
+                @Tools.NexusFPC.SourcePath + "/packages/hash/src",
+                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
+                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
+                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/inc",
+                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
+                @Tools.NexusFPC.SourcePath + "/packages/fcl-base/src",
+                @Tools.NexusFPC.SourcePath + "/packages/pthreads/src"
+            ];
+            IncludePaths: [
+                @Tools.NexusFPC.SourcePath + "/packages/pthreads/src",
+                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
+                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.OS,
+                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
+                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
+                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64",
+                @Tools.NexusFPC.SourcePath + "/packages/fcl-base/src/" + @Tools.Native.PascalPlatform,
+                @Tools.NexusFPC.SourcePath + "/packages/fcl-base/src/dummy"
+            ];
+        }
+    }
+}

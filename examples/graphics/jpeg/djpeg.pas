@@ -20,10 +20,12 @@ Program DJpeg;
         djpeg [options]  -outfile outputfile  inputfile
   works regardless of which command line style is used. }
 
+// Nexus, 2026-10-17: use the codec's TStream file interface.
 {$I jconfig.inc}
 
 
 uses
+  Classes, SysUtils,
   jmorecfg,
   jpeglib,
   jerror,
@@ -510,8 +512,8 @@ var
 {$endif}
   file_index : int;
   dest_mgr : djpeg_dest_ptr;
-  input_file : FILE;
-  output_file : FILE;
+  input_file : TStream;
+  output_file : TStream;
   num_scanlines : JDIMENSION;
 var
   argc : int;
@@ -580,45 +582,11 @@ begin
   end;
 {$endif} { TWO_FILE_COMMANDLINE }
 
-  { Open the input file. }
-  if (file_index < argc) then
-  begin
-    assign(input_file, ParamStr(file_index));
-    {$push}{$I-}
-    Reset(input_file, 1);
-    {$pop}
-    if (IOresult <> 0) then
-    begin
-      WriteLn(output, progname, ': can''t open ', ParamStr(file_index));
-      Halt(EXIT_FAILURE);
-    end;
-  end
-  else
-  begin
-    { default input file is stdin }
-    Assign(input_file, '');
-    Reset(input_file, 1);
-  end;
-
-  { Open the output file. }
-  if (outfilename <> '') then
-  begin
-    assign(output_file, outfilename);
-    {$push}{$I-}
-    rewrite(output_file, 1);
-    {$pop}
-    if (IOresult <> 0) then
-    begin
-      WriteLn(output, progname, ': can''t open ', outfilename);
-      Halt(EXIT_FAILURE);
-    end;
-  end
-  else
-  begin
-    { default output file is stdout }
-    assign(output_file, '');
-    rewrite(output_file, 1);
-  end;
+  { Nexus: the library's FILEptr is a pointer to a TStream variable. }
+  if (file_index > ParamCount) or (outfilename = '') then
+    usage;
+  input_file := TFileStream.Create(ParamStr(file_index), fmOpenRead or fmShareDenyWrite);
+  output_file := TFileStream.Create(outfilename, fmCreate);
 
 {$ifdef PROGRESS_REPORT}
   start_progress_monitor(j_common_ptr (@cinfo), @progress);
@@ -694,8 +662,8 @@ begin
   jpeg_destroy_decompress(@cinfo);
 
   { Close files, if we opened them }
-  system.close(input_file);
-  system.close(output_file);
+  input_file.Free;
+  output_file.Free;
 
 {$ifdef PROGRESS_REPORT}
   end_progress_monitor(j_common_ptr (@cinfo));

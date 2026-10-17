@@ -26,7 +26,7 @@ Project NexusScriptEditorDemo {
             UnitPaths: [
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src",
                 "../nexus/packages/nexus-packages/graphics/fcl-image/src",
-                @Tools.NexusFPC.SourcePath + "/packages/pasjpeg/src",
+                "../nexus/packages/nexus-packages/graphics/pasjpeg/src",
                 @Tools.NexusFPC.SourcePath + "/packages/users/src",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
@@ -66,7 +66,7 @@ Project NexusScriptEditorDemo {
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64",
                 @Tools.NexusFPC.SourcePath + "/packages/fcl-base/src/" + @Tools.Native.PascalPlatform,
                 @Tools.NexusFPC.SourcePath + "/packages/fcl-base/src/dummy",
-                @Tools.NexusFPC.SourcePath + "/packages/pasjpeg/src",
+                "../nexus/packages/nexus-packages/graphics/pasjpeg/src",
                 "../nexus/packages/nexus-packages/gui/external/fpgui/framework/src/main/pascal/corelib",
                 "../nexus/packages/nexus-packages/gui/external/fpgui/framework/src/main/resources",
                 "../nexus/packages/nexus-packages/gui/external/fpgui/framework/src/main/pascal/corelib/" + @Lab.Native.GUIBackend

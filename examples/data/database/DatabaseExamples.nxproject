@@ -55,7 +55,7 @@ Project DatabaseExamples {
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64",
                 @Tools.NexusFPC.SourcePath + "/packages/fcl-base/src/" + @Tools.Native.PascalPlatform,
                 @Tools.NexusFPC.SourcePath + "/packages/fcl-base/src/dummy",
-                @Tools.NexusFPC.SourcePath + "/packages/pasjpeg/src",
+                "../nexus/packages/nexus-packages/graphics/pasjpeg/src",
                 "../nexus/packages/nexus-packages/db/fcl-db/src/base",
                 "../nexus/packages/nexus-packages/db/fcl-db/src/dbase"
             ];

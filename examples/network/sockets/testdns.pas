@@ -12,71 +12,32 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
  **********************************************************************}
-{$mode objfpc}
-{$h+}
-
-program testdns;
-
-uses netdb,Sockets;
-
-Procedure DumpHostEntry(Const H : THostEntry);
-
+program NexusResolverExample;
+{$mode objfpc}{$H+}
+uses Classes, SysUtils, blcksock;
+var
+  lSocket: TTCPBlockSocket;
+  lAddresses: TStringList;
+  lName: string;
+  lIndex: Integer;
 begin
-  With H do
+  lName := 'localhost';
+  if ParamCount > 0 then lName := ParamStr(1);
+  lSocket := TTCPBlockSocket.Create;
+  lAddresses := TStringList.Create;
+  try
+    lSocket.Family := SF_ANY;
+    if (lName = '-r') and (ParamCount = 2) then
+      WriteLn(lSocket.ResolveIPToName(ParamStr(2)))
+    else if (lName = '-p') and (ParamCount = 2) then
+      WriteLn(lSocket.ResolvePort(ParamStr(2)))
+    else
     begin
-    Writeln('Name     : ',Name);
-    Writeln('Addr     : ',HostAddrToStr(Addr));
-    Writeln('Aliases  : ',Aliases);
-    Writeln;
+      lSocket.ResolveNameToIP(lName, lAddresses);
+      for lIndex := 0 to lAddresses.Count - 1 do WriteLn(lAddresses[lIndex]);
     end;
-end;
-
-Procedure TestAddr(Addr : string);
-
-Var
-  H : THostEntry;
-
-begin
-  If ResolveHostByAddr(StrToHostAddr(Addr),H) then
-    DumpHostEntry(H)
-  else
-    Writeln('No entry for address ',Addr)
-end;
-
-Procedure TestName(Const N : string);
-
-Var
-  H : THostEntry;
-
-begin
-  If ResolveHostByName(N,H) then
-    DumpHostEntry(H)
-  else
-    Writeln('No entry for hostname ',N)
-end;
-
-Var
-  I,l : INteger;
-  Ans : Array [1..10] of THostAddr;
-  H   : THostAddr;
-  NAns : Array[1..10] of String;
-
-
-
-begin
-  Writeln('Resolving name ');
-  l:=ResolveName('db.wisa.be',Ans);
-  Writeln('Got : ',l,' answers');
-  For I:=1 to l do
-    Writeln(i:2,': ',hostAddrtostr(Ans[i]));
-  Writeln('Resolving address ');
-  H:=StrtoHostAddr('212.224.143.202');
-  L:=ResolveAddress(H,NAns);
-  Writeln('Got : ',l,' answers');
-  For I:=1 to l do
-    Writeln(i:2,': ',NAns[i]);
-  Writeln('ResolveHostByName:');
-  testname('malpertuus.wisa.be');
-  Writeln('ResolveHostByAddr:');
-  testaddr('212.224.143.202');
+  finally
+    lAddresses.Free;
+    lSocket.Free;
+  end;
 end.

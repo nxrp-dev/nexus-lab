@@ -53,7 +53,7 @@ procedure gz_compress (var infile:file; outfile:gzFile);
 var
   len   : cardinal;
   ioerr : integer;
-  err   : integer;
+  lError: SmallInt;
 begin
 
   while true do begin
@@ -70,7 +70,7 @@ begin
     if (len = 0) then break;
 
     if (gzwrite (outfile, @buf, len) <> len)
-      then error (gzerror (outfile, err));
+      then error (gzerror(outfile, lError));
 
   end; {WHILE}
 
@@ -91,13 +91,13 @@ var
   len     : longint;
   written : cardinal;
   ioerr   : integer;
-  err     : integer;
+  lError: SmallInt;
 begin
   while true do begin
 
     len := gzread (infile, @buf, BUFLEN);
     if (len < 0)
-      then error (gzerror (infile, err));
+      then error (gzerror(infile, lError));
     if (len = 0)
       then break;
 

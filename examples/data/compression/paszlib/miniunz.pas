@@ -23,8 +23,6 @@ uses
   sysutils,
   {$ifdef Delphi}
   Windows,
-  {$else}
-  zlib,
   {$endif}
   ziputils,
   paszlib,

@@ -1,5 +1,7 @@
 Program rdjpgcom;
 
+{$mode objfpc}
+
 { This file contains a very simple stand-alone application that displays
   the text in COM (comment) markers in a JFIF file.
   This may be useful as an example of the minimum logic needed to parse
@@ -7,7 +9,7 @@ Program rdjpgcom;
 
 { Original: Copyright (C) 1994-1995, Thomas G. Lane. }
 uses
-  Objects;
+  Classes, SysUtils;
 
 const
   EXIT_FAILURE = 1;
@@ -20,17 +22,7 @@ type
   To reuse this code in another application, you might need to change these. }
 
 var
-  infile : TBufStream;  { input JPEG file }
-
-{ Return next input byte, or EOF if no more }
-
-function NEXTBYTE : byte;
-var
-  c : Byte;
-begin
-  infile.Read(c, 1);
-  NEXTBYTE := c;
-end;
+  infile : TFileStream;  { input JPEG file }
 
 { Error exit handler }
 procedure ERREXIT(msg : shortstring);
@@ -43,10 +35,10 @@ end;
 { Read one byte, testing for EOF }
 function read_1_byte : int;
 var
-  c : int;
+  c : Byte;
 begin
-  c := NEXTBYTE;
-  if (infile.Status <> stOK) then
+  c := 0;
+  if infile.Read(c, 1) <> 1 then
     ERREXIT('Premature EOF in JPEG file');
   read_1_byte := c;
 end;
@@ -57,10 +49,9 @@ function read_2_bytes : uInt;
 var
   c : word;
 begin
-  infile.Read(c, 2);
-  c := Swap(c);
-  if (infile.Status <> stOK) then
+  if infile.Read(c, 2) <> 2 then
     ERREXIT('Premature EOF in JPEG file');
+  c := Swap(c);
   read_2_bytes := c;
 end;
 
@@ -137,8 +128,8 @@ function first_marker : int;
 var
   c1, c2 : int;
 begin
-  c1 := NEXTBYTE;
-  c2 := NEXTBYTE;
+  c1 := read_1_byte;
+  c2 := read_1_byte;
   if (c1 <> $FF) or (c2 <> M_SOI) then
     ERREXIT('Not a JPEG file');
   first_marker := c2;
@@ -258,8 +249,7 @@ end;
 
 { Parse the marker stream until SOS or EOI is seen;
   display any COM markers.
-  While the companion program wrjpgcom will always insert COM markers before
-  SOFn, other implementations might not, so we scan to SOS before stopping.
+  COM markers may appear after SOFn, so we scan to SOS before stopping.
   If we were only interested in the image dimensions, we would stop at SOFn.
   (Conversely, if we only cared about COM markers, there would be no need
   for special code to handle SOFn; we could treat it like other markers.) }
@@ -365,16 +355,22 @@ begin
   { Open the input file. }
   arg := ParamStr(ParamCount);
 
-  if not infile.Init(arg, stOpenRead, 4096) then
-  begin
-    WriteLn(output, 'can''t open ', arg);
-    Halt(EXIT_FAILURE);
+  try
+    infile := TFileStream.Create(arg, fmOpenRead or fmShareDenyNone);
+  except
+    on E: EFOpenError do
+    begin
+      WriteLn(output, 'can''t open ', arg);
+      Halt(EXIT_FAILURE);
+    end;
   end;
 
-  { Scan the JPEG headers. }
-  scan_JPEG_header(verbose);
-
-  infile.done;
+  try
+    { Scan the JPEG headers. }
+    scan_JPEG_header(verbose);
+  finally
+    infile.Free;
+  end;
 
   { All done. }
   Halt(EXIT_SUCCESS);

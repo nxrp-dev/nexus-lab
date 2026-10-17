@@ -95,7 +95,7 @@ procedure test_gzio(const outf : string; { output file }
                     uncompr : Pbyte;
                     uncomprLen : integer);
 var
-  err : integer;
+  lError: SmallInt;
   len : integer;
 var
   zfile : gzFile;
@@ -112,19 +112,19 @@ begin
   gzputc(zfile, 'h');
   if (gzputs(zfile, 'ello') <> 4) then
   begin
-    WriteLn('gzputs err: ', gzerror(zfile, err));
+    WriteLn('gzputs err: ', gzerror(zfile, lError));
     Stop;
   end;
   {$ifdef GZ_FORMAT_STRING}
   if (gzprintf(zfile, ', %s!', 'hello') <> 8) then
   begin
-    WriteLn('gzprintf err: ', gzerror(zfile, err));
+    WriteLn('gzprintf err: ', gzerror(zfile, lError));
     Stop;
   end;
   {$else}
   if (gzputs(zfile, ', hello!') <> 8) then
   begin
-    WriteLn('gzputs err: ', gzerror(zfile, err));
+    WriteLn('gzputs err: ', gzerror(zfile, lError));
     Stop;
   end;
   {$ENDIF}
@@ -140,7 +140,7 @@ begin
   uncomprLen := gzread(zfile, uncompr, cardinal(uncomprLen));
   if (uncomprLen <> len) then
   begin
-    WriteLn('gzread err: ', gzerror(zfile, err));
+    WriteLn('gzread err: ', gzerror(zfile, lError));
     Stop;
   end;
   if (strcomp(PAnsiChar(uncompr), hello)) <> 0 then
@@ -168,7 +168,7 @@ begin
   uncomprLen := strlen(PAnsiChar(uncompr));
   if (uncomprLen <> 6) then
   begin { "hello!" }
-    WriteLn('gzgets err after gzseek: ', gzerror(zfile, err));
+    WriteLn('gzgets err after gzseek: ', gzerror(zfile, lError));
     Stop;
   end;
   if (strcomp(PAnsiChar(uncompr), hello+7)) <> 0 then

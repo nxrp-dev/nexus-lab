@@ -1,4 +1,5 @@
 Unit RdSwitch;
+// Nexus, 2026-10-17: repair the sample-factor argument declaration.
 
 { This file contains routines to process some of cjpeg's more complicated
   command-line switches.  Switches processed here are:
@@ -32,7 +33,7 @@ function set_quant_slots (cinfo : j_compress_ptr; argtxt : ansistring) : boolean
 
 {GLOBAL}
 function set_sample_factors (cinfo : j_compress_ptr;
-                             argtxt ansi: string) : boolean;
+                             argtxt : ansistring) : boolean;
 { Process a sample-factors parameter string, of the form
       HxV[,HxV,...]
   If there are more components than parameters, "1x1" is assumed for the rest.

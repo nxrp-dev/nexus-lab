@@ -38,12 +38,6 @@ restest.pas   test program for resourcestrings with GNU gettext. (MVC)
 istream.pas   testprogram for input/output streams.
 testproc.pas  testprogram for TProcess object. Needs doecho to be compiled
              also.
-socksvr.pas   Unix socket server application. Tests TUnixServer in ssockets.
-isocksvr.pas  Inet socket server application. Tests TInetServer in ssockets.
-dsocksvr.pas  Unix socket server application. Tests ssockets.
-sockcli.pas   Unix socket client application. Tests TUnixStream in ssockets.
-isockcli.pas  Inet socket server application. Tests TInetStream in ssockets.
-dsockcli.pas  Dual socket server application. Tests ssockets.
 sstream.pas   Tests TStringStream object.
 testol.pas    Tests TObjectList in contnrs. (MVC)
 testcont.pas  Tests TStack/TQueue in contnrs. (MVC)
@@ -79,3 +73,5 @@ demoio.pas    Demo for AssignStream from streamio unit.
 testthreadpool  Demo for fpthreadpool unit.
 demolg       TLockGuard demo.
 demo_spinlock TSpinLock demo.
+
+TCP and resolver examples use Nexus Synapse in ../../network/sockets.

@@ -1,4 +1,3 @@
-Program Client;
 {
     This file is part of the Free Component Library (FCL)
     Copyright (c) 1999-2000 by the Free Pascal development team
@@ -11,40 +10,32 @@ Program Client;
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
  **********************************************************************}
-
-{
-  TInetSocket client program. Before running this, run either
-  'isocksvr' or 'dsocksvr -i' in another terminal or in the
-  background.
-
-  You can specify a connection timeout in milliseconds on the command-line:
-  isockcli 1000
-  will wait 1 second.
-}
+program NexusSocketClient;
 {$mode objfpc}{$H+}
-uses sysutils, ssockets;
-
-Const
-  TheHost = 'localhost';
-  ThePort = 4100;
-
+uses SysUtils, blcksock;
 var
-  S : String;
-  i : longint;
-
+  lSocket: TTCPBlockSocket;
+  lHost, lPort: string;
+  lIndex: Integer;
 begin
-  Writeln('Using -n command-line will not send the QUIT command.');
-  S:='This is a textstring sent by the client'#10;
-  With TInetSocket.Create(TheHost,ThePort,StrToIntDef(ParamStr(1),0)) do
+  lHost := '127.0.0.1';
+  lPort := '4100';
+  if ParamCount > 0 then lHost := ParamStr(1);
+  if ParamCount > 1 then lPort := ParamStr(2);
+  lSocket := TTCPBlockSocket.Create;
+  try
+    lSocket.Family := SF_ANY;
+    lSocket.ConnectionTimeout := 1000;
+    lSocket.Connect(lHost, lPort);
+    if lSocket.LastError <> 0 then raise Exception.Create(lSocket.LastErrorDesc);
+    for lIndex := 1 to 3 do
     begin
-    For I:=1 to 10 do
-      Write(S[1],Length(S));
-    if ParamStr(1)<>'-n' then
-      begin
-      Writeln('Sending QUIT command');
-      S:='QUIT'#10;
-      Write(S[1],Length(S));
-      end;
-    Free;
+      lSocket.SendString('Nexus message ' + IntToStr(lIndex) + #13#10);
+      WriteLn(lSocket.RecvString(1000));
+      if lSocket.LastError <> 0 then raise Exception.Create(lSocket.LastErrorDesc);
     end;
+    lSocket.SendString('QUIT' + #13#10);
+  finally
+    lSocket.Free;
+  end;
 end.

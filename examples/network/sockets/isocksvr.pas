@@ -1,4 +1,3 @@
-Program server;
 {
     This file is part of the Free Component Library (FCL)
     Copyright (c) 1999-2000 by the Free Pascal development team
@@ -11,128 +10,39 @@ Program server;
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
  **********************************************************************}
-
-{
-  TInetServer server program. This will listen on port 4100 till
-  a client connects. You can connect by running the 'isockcli' or
-  'dsockcli -i' programs in another terminal.
-}
-
+program NexusSocketServer;
 {$mode objfpc}{$H+}
-uses
-  {$IFDEF UNIX}cthreads,{$ENDIF}
-  classes, sockets, ssockets;
-
-
-const
-  ThePort=4100;
-
-Type
-  { TAcceptThread }
-
-  TAcceptThread = Class(TThread)
-    FSocket : TInetServer;
-    Constructor Create(aSocket : TInetServer);
-    Procedure Execute; override;
-  end;
-
-  TINetServerApp = Class(TObject)
-  Private
-    FServer : TInetServer;
-  Public
-    Constructor Create(Port : longint);
-    Destructor Destroy;override;
-    Procedure OnConnect (Sender : TObject; Data : TSocketStream);
-    Procedure OnDisConnect (Sender : TObject; Data : TSocketStream);
-    Procedure Run;
-  end;
-
-
-{ TAcceptThread }
-
-constructor TAcceptThread.Create(aSocket: TInetServer);
-begin
-  FSocket:=aSocket;
-  FreeOnTerminate:=True;
-  Inherited Create(False);
-end;
-
-procedure TAcceptThread.Execute;
-begin
-  FSocket.StartAccepting;
-end;
-
-{ TInetServerApp }
-
-Constructor TInetServerApp.Create(Port : longint);
-
-begin
-  FServer:=TINetServer.Create(Port);
-  FServer.OnConnect:=@OnConnect;
-  FServer.OnDisConnect:=@OnDisConnect;
-end;
-
-Destructor TInetServerApp.Destroy;
-
-begin
-  FServer.Free;
-end;
-
-
-Function SocketAddrToString(ASocketAddr: TSockAddr): AnsiString;
-
-Var
-  S : ShortString;
-
-begin
-  Result:='';
-  if ASocketAddr.sa_family = AF_INET then
-    begin
-    S := NetAddrToStr(ASocketAddr.sin_addr);
-    Result:=S;
-    end;
-end;
-
-Procedure TInetServerApp.OnDisConnect (Sender : TObject; Data : TSocketStream);
-
-
+uses SysUtils, blcksock, synsock;
 var
-  PeerHost : String;
-
+  lListener, lClient: TTCPBlockSocket;
+  lHost, lPort, lLine: string;
 begin
-  PeerHost:=SocketAddrToString(Data.RemoteAddress);
-  Writeln('Disconnecting from ',PeerHost);
-end;
-
-Procedure TInetServerApp.OnConnect (Sender : TObject; Data : TSocketStream);
-
-
-Var Buf : ShortString;
-    Count : longint;
-
-begin
-  Writeln('Connection from ',SocketAddrToString(Data.RemoteAddress));
-  Repeat
-    Count:=Data.Read(Buf[1],255);
-    SetLength(Buf,Count);
-    Write('Server got : ',Buf);
-  Until (Count=0) or (Pos('QUIT',Buf)<>0);
-  if Pos('QUIT',Buf)<>0 then
-    FServer.StopAccepting;
-  Data.Free;
-end;
-
-Procedure TInetServerApp.Run;
-
-begin
-  TAcceptThread.Create(FServer).WaitFor;
-end;
-
-Var
-  Application : TInetServerApp;
-
-begin
-  Application:=TInetServerApp.Create(ThePort);
-  Application.Run;
-  Application.Free;
+  lHost := '127.0.0.1';
+  lPort := '4100';
+  if ParamCount > 0 then lHost := ParamStr(1);
+  if ParamCount > 1 then lPort := ParamStr(2);
+  lListener := TTCPBlockSocket.Create;
+  lClient := TTCPBlockSocket.Create;
+  try
+    lListener.Family := SF_ANY;
+    lListener.Bind(lHost, lPort);
+    if lListener.LastError <> 0 then raise Exception.Create(lListener.LastErrorDesc);
+    lListener.Listen;
+    if lListener.LastError <> 0 then raise Exception.Create(lListener.LastErrorDesc);
+    WriteLn('Listening on ', lHost, ':', lListener.GetLocalSinPort);
+    Flush(Output);
+    if not lListener.CanRead(30000) then raise Exception.Create('No client arrived within 30 seconds');
+    lClient.Socket := lListener.Accept;
+    if lClient.Socket = INVALID_SOCKET then raise Exception.Create('Accept failed');
+    repeat
+      lLine := lClient.RecvString(5000);
+      if lClient.LastError <> 0 then Break;
+      if lLine = 'QUIT' then Break;
+      WriteLn(lLine);
+      lClient.SendString(lLine + #13#10);
+    until lClient.LastError <> 0;
+  finally
+    lClient.Free;
+    lListener.Free;
+  end;
 end.

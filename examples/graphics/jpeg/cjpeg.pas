@@ -18,10 +18,12 @@ Program cjpeg;
         cjpeg [options]  -outfile outputfile  inputfile
   works regardless of which command line style is used. }
 
+// Nexus, 2026-10-17: use the codec's TStream file interface.
 {$I jconfig.inc}
 {$undef PPM_SUPPORTED}
 
 uses
+  Classes, SysUtils,
   jmorecfg,
   cdjpeg,               { Common decls for cjpeg/djpeg applications }
   {jversion,}           { for version message }
@@ -86,7 +88,7 @@ end;
 
 {LOCAL}
 function select_file_type (cinfo : j_compress_ptr;
-                           var infile : FILE) : cjpeg_source_ptr;
+                           var infile : TStream) : cjpeg_source_ptr;
 var
   c : AnsiChar;
 begin
@@ -581,8 +583,8 @@ var
 {$endif}
   file_index : int;
   src_mgr : cjpeg_source_ptr;
-  input_file : FILE;
-  output_file : FILE;
+  input_file : TStream;
+  output_file : TStream;
   num_scanlines : JDIMENSION;
 var
   argc : int;
@@ -649,53 +651,13 @@ begin
   end;
 {$endif} { TWO_FILE_COMMANDLINE }
 
-  { Open the input file. }
-  if (file_index < argc) then
-  begin
-    Assign(input_file, ParamStr(file_index));
-    {$push}{$I-}
-    Reset(input_file, 1);
-    {$pop}
-    if (IOresult <> 0) then
-    begin
-      WriteLn(output, progname, ': can''t open ', ParamStr(file_index));
-      Halt(EXIT_FAILURE);
-    end;
-  end
-  else
-  begin
-    WriteLn(output, progname, ': no input file');
-    Halt(EXIT_FAILURE);
-  end;
-
-  { Open the output file. }
-  if (outfilename <> '') then
-  begin
-    Assign(output_file, outfilename);
-{$push}{$I-}
-    Reset(output_file, 1);
-{$pop}
-    if (IOresult = 0) then
-    begin
-      WriteLn(output, outfilename, ':  already exists.');
-      close(output_file);
-      Halt(EXIT_FAILURE);
-    end;
-
-{$push}{$I-}
-    ReWrite(output_file, 1);
-{$pop}
-    if (IOresult <> 0) then
-    begin
-      WriteLn(output, progname, ': can''t create ', outfilename);
-      Halt(EXIT_FAILURE);
-    end;
-  end
-  else
-  begin
-    WriteLn(output, progname, ': no output file');
-    Halt(EXIT_FAILURE);
-  end;
+  { Nexus: the library's FILEptr is a pointer to a TStream variable. }
+  if (file_index > ParamCount) or (outfilename = '') then
+    usage;
+  input_file := TFileStream.Create(ParamStr(file_index), fmOpenRead or fmShareDenyWrite);
+  if FileExists(outfilename) then
+    raise EFCreateError.CreateFmt('Output already exists: %s', [outfilename]);
+  output_file := TFileStream.Create(outfilename, fmCreate);
 
 {$ifdef PROGRESS_REPORT}
   start_progress_monitor(j_common_ptr (@cinfo), @progress);
@@ -733,8 +695,8 @@ begin
   jpeg_destroy_compress(@cinfo);
 
   { Close files, if we opened them }
-  close(input_file);
-  close(output_file);
+  input_file.Free;
+  output_file.Free;
 
 {$ifdef PROGRESS_REPORT}
   end_progress_monitor(j_common_ptr (@cinfo));

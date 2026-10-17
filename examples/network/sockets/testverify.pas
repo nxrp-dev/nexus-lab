@@ -1,62 +1,32 @@
-// OpenSSL provider source: Nexus packages/nexus-packages/network/openssl/src.
 {
   Program to demonstrate verification of a certificate.
   Created by Bernd K. for issue:
   https://gitlab.com/freepascal.org/fpc/source/-/issues/39998
 }
-program testverify;
-
-uses
-  Sysutils, Classes, sockets, ssockets, sslsockets, openssl, opensslsockets;
-
-
-type
-
-  { TApp }
-
-  TApp = class
-    Sock: TInetSocket;
-    SSLHandler: TSSLSocketHandler;
-    constructor Create;
-    destructor Destroy; override;
-    procedure OnVerify(Sender: TObject; var Allow: Boolean);
+program NexusTLSVerification;
+{$mode objfpc}{$H+}
+uses SysUtils, blcksock, obNXSynapseOpenSSL;
+var
+  lSocket: TTCPBlockSocket;
+begin
+  if ParamCount <> 3 then
+  begin
+    WriteLn('Usage: testverify <host> <port> <CA-PEM-file>');
+    Halt(2);
   end;
-
-var
-  App: TApp;
-
-{ TApp }
-
-constructor TApp.Create;
-begin
-  SSLHandler := TSSLSocketHandler.GetDefaultHandler;
-  SSLHandler.OnVerifyCertificate := @OnVerify;
-  //SSLHandler.VerifyPeerCert := True;
-  Sock := TInetSocket.Create('test.mosquitto.org', 8883, 1000, SSLHandler);
-
-  writeln('begin connect');
-  Sock.Connect;
-  writeln('end connect');
-
-end;
-
-destructor TApp.Destroy;
-begin
-  Sock.Free;
-  inherited Destroy;
-end;
-
-procedure TApp.OnVerify(Sender: TObject; var Allow: Boolean);
-var
-  S: TOpenSSLSocketHandler;
-begin
-  Writeln('OnVerify');
-  S := Sender as TOpenSSLSocketHandler;
-  writeln('cert assigned: ', Assigned(S.SSL.PeerCertificate));
-  writeln('cert info:     ', S.SSL.CertInfo);
-end;
-
-begin
-  App := TApp.Create;
-  App.Free;
+  if not FileExists(ParamStr(3)) then raise Exception.Create('CA file does not exist');
+  lSocket := TTCPBlockSocket.Create;
+  try
+    lSocket.Family := SF_ANY;
+    lSocket.ConnectionTimeout := 3000;
+    lSocket.Connect(ParamStr(1), ParamStr(2));
+    if lSocket.LastError <> 0 then raise Exception.Create(lSocket.LastErrorDesc);
+    lSocket.SSL.SNIHost := ParamStr(1);
+    lSocket.SSL.CertCAFile := ParamStr(3);
+    lSocket.SSL.VerifyCert := True;
+    if not lSocket.SSL.Connect then raise Exception.Create(lSocket.SSL.LastErrorDesc);
+    WriteLn(lSocket.SSL.GetSSLVersion, ' ', lSocket.SSL.GetPeerName);
+  finally
+    lSocket.Free;
+  end;
 end.
