@@ -5,7 +5,7 @@ unit obGameLayer;
 interface
 
 uses
-  Classes, SysUtils, fgl, obContainers, obGameView;
+  Classes, SysUtils, obContainers, obGameView;
 
 type
 

@@ -42,6 +42,7 @@ Project ProcessExamples {
                 "../nexus/packages/nexus-packages/graphics/x11/src",
                 @Tools.Native.RTLPath,
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/inc",
+                @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
                 @Tools.NexusFPC.SourcePath + "/packages/fcl-base/src",
                 @Tools.NexusFPC.SourcePath + "/packages/paszlib/src",
@@ -51,6 +52,7 @@ Project ProcessExamples {
                 "../nexus/packages/nexus-packages/fcl-process/src"
             ];
             IncludePaths: [
+                @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/pthreads/src",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,

@@ -4,7 +4,7 @@ program ThreadedIPC;
 
 uses
   {$IFDEF UNIX}cthreads,{$ENDIF}
-  SysUtils, Classes, Math, FGL, SimpleIPC;
+  SysUtils, Classes, Math, Generics.Collections, SimpleIPC;
 
 const
   ServerUniqueID = '39693DC0-BD8B-4AAD-9D9B-387D37CD59FD';
@@ -82,7 +82,7 @@ begin
 end;
 
 type
-  TThreadList = specialize TFPGObjectList<TThread>;
+  TThreadList = specialize TObjectList<TThread>;
 
 var
   I: Integer;

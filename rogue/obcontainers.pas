@@ -5,14 +5,13 @@ unit obContainers;
 interface
 
 uses
-  Classes, SysUtils, fgl;
+  Classes, SysUtils, Generics.Collections;
 
 type
   generic TForEachProc<T> = procedure(const AItem: T) of object;
 
-  generic TGenericList<T> = class(specialize TFPGList<T>)
+  generic TGenericList<T: class> = class(specialize TList<T>)
   public
-  type
     procedure ForEach(AProc: specialize TForEachProc<T>);
     function Add(AClass: TClass): T; overload;
   end;
