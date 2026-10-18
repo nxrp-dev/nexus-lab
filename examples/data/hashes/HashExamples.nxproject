@@ -15,11 +15,7 @@ Project HashExamples {
             "../nexus-lab/examples/data/hashes/md5performancetest.pas",
             "../nexus-lab/examples/data/hashes/sha1performancetest.pas",
             "../nexus-lab/examples/data/cryptography/demosha256.pas",
-            "../nexus-lab/examples/data/cryptography/sha256performancetest.pas",
-            "../nexus-lab/examples/data/cryptography/authenticator.pas",
-            "../nexus-lab/examples/data/cryptography/gentotp.pas",
-            "../nexus-lab/examples/data/cryptography/dumppem.lpr",
-            "../nexus-lab/examples/data/cryptography/extractrsa.lpr"];
+            "../nexus-lab/examples/data/cryptography/sha256performancetest.pas"];
         OutputPath: @HashExamples.OutputRoot;
         RawOptions: ["-O2", "-gl"];
         Language Pascal { Mode: ObjFPC; }
@@ -29,8 +25,6 @@ Project HashExamples {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
             UnitPaths: [
                 @Tools.Native.RTLPath,
-                @Tools.NexusFPC.SourcePath + "/packages/hash/src",
-                @Tools.NexusFPC.SourcePath + "/packages/fcl-hash/src",
                 "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/Base",
                 "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/Checksum",
                 "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/Crypto",
