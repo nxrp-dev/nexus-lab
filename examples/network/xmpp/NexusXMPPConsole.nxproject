@@ -26,7 +26,7 @@ Project NexusXMPPConsole {
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
                 @Tools.NexusFPC.SourcePath + "/packages/pthreads/src",
-                @Tools.NexusFPC.SourcePath + "/packages/x11/src",
+                "../nexus/packages/nexus-packages/graphics/x11/src",
                 @Tools.Native.RTLPath,
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,

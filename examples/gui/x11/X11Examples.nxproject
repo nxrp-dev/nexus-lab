@@ -1,0 +1,22 @@
+// Copyright (c) 2026 Kevin Collins.
+// SPDX-License-Identifier: MPL-2.0-no-copyleft-exception
+dialect "../../../../nexus/projects/nxbuild/language/nxbuild.Language.nxscript";
+module "../../../../nexus/projects/nxbuild/nxbuild.environment.nxscript";
+Project X11Examples {
+    RootDirectory: "../../..";
+    OutputRoot: "output/X11Examples/" + @Tools.Native.Name;
+    FPC KeyboardMap {
+        CompilerPath: @Tools.Native.FPCCompiler;
+        SourceFiles: ["examples/gui/x11/KeyboardMap.pas"];
+        OutputPath: @X11Examples.OutputRoot;
+        RawOptions: ["-Cr", "-Co", "-gl"];
+        Config Options { DisableDefaultConfigFiles: True; }
+        Language Pascal { Mode: ObjFPC; }
+        Assembler Native TargetOS[linux] { OutputFormat: "as-clang"; }
+        Files Paths {
+            CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
+            UnitPaths: [@Tools.Native.RTLPath,
+                "../nexus/packages/nexus-packages/graphics/x11/src"];
+        }
+    }
+}

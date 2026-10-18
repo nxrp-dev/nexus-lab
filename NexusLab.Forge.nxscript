@@ -35,6 +35,10 @@ Group Examples {
         Template: "../nexus/projects/forge/templates/NXBuild.mustache";
         EntryPoint: "examples/graphics/images/FCLImageExamples.nxproject";
     }
+    NXBuild X11Keyboard {
+        Template: "../nexus/projects/forge/templates/NXBuild.mustache";
+        EntryPoint: "examples/gui/x11/X11Examples.nxproject";
+    }
     NXBuild ScriptEditor {
         Template: "../nexus/projects/forge/templates/NXBuild.mustache";
         EntryPoint: "examples/gui/script-editor/NexusScriptEditorDemo.nxproject";

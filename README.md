@@ -12,7 +12,7 @@ their own repositories.
 | Describe packages | [Package catalogs](examples/packages/catalogs), [runtime package loading](examples/packages/runtime-loading) |
 | Work with data | [JSON](examples/data/json), [XML](examples/data/xml), [databases](examples/data/database), [schemas](examples/data/schema), [CSV](examples/data/csv), [SQLite from Lua](examples/data/sqlite-lua) |
 | Compress and hash | [Compression](examples/data/compression), [hashes](examples/data/hashes), [cryptography](examples/data/cryptography) |
-| Build a user interface | [Script editor](examples/gui/script-editor), [virtual tree](examples/gui/virtual-tree), [fpGUI](examples/gui/fpgui), [layout](examples/gui/layout), [progress indicator](examples/gui/progress-indicator) |
+| Build a user interface | [Script editor](examples/gui/script-editor), [virtual tree](examples/gui/virtual-tree), [fpGUI](examples/gui/fpgui), [X11 keyboard maps](examples/gui/x11), [layout](examples/gui/layout), [progress indicator](examples/gui/progress-indicator) |
 | Draw and process images | [Images and barcodes](examples/graphics/images), [JPEG](examples/graphics/jpeg), [AggPas](examples/graphics/aggpas), [vertex canvas](examples/graphics/vertex-canvas), [ANGLE](examples/graphics/angle), [MetalANGLE](examples/graphics/metalangle), [iOS graphics](examples/graphics/metalangle-ios), [SPIR-V](examples/graphics/spirv) |
 | Connect applications | [XMPP](examples/network/xmpp), [TLS](examples/network/tls), [sockets](examples/network/sockets), [Lua sockets](examples/network/lua-sockets) |
 | Use the runtime | [Collections](examples/runtime/collections), [Object Pascal](examples/runtime/object-pascal), [base utilities](examples/runtime/base), [FFI](examples/runtime/ffi) |
