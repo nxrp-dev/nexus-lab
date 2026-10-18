@@ -7,7 +7,7 @@ module "../../../NexusLab.Environment.nxscript";
 Project plugin_sample {
     RootDirectory: "../../..";
     SourceRoot: "examples/mobile/pascal-plugin";
-    OutputRoot: "output/plugin_sample/" + @Tools.Native.Name;
+    OutputRoot: "../../worktree/libffi-relocation/mobile/" + @Tools.Native.Name;
 
     FPC Application {
         CompilerPath: @Tools.Native.FPCCompiler;
@@ -24,7 +24,7 @@ Project plugin_sample {
             LibraryPaths: @Lab.Native.PluginLibraryPaths;
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
             UnitPaths: [
-                @Tools.NexusFPC.SourcePath + "/packages/libffi/src",
+                "../nexus/packages/nexus-packages/libffi/src",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
                 @Tools.NexusFPC.SourcePath + "/packages/pthreads/src",

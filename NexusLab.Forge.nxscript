@@ -27,6 +27,14 @@ Group Examples {
         Template: "../nexus/projects/forge/templates/NXBuild.mustache";
         EntryPoint: "examples/system/processes/ProcessExamples.nxproject";
     }
+    NXBuild ForeignFunctionInterface {
+        Template: "../nexus/projects/forge/templates/NXBuild.mustache";
+        EntryPoint: "examples/runtime/ffi/FFIExamples.nxproject";
+    }
+    NXBuild RTTI {
+        Template: "../nexus/projects/forge/templates/NXBuild.mustache";
+        EntryPoint: "examples/runtime/object-pascal/RTTIExamples.nxproject";
+    }
     NXBuild Resources {
         Template: "../nexus/projects/forge/templates/NXBuild.mustache";
         EntryPoint: "examples/system/resources/ResourceExamples.nxproject";
