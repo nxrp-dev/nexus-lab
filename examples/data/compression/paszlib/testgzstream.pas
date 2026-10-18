@@ -1,7 +1,7 @@
 program example;
 
 uses
-  SysUtils, ZStream, Classes;
+  SysUtils, PasZLibIO, Classes;
 
 procedure TestGZip;
 var

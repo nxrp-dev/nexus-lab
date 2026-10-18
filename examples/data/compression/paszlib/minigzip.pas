@@ -18,7 +18,7 @@ program minigzip;
 }
 
 uses
-  gzio;
+  PasZLibIO;
 
 const
   BUFLEN       = 16384 ;

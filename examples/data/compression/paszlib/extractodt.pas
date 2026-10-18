@@ -3,7 +3,7 @@ program ExtractODT;
 
 {$mode objfpc}{$H+}
 
-Uses Zipper,sysutils;
+Uses PasZLibIO,sysutils;
 
 procedure usage;
 begin

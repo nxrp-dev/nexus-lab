@@ -1,6 +1,6 @@
 # Nexus Pascal compression examples
 
-These examples use the authoritative NexusFPC `packages/paszlib/src` tree.
+These examples use the authoritative NexusFPC `rtl/objpas` `PasZLib` and `PasZLibIO` units.
 The duplicate `paszlib-external` folder was removed after comparing its source
 and notices. Original author/license notices remain with these examples.
 

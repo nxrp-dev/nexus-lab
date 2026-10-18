@@ -3,7 +3,7 @@ program EnhancedZipperExample;
 {$mode objfpc}{$H+}
 
 uses
-  Classes, zstream, zipper;
+  Classes, PasZLibIO;
 
 var
    z: TZipper;

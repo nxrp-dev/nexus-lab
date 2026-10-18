@@ -15,7 +15,7 @@
 {$h+}
 Program testunzip;
 
-uses Classes,Zipper;
+uses Classes,PasZLibIO;
 
 Var
   I : Integer;

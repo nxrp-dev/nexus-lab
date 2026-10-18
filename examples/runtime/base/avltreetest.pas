@@ -1,9 +1,9 @@
-Program AvlTreeTest;
+program AvlTreeTest;
 {
     This file is a demo of the Free Component Library (FCL)
     Copyright (c) 2009 by Marco van de Voort.
 
-    A demo/test of straightforward unit Avl_Tree usage.
+    A demo/test adapted to use the shared Generics.Collections AVL map.
 
     See the file COPYING.FPC, included in this distribution,
     for details about the copyright. Alternately you may also
@@ -14,91 +14,67 @@ Program AvlTreeTest;
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
  **********************************************************************}
-// Simple test of avl_tree unit.
-// It adds 1000 randomly generated numbers to both a TBits and an avltree,
-//  no dupes are allowed in the avltree. Then it compares and deallocates.
-//
-// While doing this, it counts the total number of compares.
+{$mode objfpc}{$H+}
 
+uses Classes, SysUtils, Generics.Collections, Generics.Defaults;
 
-{$mode ObjFPC}{$H+}
+const
+  cNumberOfValues = 10000;
 
-Uses avl_tree,Sysutils,Classes;
+var
+  lComparisons: SizeInt = 0;
 
-Const
-    NumberOfValues = 10000;
-
-Type TDataObject = Class
-		    Name:String;
-                    value : integer;
-		   end;
-
-Var objcompares : integer =0;
-    keycompares : integer =0;
-
-Function CompareProcObj(Node1, Node2: Pointer): integer;
+function CompareNames(const AFirst, ASecond: string): Integer;
 begin
-  inc(objcompares);
-  Result := CompareStr(TDataObject(Node2).name,TDataObject(Node1).name);
-end;
-
-Function CompareProcKey(Node1:pointer; Node2: Pointer): integer;
-begin
-  inc(keycompares);
-  Result := CompareStr(TDataObject(Node2).name,ansistring(Node1));
+  Inc(lComparisons);
+  Result := CompareStr(ASecond, AFirst);
 end;
 
 var
-   Tree      : TAVLTree;
-   i,value   : Integer;
-   valueStr  : String;
-   Allocated : TBits;
-   obj       : TDataObject;
-   AVLNode   : TAVLTreeNode;
+  lTree: specialize TAVLTreeMap<string, Integer>;
+  lSeen: TBits;
+  lIndex, lValue: Integer;
+  lName: string;
+  lBefore, lFindComparisons, lInsertComparisons: SizeInt;
+  lIsNew: Boolean;
 begin
- Randomize;
- Tree :=TAVLTree.Create(@CompareProcObj);
- Allocated:=TBits.Create(NumberOfValues);
-
- // note that the compareproc is different from above.
- For I:=0 to NumberOfValues-1 do
-  begin
-    value:=Random(NumberOfValues);
-    valueStr:=inttostr(Value);
-    If not assigned(Tree.FindKey(pointer(valueStr),@CompareProcKey)) Then
+  Randomize;
+  lFindComparisons := 0;
+  lInsertComparisons := 0;
+  lTree := specialize TAVLTreeMap<string, Integer>.Create(
+    specialize TComparer<string>.Construct(@CompareNames));
+  try
+    lSeen := TBits.Create(cNumberOfValues);
+    try
+      for lIndex := 0 to cNumberOfValues - 1 do
       begin
-        obj:=TDataObject.Create;
-        obj.name:=ValueStr;
-        obj.value:=value;
-        Tree.Add(Obj);
-        Allocated[value]:=true;
+        lValue := Random(cNumberOfValues);
+        lName := IntToStr(lValue);
+        lBefore := lComparisons;
+        lIsNew := not lTree.ContainsKey(lName);
+        Inc(lFindComparisons, lComparisons - lBefore);
+        if lIsNew then
+        begin
+          lBefore := lComparisons;
+          lTree.Add(lName, lValue);
+          Inc(lInsertComparisons, lComparisons - lBefore);
+          lSeen[lValue] := True;
+        end;
       end;
+      WriteLn(lTree.Count, ' unique nodes in the tree');
+      WriteLn('Insert comparisons: ', lInsertComparisons);
+      WriteLn('Find comparisons: ', lFindComparisons);
+      lBefore := lComparisons;
+      for lValue in lTree.Values do
+        if not lSeen[lValue] then
+          raise Exception.CreateFmt('Unexpected value: %d', [lValue]);
+      if lComparisons <> lBefore then
+        raise Exception.Create('Iteration must not compare keys');
+      lTree.ConsistencyCheck;
+    finally
+      lSeen.Free;
+    end;
+  finally
+    lTree.Free;
   end;
-  // Key compares (which should be about sum(n=1..NumberOfValues,log(n)/log(2))
-  //   seems to be about 2log(n)-2. I haven't calculated the limit yet.
-  writeln(Tree.Count, ' unique nodes in the tree');
-  Writeln('object compares (insert):',objcompares,' (/Tree.count): ',floattostrf(objcompares/tree.count,fffixed,10,2));
-  Writeln('key    compares (find  ):',keycompares,' (/',NumberOfValues,'): ',floattostrf(keycompares/NumberOfValues,fffixed,10,2));
-
-  // iterating and comparing with the TBits.
-  AVLNode:=Tree.FindLowest;
-  while (AVLNode<>nil) do
-     begin
-       value:=TDataObject(AVLNode.Data).value;
-       if not Allocated[value] then
-         writeln('Oops, missed:',value);
-      AVLNode:=Tree.FindSuccessor(AVLNode)
-     end;
-
-  // Iterating is compareless as it should be, despite
-  //   the "FINDsuccessor" method name.
-  Writeln('object compares (insert):',objcompares);
-  Writeln('key    compares (find  ):',keycompares);
-
-  // Clean up.
-
-  Tree.FreeAndClear;
-  FreeAndNil(Tree);
-  FreeAndNil(Allocated);
-
-End.
+end.

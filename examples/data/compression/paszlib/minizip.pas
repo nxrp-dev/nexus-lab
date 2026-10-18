@@ -14,7 +14,7 @@ program MiniZip;
 }
 
 uses
-  SysUtils, paszlib, ctypes, ziputils, zip;
+  SysUtils, paszlib, ctypes, PasZLibIO;
 
 const
   WRITEBUFFERSIZE = Z_BUFSIZE;

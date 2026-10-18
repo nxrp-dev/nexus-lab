@@ -17,13 +17,7 @@ program example;
 {$DEFINE TEST_FLUSH}
 
 uses
-  strings,
-  zbase,
-  gzio,
-  zinflate,
-  zdeflate,
-  zcompres,
-  zuncompr
+  Strings, PasZLib, PasZLibIO
 {$ifdef memcheck}
   , memcheck in '../../../../../nexus-fpc/packages/monotekt/pas/memcheck/memcheck.pas'
 {$endif}

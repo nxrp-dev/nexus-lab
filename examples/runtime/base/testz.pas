@@ -1,6 +1,6 @@
 Program testz;
 
-uses Classes,zstream;
+uses Classes,PasZLibIO;
 
 Var F : TFileStream;
     C : TCompressionStream;

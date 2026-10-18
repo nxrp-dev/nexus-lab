@@ -1,6 +1,6 @@
 Program testz2;
 
-uses zstream;
+uses PasZLibIO;
 
 const
 {$ifdef unix}

@@ -15,7 +15,7 @@
 {$h+}
 Program testzip;
 
-uses Classes,Zipper;
+uses Classes,PasZLibIO;
 
 Var
   S : TStringList;

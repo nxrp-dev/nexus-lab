@@ -24,10 +24,9 @@ uses
   {$ifdef Delphi}
   Windows,
   {$endif}
-  ziputils,
+  PasZLibIO,
   paszlib,
-  ctypes,
-  unzip;
+  ctypes;
 
 const
   CASESENSITIVITY = 0;

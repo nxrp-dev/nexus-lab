@@ -5,7 +5,7 @@ program console_aggpas_2;
 
 uses
   sysutils,
-  zstream,
+  PasZLibIO,
   ftfont,
   agg_2D,
   FPimage,
