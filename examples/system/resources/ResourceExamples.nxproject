@@ -1,0 +1,25 @@
+// Copyright (c) 2026 Kevin Collins.
+// SPDX-License-Identifier: MPL-2.0-no-copyleft-exception
+
+dialect "../../../../nexus/projects/nxbuild/language/nxbuild.Language.nxscript";
+module "../../../../nexus/projects/nxbuild/nxbuild.environment.nxscript";
+
+Project ResourceExamples {
+    RootDirectory: "../../..";
+    OutputRoot: "output/ResourceExamples/" + @Tools.Native.Name;
+    FPC ResourceTool {
+        CompilerPath: @Tools.Native.FPCCompiler;
+        SourceFiles: ["examples/system/resources/restool.lpr"];
+        OutputPath: @ResourceExamples.OutputRoot;
+        Config Options { DisableDefaultConfigFiles: True; }
+        Language Pascal { Mode: ObjFPC; }
+        Syntax Strings { ReferenceCountedStrings: Enabled; }
+        Assembler Native TargetOS[linux] { OutputFormat: "as-clang"; }
+        Files Paths {
+            CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
+            UnitPaths: [@Tools.Native.RTLPath,
+                "../nexus/packages/nexus-packages/fcl-res/src",
+                @Tools.NexusFPC.SourcePath + "/packages/fcl-base/src"];
+        }
+    }
+}

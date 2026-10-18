@@ -27,6 +27,10 @@ Group Examples {
         Template: "../nexus/projects/forge/templates/NXBuild.mustache";
         EntryPoint: "examples/system/processes/ProcessExamples.nxproject";
     }
+    NXBuild Resources {
+        Template: "../nexus/projects/forge/templates/NXBuild.mustache";
+        EntryPoint: "examples/system/resources/ResourceExamples.nxproject";
+    }
     NXBuild Registry {
         Template: "../nexus/projects/forge/templates/NXBuild.mustache";
         EntryPoint: "examples/system/registry/RegistryExamples.nxproject";
