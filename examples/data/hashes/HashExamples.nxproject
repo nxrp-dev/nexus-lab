@@ -2,20 +2,25 @@
 // SPDX-License-Identifier: MPL-2.0-no-copyleft-exception
 
 dialect "../../../../nexus/projects/nxbuild/language/nxbuild.Language.nxscript";
+module Projects "../../../../nexus/projects/nxbuild/Projects.nxscript";
 module "../../../../nexus/projects/nxbuild/nxbuild.environment.nxscript";
 
 Project HashExamples {
+    Id: "NXRP.Examples.HashExamples";
+    Requires: [@Projects.HashLib4Pascal, @Projects.FCLBase, @Projects.Pthreads];
     RootDirectory: "../../../../nexus";
-    OutputRoot: "../nexus-lab/output/HashExamples/" + @Tools.Native.Name;
+    OutputRoot: @Tools.OutputRoot + "/HashExamples/" + @Tools.Native.Name;
     FPC Tests {
         CompilerPath: @Tools.Native.FPCCompiler;
-        SourceFiles: ["../nexus-lab/examples/data/hashes/mdtest.pas",
+        SourceFiles: [
+            "../nexus-lab/examples/data/hashes/mdtest.pas",
             "../nexus-lab/examples/data/hashes/hmd5.pas",
             "../nexus-lab/examples/data/hashes/hsha1.pas",
             "../nexus-lab/examples/data/hashes/md5performancetest.pas",
             "../nexus-lab/examples/data/hashes/sha1performancetest.pas",
             "../nexus-lab/examples/data/cryptography/demosha256.pas",
-            "../nexus-lab/examples/data/cryptography/sha256performancetest.pas"];
+            "../nexus-lab/examples/data/cryptography/sha256performancetest.pas"
+        ];
         OutputPath: @HashExamples.OutputRoot;
         RawOptions: ["-O2", "-gl"];
         Language Pascal { Mode: ObjFPC; }
@@ -25,37 +30,13 @@ Project HashExamples {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
             UnitPaths: [
                 @Tools.Native.RTLPath,
-                "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/Base",
-                "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/Checksum",
-                "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/Crypto",
-                "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/Crypto/Blake2BParams",
-                "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/Crypto/Blake2SParams",
-                "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/Hash128",
-                "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/Hash32",
-                "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/Hash64",
-                "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/Interfaces",
-                "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/Interfaces/IBlake2BParams",
-                "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/Interfaces/IBlake2SParams",
-                "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/KDF",
-                "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/Misc",
-                "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/NullDigest",
-                "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/Simd/Backend",
-                "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/Simd/Facade",
-                "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/Utils",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src",
-                "packages/nexus-packages/fcl-base/src",
-                "../nexus/packages/nexus-packages/pthreads/src"
+                @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src"
             ];
             IncludePaths: [
-                "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/Simd/Backend",
-                "packages/nexus-packages/hashlib4pascal/external/hashlib4pascal/HashLib/src/Include",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src/inc",
-                "packages/nexus-packages/fcl-base/src/" + @Tools.Native.PascalPlatform,
-                "packages/nexus-packages/fcl-base/src/dummy",
-                "../nexus/packages/nexus-packages/pthreads/src"
+                @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src/inc"
             ];
         }
     }

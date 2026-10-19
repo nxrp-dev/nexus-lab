@@ -2,11 +2,14 @@
 // SPDX-License-Identifier: MPL-2.0-no-copyleft-exception
 
 dialect "../../../../nexus/projects/nxbuild/language/nxbuild.Language.nxscript";
+module Projects "../../../../nexus/projects/nxbuild/Projects.nxscript";
 module "../../../NexusLab.Environment.nxscript";
 
 Project JSONExamples {
-    RootDirectory: "../../..";
-    SourceRoot: "examples/data/json";
+    Id: "NXRP.Examples.JSONExamples";
+    Requires: [@Projects.Pthreads, @Projects.X11, @Projects.FCLBase, @Projects.Iconv, @Projects.FCLJSON, @Projects.PasJPEG];
+    RootDirectory: "../../../../nexus";
+    SourceRoot: "../nexus-lab/examples/data/json";
     OutputRoot: @Tools.OutputRoot + "/JSONExamples/" + @Tools.Native.Name;
 
     FPC Application {
@@ -32,27 +35,18 @@ Project JSONExamples {
             UnitPaths: [
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
-                "../nexus/packages/nexus-packages/pthreads/src",
-                "../nexus/packages/nexus-packages/graphics/x11/src",
                 @Tools.Native.RTLPath,
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                "packages/nexus-packages/fcl-base/src",
                 @Tools.NexusFPC.SourcePath + "/rtl/objpas",
-                "../nexus/packages/nexus-packages/iconvenc/src",
                 @JSONExamples.SourceRoot,
-                @JSONExamples.OutputRoot,
-                "../nexus/packages/nexus-packages/serialization/fcl-json/src"
+                @JSONExamples.OutputRoot
             ];
             IncludePaths: [
-                "../nexus/packages/nexus-packages/pthreads/src",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64",
-                "packages/nexus-packages/fcl-base/src/" + @Tools.Native.PascalPlatform,
-                "packages/nexus-packages/fcl-base/src/dummy",
-                "../nexus/packages/nexus-packages/graphics/pasjpeg/src"
+                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64"
             ];
         }
     }

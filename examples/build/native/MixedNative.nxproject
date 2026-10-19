@@ -1,0 +1,20 @@
+// Copyright (c) 2026 Kevin Collins.
+// SPDX-License-Identifier: MPL-2.0-no-copyleft-exception
+
+dialect "../../../../nexus/projects/nxbuild/language/nxbuild.Language.nxscript";
+module "../../../../nexus/projects/nxbuild/nxbuild.environment.nxscript";
+
+Project MixedNative {
+    Id: "NXRP.Examples.MixedNative";
+    RootDirectory: "../../../../nexus";
+    SourceRoot: "../nexus-lab/examples/build/native";
+    OutputRoot: @Tools.OutputRoot + "/mixed/" + @Tools.Native.Name + "/native";
+    Publishes Directories { Objects: [@MixedNative.OutputRoot]; }
+    LLVM Native {
+        CompilerPath: @Tools.Native.LLVMCompiler;
+        BuildKind: Object;
+        Target: @Tools.Native.Triple;
+        SourceFiles: [@MixedNative.SourceRoot + "/native.c", @MixedNative.SourceRoot + "/twice.cpp"];
+        OutputPath: @MixedNative.OutputRoot;
+    }
+}

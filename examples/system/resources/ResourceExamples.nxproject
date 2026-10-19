@@ -2,14 +2,17 @@
 // SPDX-License-Identifier: MPL-2.0-no-copyleft-exception
 
 dialect "../../../../nexus/projects/nxbuild/language/nxbuild.Language.nxscript";
+module Projects "../../../../nexus/projects/nxbuild/Projects.nxscript";
 module "../../../../nexus/projects/nxbuild/nxbuild.environment.nxscript";
 
 Project ResourceExamples {
-    RootDirectory: "../../..";
+    Id: "NXRP.Examples.ResourceExamples";
+    Requires: [@Projects.FCLRes, @Projects.FCLBase];
+    RootDirectory: "../../../../nexus";
     OutputRoot: @Tools.OutputRoot + "/ResourceExamples/" + @Tools.Native.Name;
     FPC ResourceTool {
         CompilerPath: @Tools.Native.FPCCompiler;
-        SourceFiles: ["examples/system/resources/restool.lpr"];
+        SourceFiles: ["../nexus-lab/examples/system/resources/restool.lpr"];
         OutputPath: @ResourceExamples.OutputRoot;
         Config Options { DisableDefaultConfigFiles: True; }
         Language Pascal { Mode: ObjFPC; }
@@ -17,9 +20,7 @@ Project ResourceExamples {
         Assembler Native TargetOS[linux] { OutputFormat: "as-clang"; }
         Files Paths {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
-            UnitPaths: [@Tools.Native.RTLPath,
-                "../nexus/packages/nexus-packages/fcl-res/src",
-                "packages/nexus-packages/fcl-base/src"];
+            UnitPaths: [@Tools.Native.RTLPath];
         }
     }
 }

@@ -2,20 +2,23 @@
 // SPDX-License-Identifier: MPL-2.0-no-copyleft-exception
 
 dialect "../../../../nexus/projects/nxbuild/language/nxbuild.Language.nxscript";
+module Projects "../../../../nexus/projects/nxbuild/Projects.nxscript";
 module "../../../NexusLab.Environment.nxscript";
 
 Project UsersExamples {
-    RootDirectory: "../../..";
-    OutputRoot: @Tools.OutputRoot + "/unix-bindings-examples/users/" + @Tools.Native.Name;
+    Id: "NXRP.Examples.UsersExamples";
+    Requires: [@Projects.Users];
+    RootDirectory: "../../../../nexus";
+    OutputRoot: @Tools.OutputRoot + "/UsersExamples/" + @Tools.Native.Name;
     FPC Application {
         CompilerPath: @Tools.Native.FPCCompiler;
-        SourceFiles: ["examples/system/users/testuser.pas"];
+        SourceFiles: ["../nexus-lab/examples/system/users/testuser.pas"];
         OutputPath: @UsersExamples.OutputRoot;
         Config Options { DisableDefaultConfigFiles: True; }
         Assembler Native TargetOS[linux] { OutputFormat: "as-clang"; }
         Files Paths {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
-            UnitPaths: [@Tools.Native.RTLPath, "../nexus/packages/nexus-packages/users/src"];
+            UnitPaths: [@Tools.Native.RTLPath];
         }
     }
 }

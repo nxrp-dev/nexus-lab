@@ -5,11 +5,12 @@ dialect "../../../../nexus/projects/nxbuild/language/nxbuild.Language.nxscript";
 module "../../../../nexus/projects/nxbuild/nxbuild.environment.nxscript";
 
 Project CollectionsAVL {
-    RootDirectory: "../../..";
-    OutputRoot: "../../worktree/collections-avl/final/lab/" + @Tools.Native.Name;
+    Id: "NXRP.Examples.CollectionsAVL";
+    RootDirectory: "../../../../nexus";
+    OutputRoot: @Tools.OutputRoot + "/CollectionsAVL/" + @Tools.Native.Name;
     FPC Example {
         CompilerPath: @Tools.Native.FPCCompiler;
-        SourceFiles: ["examples/runtime/base/avltreetest.pas"];
+        SourceFiles: ["../nexus-lab/examples/runtime/base/avltreetest.pas"];
         OutputPath: @CollectionsAVL.OutputRoot;
         Config Options { DisableDefaultConfigFiles: True; }
         Assembler Native TargetOS[linux] { OutputFormat: "as-clang"; }

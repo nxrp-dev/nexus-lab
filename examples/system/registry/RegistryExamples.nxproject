@@ -2,18 +2,21 @@
 // SPDX-License-Identifier: MPL-2.0-no-copyleft-exception
 
 dialect "../../../../nexus/projects/nxbuild/language/nxbuild.Language.nxscript";
+module Projects "../../../../nexus/projects/nxbuild/Projects.nxscript";
 module "../../../NexusLab.Environment.nxscript";
 
 Project RegistryExamples {
-    RootDirectory: "../../..";
+    Id: "NXRP.Examples.RegistryExamples";
+    Requires: [@Projects.FCLRegistry, @Projects.FCLXML, @Projects.Iconv, @Projects.FCLBase];
+    RootDirectory: "../../../../nexus";
     OutputRoot: @Tools.OutputRoot + "/RegistryExamples/" + @Tools.Native.Name;
     FPC Application TargetOS[linux] {
         CompilerPath: @Tools.Native.FPCCompiler;
         SourceFiles: [
-            "examples/runtime/base/txmlreg.pas",
-            "examples/runtime/base/testreg.pas",
-            "examples/system/registry/testunicode.pas",
-            "examples/system/registry/testunicode2.pas"
+            "../nexus-lab/examples/runtime/base/txmlreg.pas",
+            "../nexus-lab/examples/runtime/base/testreg.pas",
+            "../nexus-lab/examples/system/registry/testunicode.pas",
+            "../nexus-lab/examples/system/registry/testunicode2.pas"
         ];
         OutputPath: @RegistryExamples.OutputRoot;
         RawOptions: ["-dXMLRegfile_in_CurDir"];
@@ -24,15 +27,10 @@ Project RegistryExamples {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
             UnitPaths: [
                 @Tools.Native.RTLPath,
-                "../nexus/packages/nexus-packages/fcl-registry/src",
-                "../nexus/packages/nexus-packages/serialization/fcl-xml/src",
-                "../nexus/packages/nexus-packages/iconvenc/src",
-                "packages/nexus-packages/fcl-base/src",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform
             ];
             IncludePaths: [
-                "../nexus/packages/nexus-packages/fcl-registry/src",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64"
             ];

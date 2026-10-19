@@ -1,0 +1,10 @@
+// Copyright (c) 2026 Kevin Collins.
+// SPDX-License-Identifier: MPL-2.0-no-copyleft-exception
+
+dialect "../../../../nexus/projects/nxbuild/language/nxbuild.Language.nxscript";
+module Projects "../../../../nexus/projects/nxbuild/Projects.nxscript";
+
+Project AbbreviaRuntimeExample {
+    Id: "NXRP.Examples.AbbreviaRuntime";
+    Requires: [@Projects.AbbreviaRuntime];
+}

@@ -2,11 +2,14 @@
 // SPDX-License-Identifier: MPL-2.0-no-copyleft-exception
 
 dialect "../../../../nexus/projects/nxbuild/language/nxbuild.Language.nxscript";
+module Projects "../../../../nexus/projects/nxbuild/Projects.nxscript";
 module "../../../../nexus/projects/nxbuild/nxbuild.environment.nxscript";
 
 Project FCLBaseExamples {
+    Id: "NXRP.Examples.FCLBaseExamples";
+    Requires: [@Projects.FCLBase];
     RootDirectory: "../../../../nexus";
-    OutputRoot: @Tools.OutputRoot + "/fcl-base-examples/" + @Tools.Native.Name;
+    OutputRoot: @Tools.OutputRoot + "/FCLBaseExamples/" + @Tools.Native.Name;
     FPC Examples {
         CompilerPath: @Tools.Native.FPCCompiler;
         SourceFiles: [
@@ -19,7 +22,7 @@ Project FCLBaseExamples {
         Assembler Native TargetOS[linux] { OutputFormat: "as-clang"; }
         Files Paths {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
-            UnitPaths: [@Tools.Native.RTLPath, "packages/nexus-packages/fcl-base/src"];
+            UnitPaths: [@Tools.Native.RTLPath];
         }
     }
 }

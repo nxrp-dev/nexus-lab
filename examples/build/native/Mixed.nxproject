@@ -2,29 +2,25 @@
 // SPDX-License-Identifier: MPL-2.0-no-copyleft-exception
 
 dialect "../../../../nexus/projects/nxbuild/language/nxbuild.Language.nxscript";
-module "../../../NexusLab.Environment.nxscript";
+module "../../../../nexus/projects/nxbuild/nxbuild.environment.nxscript";
+module Projects "../../../../nexus/projects/nxbuild/Projects.nxscript";
 
-Package Mixed {
-    RootDirectory: "../../..";
-    SourceRoot: "examples/build/native";
-    OutputRoot: "output/Mixed/" + @Tools.Native.Name;
-    LLVM Native {
-        CompilerPath: @Tools.Native.LLVMCompiler;
-        BuildKind: Object;
-        Target: @Tools.Native.Triple;
-        SourceFiles: [@Mixed.SourceRoot + "/native.c", @Mixed.SourceRoot + "/twice.cpp"];
-        OutputPath: @Mixed.OutputRoot + "/native";
-    }
+Project Mixed {
+    Id: "Examples.Mixed";
+    Requires: [@Projects.MixedNative];
+    RootDirectory: "../../../../nexus";
+    SourceRoot: "../nexus-lab/examples/build/native";
+    OutputRoot: @Tools.OutputRoot + "/mixed/" + @Tools.Native.Name + "/application";
     FPC Applications {
         CompilerPath: @Tools.Native.FPCCompiler;
         SourceFiles: [@Mixed.SourceRoot + "/Mixed.lpr", @Mixed.SourceRoot + "/Hello.lpr"];
-        OutputPath: @Mixed.OutputRoot + "/application";
+        OutputPath: @Mixed.OutputRoot;
+        Target Platform { OperatingSystem: @Tools.Native.OS; }
         Config Options { DisableDefaultConfigFiles: True; }
         Assembler Native TargetOS[linux] { OutputFormat: "as-clang"; }
         Files Paths {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
             UnitPaths: [@Tools.Native.RTLPath];
-            ObjectPaths: [@Mixed.Native.OutputPath];
         }
     }
 }

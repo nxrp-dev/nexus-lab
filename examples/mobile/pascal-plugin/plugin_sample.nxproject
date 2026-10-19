@@ -2,18 +2,19 @@
 // SPDX-License-Identifier: MPL-2.0-no-copyleft-exception
 
 dialect "../../../../nexus/projects/nxbuild/language/nxbuild.Language.nxscript";
+module Projects "../../../../nexus/projects/nxbuild/Projects.nxscript";
 module "../../../NexusLab.Environment.nxscript";
 
 Project plugin_sample {
-    RootDirectory: "../../..";
-    SourceRoot: "examples/mobile/pascal-plugin";
-    OutputRoot: "../../worktree/libffi-relocation/mobile/" + @Tools.Native.Name;
+    Id: "NXRP.Examples.plugin_sample";
+    Requires: [@Projects.LibFFI, @Projects.Pthreads, @Projects.X11, @Projects.FCLBase, @Projects.Iconv, @Projects.Solar2D, @Projects.Lua, @Projects.PasJPEG];
+    RootDirectory: "../../../../nexus";
+    SourceRoot: "../nexus-lab/examples/mobile/pascal-plugin";
+    OutputRoot: @Tools.OutputRoot + "/plugin_sample/" + @Tools.Native.Name;
 
     FPC Application {
         CompilerPath: @Tools.Native.FPCCompiler;
-        SourceFiles: [
-            @plugin_sample.SourceRoot + "/plugin_sample.lpr"
-        ];
+        SourceFiles: [@plugin_sample.SourceRoot + "/plugin_sample.lpr"];
         OutputPath: @plugin_sample.OutputRoot;
         Target Platform { OperatingSystem: @Tools.Native.OS; }
         Config Options { DisableDefaultConfigFiles: True; }
@@ -24,34 +25,22 @@ Project plugin_sample {
             LibraryPaths: @Lab.Native.PluginLibraryPaths;
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
             UnitPaths: [
-                "../nexus/packages/nexus-packages/libffi/src",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
-                "../nexus/packages/nexus-packages/pthreads/src",
-                "../nexus/packages/nexus-packages/graphics/x11/src",
                 @Tools.Native.RTLPath,
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                "packages/nexus-packages/fcl-base/src",
                 @Tools.NexusFPC.SourcePath + "/rtl/objpas",
-                "../nexus/packages/nexus-packages/iconvenc/src",
                 @plugin_sample.SourceRoot,
-                @plugin_sample.OutputRoot,
-                "../nexus/packages/nexus-packages/solar2d/src",
-                "../nexus/packages/nexus-packages/lua/src",
-                "../nexus/packages/nexus-packages/lua/src/bindings"
+                @plugin_sample.OutputRoot
             ];
             IncludePaths: [
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src/inc",
-                "../nexus/packages/nexus-packages/pthreads/src",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64",
-                "packages/nexus-packages/fcl-base/src/" + @Tools.Native.PascalPlatform,
-                "packages/nexus-packages/fcl-base/src/dummy",
-                "../nexus/packages/nexus-packages/graphics/pasjpeg/src"
+                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64"
             ];
         }
         Linking NativeImports TargetOS[win64] { LinkerOptions: ["/defaultlib:CoronaLabs.Corona.Native.lib"]; }
