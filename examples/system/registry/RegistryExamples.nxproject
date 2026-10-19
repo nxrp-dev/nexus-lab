@@ -6,7 +6,7 @@ module "../../../NexusLab.Environment.nxscript";
 
 Project RegistryExamples {
     RootDirectory: "../../..";
-    OutputRoot: "output/RegistryExamples/" + @Tools.Native.Name;
+    OutputRoot: @Tools.OutputRoot + "/RegistryExamples/" + @Tools.Native.Name;
     FPC Application TargetOS[linux] {
         CompilerPath: @Tools.Native.FPCCompiler;
         SourceFiles: [
@@ -26,8 +26,8 @@ Project RegistryExamples {
                 @Tools.Native.RTLPath,
                 "../nexus/packages/nexus-packages/fcl-registry/src",
                 "../nexus/packages/nexus-packages/serialization/fcl-xml/src",
-                @Tools.NexusFPC.SourcePath + "/packages/iconvenc/src",
-                @Tools.NexusFPC.SourcePath + "/packages/fcl-base/src",
+                "../nexus/packages/nexus-packages/iconvenc/src",
+                "packages/nexus-packages/fcl-base/src",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform
             ];

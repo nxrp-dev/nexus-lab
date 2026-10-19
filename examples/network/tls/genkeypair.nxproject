@@ -7,7 +7,7 @@ module "../../../NexusLab.Environment.nxscript";
 Project genkeypair {
     RootDirectory: "../../..";
     SourceRoot: "examples/network/tls";
-    OutputRoot: "output/genkeypair/" + @Tools.Native.Name;
+    OutputRoot: @Tools.OutputRoot + "/genkeypair/" + @Tools.Native.Name;
 
     FPC Application {
         CompilerPath: @Tools.Native.FPCCompiler;
@@ -25,26 +25,26 @@ Project genkeypair {
             UnitPaths: [
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/pthreads/src",
+                "../nexus/packages/nexus-packages/pthreads/src",
                 "../nexus/packages/nexus-packages/graphics/x11/src",
                 @Tools.Native.RTLPath,
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/fcl-base/src",
+                "packages/nexus-packages/fcl-base/src",
                 @Tools.NexusFPC.SourcePath + "/rtl/objpas",
-                @Tools.NexusFPC.SourcePath + "/packages/iconvenc/src",
+                "../nexus/packages/nexus-packages/iconvenc/src",
                 @genkeypair.SourceRoot,
                 @genkeypair.OutputRoot,
                 "../nexus/packages/nexus-packages/network/openssl/src"
             ];
             IncludePaths: [
-                @Tools.NexusFPC.SourcePath + "/packages/pthreads/src",
+                "../nexus/packages/nexus-packages/pthreads/src",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64",
-                @Tools.NexusFPC.SourcePath + "/packages/fcl-base/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/fcl-base/src/dummy",
+                "packages/nexus-packages/fcl-base/src/" + @Tools.Native.PascalPlatform,
+                "packages/nexus-packages/fcl-base/src/dummy",
                 "../nexus/packages/nexus-packages/graphics/pasjpeg/src"
             ];
         }

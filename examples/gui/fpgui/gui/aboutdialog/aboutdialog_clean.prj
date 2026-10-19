@@ -91,7 +91,7 @@ sourcedirs=19
  ${TIOPF}/GUI/fpGUI/
  ${TIOPF}/Options/
  ${TIOPF}/Core/
- ${FPCDIR}src/packages/fcl-base/src/
+ ../../../../../../nexus/packages/nexus-packages/fcl-base/src/
  ${FPCDIR}src/rtl/objpas/*/
  ${FPCDIR}src/rtl/unix/
  ${FPCDIR}src/rtl/linux/

@@ -7,7 +7,7 @@ module "../../../NexusLab.Environment.nxscript";
 Project NexusVirtualTreeViewDemo {
     RootDirectory: "../../..";
     SourceRoot: "examples/gui/virtual-tree";
-    OutputRoot: "output/NexusVirtualTreeViewDemo/" + @Tools.Native.Name;
+    OutputRoot: @Tools.OutputRoot + "/NexusVirtualTreeViewDemo/" + @Tools.Native.Name;
 
     FPC Application {
         CompilerPath: @Tools.Native.FPCCompiler;
@@ -27,17 +27,17 @@ Project NexusVirtualTreeViewDemo {
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src",
                 "../nexus/packages/nexus-packages/graphics/fcl-image/src",
                 "../nexus/packages/nexus-packages/graphics/pasjpeg/src",
-                @Tools.NexusFPC.SourcePath + "/packages/users/src",
+                "../nexus/packages/nexus-packages/users/src",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/pthreads/src",
+                "../nexus/packages/nexus-packages/pthreads/src",
                 "../nexus/packages/nexus-packages/graphics/x11/src",
                 @Tools.Native.RTLPath,
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/fcl-base/src",
+                "packages/nexus-packages/fcl-base/src",
                 @Tools.NexusFPC.SourcePath + "/rtl/objpas",
-                @Tools.NexusFPC.SourcePath + "/packages/iconvenc/src",
+                "../nexus/packages/nexus-packages/iconvenc/src",
                 @NexusVirtualTreeViewDemo.SourceRoot,
                 @NexusVirtualTreeViewDemo.OutputRoot,
                 "../nexus/packages/nexus-packages/gui/src",
@@ -58,13 +58,13 @@ Project NexusVirtualTreeViewDemo {
                 "../nexus/packages/nexus-packages/gui/external/fpgui/framework/src/main/pascal/corelib/" + @Lab.Native.GUIBackend
             ];
             IncludePaths: [
-                @Tools.NexusFPC.SourcePath + "/packages/pthreads/src",
+                "../nexus/packages/nexus-packages/pthreads/src",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
                 @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64",
-                @Tools.NexusFPC.SourcePath + "/packages/fcl-base/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/fcl-base/src/dummy",
+                "packages/nexus-packages/fcl-base/src/" + @Tools.Native.PascalPlatform,
+                "packages/nexus-packages/fcl-base/src/dummy",
                 "../nexus/packages/nexus-packages/graphics/pasjpeg/src",
                 "../nexus/packages/nexus-packages/gui/external/fpgui/framework/src/main/pascal/corelib",
                 "../nexus/packages/nexus-packages/gui/external/fpgui/framework/src/main/resources",

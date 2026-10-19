@@ -27,6 +27,10 @@ Group Examples {
         Template: "../nexus/projects/forge/templates/NXBuild.mustache";
         EntryPoint: "examples/system/processes/ProcessExamples.nxproject";
     }
+    NXBuild FCLBase {
+        Template: "../nexus/projects/forge/templates/NXBuild.mustache";
+        EntryPoint: "examples/runtime/base/FCLBaseExamples.nxproject";
+    }
     NXBuild CollectionsAVL {
         Template: "../nexus/projects/forge/templates/NXBuild.mustache";
         EntryPoint: "examples/runtime/base/CollectionsAVL.nxproject";
@@ -74,5 +78,13 @@ Group Examples {
     NXBuild KeyPair {
         Template: "../nexus/projects/forge/templates/NXBuild.mustache";
         EntryPoint: "examples/network/tls/genkeypair.nxproject";
+    }
+    NXBuild Users {
+        Template: "../nexus/projects/forge/templates/NXBuild.mustache";
+        EntryPoint: "examples/system/users/UsersExamples.nxproject";
+    }
+    NXBuild Encoding {
+        Template: "../nexus/projects/forge/templates/NXBuild.mustache";
+        EntryPoint: "examples/text/encoding/EncodingExamples.nxproject";
     }
 }

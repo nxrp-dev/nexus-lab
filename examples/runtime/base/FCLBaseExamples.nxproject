@@ -1,0 +1,25 @@
+// Copyright (c) 2026 Kevin Collins.
+// SPDX-License-Identifier: MPL-2.0-no-copyleft-exception
+
+dialect "../../../../nexus/projects/nxbuild/language/nxbuild.Language.nxscript";
+module "../../../../nexus/projects/nxbuild/nxbuild.environment.nxscript";
+
+Project FCLBaseExamples {
+    RootDirectory: "../../../../nexus";
+    OutputRoot: @Tools.OutputRoot + "/fcl-base-examples/" + @Tools.Native.Name;
+    FPC Examples {
+        CompilerPath: @Tools.Native.FPCCompiler;
+        SourceFiles: [
+            "../nexus-lab/examples/runtime/base/cachetest.pas",
+            "../nexus-lab/examples/runtime/base/encodeascii85.pas",
+            "../nexus-lab/examples/runtime/base/decodeascii85.pas"
+        ];
+        OutputPath: @FCLBaseExamples.OutputRoot;
+        Config Options { DisableDefaultConfigFiles: True; }
+        Assembler Native TargetOS[linux] { OutputFormat: "as-clang"; }
+        Files Paths {
+            CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
+            UnitPaths: [@Tools.Native.RTLPath, "packages/nexus-packages/fcl-base/src"];
+        }
+    }
+}
