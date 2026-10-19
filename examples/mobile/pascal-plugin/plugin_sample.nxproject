@@ -7,10 +7,10 @@ module "../../../NexusLab.Environment.nxscript";
 
 Project plugin_sample {
     Id: "NXRP.Examples.plugin_sample";
-    Requires: [@Projects.LibFFI, @Projects.Pthreads, @Projects.X11, @Projects.FCLBase, @Projects.Iconv, @Projects.Solar2D, @Projects.Lua, @Projects.PasJPEG];
+    Requires: [@Projects.NexusRTL, @Projects.RTLSystem, @Projects.RTLObjPas, @Projects.RTLGenerics, @Projects.RTLExtra, @Projects.LibFFI, @Projects.Pthreads, @Projects.X11, @Projects.FCLBase, @Projects.Iconv, @Projects.Solar2D, @Projects.Lua, @Projects.PasJPEG];
     RootDirectory: "../../../../nexus";
     SourceRoot: "../nexus-lab/examples/mobile/pascal-plugin";
-    OutputRoot: @Tools.OutputRoot + "/plugin_sample/" + @Tools.Native.Name;
+    OutputRoot: @Tools.OutputRoot + "/plugin_sample/" + @Tools.Native.Name + "/" + $BuildConfiguration;
 
     FPC Application {
         CompilerPath: @Tools.Native.FPCCompiler;
@@ -22,25 +22,10 @@ Project plugin_sample {
         Assembler Native TargetOS[linux] { OutputFormat: "as-clang"; }
         RawOptions: ["-Cg"];
         Files Paths {
-            LibraryPaths: @Lab.Native.PluginLibraryPaths;
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
             UnitPaths: [
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
-                @Tools.Native.RTLPath,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/rtl/objpas",
                 @plugin_sample.SourceRoot,
                 @plugin_sample.OutputRoot
-            ];
-            IncludePaths: [
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64"
             ];
         }
         Linking NativeImports TargetOS[win64] { LinkerOptions: ["/defaultlib:CoronaLabs.Corona.Native.lib"]; }

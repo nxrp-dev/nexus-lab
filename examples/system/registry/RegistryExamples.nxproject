@@ -7,9 +7,9 @@ module "../../../NexusLab.Environment.nxscript";
 
 Project RegistryExamples {
     Id: "NXRP.Examples.RegistryExamples";
-    Requires: [@Projects.FCLRegistry, @Projects.FCLXML, @Projects.Iconv, @Projects.FCLBase];
+    Requires: [@Projects.NexusRTL, @Projects.RTLObjPas, @Projects.FCLRegistry, @Projects.FCLXML, @Projects.Iconv, @Projects.FCLBase];
     RootDirectory: "../../../../nexus";
-    OutputRoot: @Tools.OutputRoot + "/RegistryExamples/" + @Tools.Native.Name;
+    OutputRoot: @Tools.OutputRoot + "/RegistryExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
     FPC Application TargetOS[linux] {
         CompilerPath: @Tools.Native.FPCCompiler;
         SourceFiles: [
@@ -25,15 +25,6 @@ Project RegistryExamples {
         Assembler Native { OutputFormat: "as-clang"; }
         Files Paths {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
-            UnitPaths: [
-                @Tools.Native.RTLPath,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform
-            ];
-            IncludePaths: [
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64"
-            ];
         }
     }
 }

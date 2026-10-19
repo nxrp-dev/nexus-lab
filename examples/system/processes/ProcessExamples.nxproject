@@ -7,10 +7,10 @@ module "../../../NexusLab.Environment.nxscript";
 
 Project ProcessExamples {
     Id: "NXRP.Examples.ProcessExamples";
-    Requires: [@Projects.Pthreads, @Projects.X11, @Projects.FCLBase, @Projects.Iconv, @Projects.FCLProcess, @Projects.PasJPEG];
+    Requires: [@Projects.NexusRTL, @Projects.RTLSystem, @Projects.RTLObjPas, @Projects.RTLGenerics, @Projects.RTLExtra, @Projects.Pthreads, @Projects.X11, @Projects.FCLBase, @Projects.Iconv, @Projects.FCLProcess, @Projects.PasJPEG];
     RootDirectory: "../../../../nexus";
     SourceRoot: "../nexus-lab/examples/system/processes";
-    OutputRoot: @Tools.OutputRoot + "/ProcessExamples/" + @Tools.Native.Name;
+    OutputRoot: @Tools.OutputRoot + "/ProcessExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
 
     FPC Application {
         CompilerPath: @Tools.Native.FPCCompiler;
@@ -39,22 +39,8 @@ Project ProcessExamples {
         Files Paths {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
             UnitPaths: [
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
-                @Tools.Native.RTLPath,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/rtl/objpas",
                 @ProcessExamples.SourceRoot,
                 @ProcessExamples.OutputRoot
-            ];
-            IncludePaths: [
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64"
             ];
         }
     }

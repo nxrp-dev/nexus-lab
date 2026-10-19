@@ -7,10 +7,10 @@ module "../../../NexusLab.Environment.nxscript";
 
 Project NexusScriptEditorDemo {
     Id: "NXRP.Examples.NexusScriptEditorDemo";
-    Requires: [@Projects.FCLImage, @Projects.PasJPEG, @Projects.Users, @Projects.Pthreads, @Projects.X11, @Projects.FCLBase, @Projects.Iconv, @Projects.GUI, @Projects.NexusScript, @Projects.Serialization, @Projects.JSON, @Projects.FCLJSON, @Projects.SQLite, @Projects.JSONRPC, @Projects.Core, @Projects.Mustache, @Projects.RegExpr];
+    Requires: [@Projects.NexusRTL, @Projects.RTLSystem, @Projects.RTLObjPas, @Projects.RTLGenerics, @Projects.RTLExtra, @Projects.FCLImage, @Projects.PasJPEG, @Projects.Users, @Projects.Pthreads, @Projects.X11, @Projects.FCLBase, @Projects.Iconv, @Projects.GUI, @Projects.NexusScript, @Projects.Serialization, @Projects.JSON, @Projects.FCLJSON, @Projects.SQLite, @Projects.JSONRPC, @Projects.Core, @Projects.Mustache, @Projects.RegExpr];
     RootDirectory: "../../../../nexus";
     SourceRoot: "../nexus-lab/examples/gui/script-editor";
-    OutputRoot: @Tools.OutputRoot + "/NexusScriptEditorDemo/" + @Tools.Native.Name;
+    OutputRoot: @Tools.OutputRoot + "/NexusScriptEditorDemo/" + @Tools.Native.Name + "/" + $BuildConfiguration;
 
     FPC Application {
         CompilerPath: @Tools.Native.FPCCompiler;
@@ -25,21 +25,8 @@ Project NexusScriptEditorDemo {
         Files Paths {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
             UnitPaths: [
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
-                @Tools.Native.RTLPath,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/rtl/objpas",
                 @NexusScriptEditorDemo.SourceRoot,
                 @NexusScriptEditorDemo.OutputRoot
-            ];
-            IncludePaths: [
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64"
             ];
         }
     }

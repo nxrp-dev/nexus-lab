@@ -6,10 +6,10 @@ module Projects "../../../../nexus/projects/nxbuild/Projects.nxscript";
 module "../../../NexusLab.Environment.nxscript";
 Project PasJPEGExamples {
     Id: "NXRP.Examples.PasJPEGExamples";
-    Requires: [@Projects.PasJPEG];
+    Requires: [@Projects.NexusRTL, @Projects.PasJPEG];
     RootDirectory: "../../../../nexus";
     SourceRoot: "../nexus-lab/examples/graphics/jpeg";
-    OutputRoot: @Tools.OutputRoot + "/PasJPEGExamples/" + @Tools.Native.Name;
+    OutputRoot: @Tools.OutputRoot + "/PasJPEGExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
     FPC Applications {
         CompilerPath: @Tools.Native.FPCCompiler;
         SourceFiles: [
@@ -26,7 +26,6 @@ Project PasJPEGExamples {
         Files Paths {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
             UnitPaths: [
-                @Tools.Native.RTLPath,
                 @PasJPEGExamples.SourceRoot
             ];
             IncludePaths: [];

@@ -7,10 +7,10 @@ module "../../../NexusLab.Environment.nxscript";
 
 Project XMLExamples {
     Id: "NXRP.Examples.XMLExamples";
-    Requires: [@Projects.Pthreads, @Projects.X11, @Projects.FCLBase, @Projects.Iconv, @Projects.FCLXML, @Projects.PasJPEG];
+    Requires: [@Projects.NexusRTL, @Projects.RTLSystem, @Projects.RTLObjPas, @Projects.RTLExtra, @Projects.Pthreads, @Projects.X11, @Projects.FCLBase, @Projects.Iconv, @Projects.FCLXML, @Projects.PasJPEG];
     RootDirectory: "../../../../nexus";
     SourceRoot: "../nexus-lab/examples/data/xml";
-    OutputRoot: @Tools.OutputRoot + "/XMLExamples/" + @Tools.Native.Name;
+    OutputRoot: @Tools.OutputRoot + "/XMLExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
 
     FPC Application {
         CompilerPath: @Tools.Native.FPCCompiler;
@@ -27,20 +27,8 @@ Project XMLExamples {
         Files Paths {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
             UnitPaths: [
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
-                @Tools.Native.RTLPath,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/rtl/objpas",
                 @XMLExamples.SourceRoot,
                 @XMLExamples.OutputRoot
-            ];
-            IncludePaths: [
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64"
             ];
         }
     }

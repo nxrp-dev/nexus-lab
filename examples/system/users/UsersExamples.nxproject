@@ -7,9 +7,9 @@ module "../../../NexusLab.Environment.nxscript";
 
 Project UsersExamples {
     Id: "NXRP.Examples.UsersExamples";
-    Requires: [@Projects.Users];
+    Requires: [@Projects.NexusRTL, @Projects.Users];
     RootDirectory: "../../../../nexus";
-    OutputRoot: @Tools.OutputRoot + "/UsersExamples/" + @Tools.Native.Name;
+    OutputRoot: @Tools.OutputRoot + "/UsersExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
     FPC Application {
         CompilerPath: @Tools.Native.FPCCompiler;
         SourceFiles: ["../nexus-lab/examples/system/users/testuser.pas"];
@@ -18,7 +18,6 @@ Project UsersExamples {
         Assembler Native TargetOS[linux] { OutputFormat: "as-clang"; }
         Files Paths {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
-            UnitPaths: [@Tools.Native.RTLPath];
         }
     }
 }

@@ -7,9 +7,9 @@ module "../../../../nexus/projects/nxbuild/nxbuild.environment.nxscript";
 
 Project RTTIExamples {
     Id: "NXRP.Examples.RTTIExamples";
-    Requires: [@Projects.LibFFI];
+    Requires: [@Projects.NexusRTL, @Projects.RTLObjPas, @Projects.RTLGenerics, @Projects.LibFFI];
     RootDirectory: "../../../../nexus";
-    OutputRoot: @Tools.OutputRoot + "/RTTIExamples/" + @Tools.Native.Name;
+    OutputRoot: @Tools.OutputRoot + "/RTTIExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
     FPC Example {
         CompilerPath: @Tools.Native.FPCCompiler;
         SourceFiles: ["../nexus-lab/examples/runtime/object-pascal/vmidemo.pas"];
@@ -19,17 +19,6 @@ Project RTTIExamples {
         Assembler Native TargetOS[linux] { OutputFormat: "as-clang"; }
         Files Paths {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
-            UnitPaths: [
-                @Tools.Native.RTLPath,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src"
-            ];
-            IncludePaths: [
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src/inc"
-            ];
         }
     }
 }

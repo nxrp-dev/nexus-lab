@@ -7,9 +7,9 @@ module "../../../../nexus/projects/nxbuild/nxbuild.environment.nxscript";
 
 Project ResourceExamples {
     Id: "NXRP.Examples.ResourceExamples";
-    Requires: [@Projects.FCLRes, @Projects.FCLBase];
+    Requires: [@Projects.NexusRTL, @Projects.FCLRes, @Projects.FCLBase];
     RootDirectory: "../../../../nexus";
-    OutputRoot: @Tools.OutputRoot + "/ResourceExamples/" + @Tools.Native.Name;
+    OutputRoot: @Tools.OutputRoot + "/ResourceExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
     FPC ResourceTool {
         CompilerPath: @Tools.Native.FPCCompiler;
         SourceFiles: ["../nexus-lab/examples/system/resources/restool.lpr"];
@@ -20,7 +20,6 @@ Project ResourceExamples {
         Assembler Native TargetOS[linux] { OutputFormat: "as-clang"; }
         Files Paths {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
-            UnitPaths: [@Tools.Native.RTLPath];
         }
     }
 }

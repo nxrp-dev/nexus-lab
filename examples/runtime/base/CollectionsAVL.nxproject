@@ -2,12 +2,14 @@
 // SPDX-License-Identifier: MPL-2.0-no-copyleft-exception
 
 dialect "../../../../nexus/projects/nxbuild/language/nxbuild.Language.nxscript";
+module Projects "../../../../nexus/projects/nxbuild/Projects.nxscript";
 module "../../../../nexus/projects/nxbuild/nxbuild.environment.nxscript";
 
 Project CollectionsAVL {
     Id: "NXRP.Examples.CollectionsAVL";
+    Requires: [@Projects.NexusRTL, @Projects.RTLObjPas, @Projects.RTLGenerics];
     RootDirectory: "../../../../nexus";
-    OutputRoot: @Tools.OutputRoot + "/CollectionsAVL/" + @Tools.Native.Name;
+    OutputRoot: @Tools.OutputRoot + "/CollectionsAVL/" + @Tools.Native.Name + "/" + $BuildConfiguration;
     FPC Example {
         CompilerPath: @Tools.Native.FPCCompiler;
         SourceFiles: ["../nexus-lab/examples/runtime/base/avltreetest.pas"];
@@ -16,17 +18,6 @@ Project CollectionsAVL {
         Assembler Native TargetOS[linux] { OutputFormat: "as-clang"; }
         Files Paths {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
-            UnitPaths: [
-                @Tools.Native.RTLPath,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src"
-            ];
-            IncludePaths: [
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src/inc"
-            ];
         }
     }
 }

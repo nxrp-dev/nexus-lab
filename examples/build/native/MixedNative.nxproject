@@ -8,7 +8,7 @@ Project MixedNative {
     Id: "NXRP.Examples.MixedNative";
     RootDirectory: "../../../../nexus";
     SourceRoot: "../nexus-lab/examples/build/native";
-    OutputRoot: @Tools.OutputRoot + "/mixed/" + @Tools.Native.Name + "/native";
+    OutputRoot: @Tools.OutputRoot + "/mixed/" + @Tools.Native.Name + "/native" + "/" + $BuildConfiguration;
     Publishes Directories { Objects: [@MixedNative.OutputRoot]; }
     LLVM Native {
         CompilerPath: @Tools.Native.LLVMCompiler;

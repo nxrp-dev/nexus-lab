@@ -7,9 +7,9 @@ module "../../../NexusLab.Environment.nxscript";
 
 Project EncodingExamples {
     Id: "NXRP.Examples.EncodingExamples";
-    Requires: [@Projects.Iconv];
+    Requires: [@Projects.NexusRTL, @Projects.Iconv];
     RootDirectory: "../../../../nexus";
-    OutputRoot: @Tools.OutputRoot + "/EncodingExamples/" + @Tools.Native.Name;
+    OutputRoot: @Tools.OutputRoot + "/EncodingExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
     FPC Application {
         CompilerPath: @Tools.Native.FPCCompiler;
         SourceFiles: ["../nexus-lab/examples/text/encoding/iconvtest.pas"];
@@ -18,7 +18,6 @@ Project EncodingExamples {
         Assembler Native TargetOS[linux] { OutputFormat: "as-clang"; }
         Files Paths {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
-            UnitPaths: [@Tools.Native.RTLPath];
         }
     }
 }

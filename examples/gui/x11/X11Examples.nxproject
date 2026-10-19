@@ -5,9 +5,9 @@ module Projects "../../../../nexus/projects/nxbuild/Projects.nxscript";
 module "../../../../nexus/projects/nxbuild/nxbuild.environment.nxscript";
 Project X11Examples {
     Id: "NXRP.Examples.X11Examples";
-    Requires: [@Projects.X11];
+    Requires: [@Projects.NexusRTL, @Projects.X11];
     RootDirectory: "../../../../nexus";
-    OutputRoot: @Tools.OutputRoot + "/X11Examples/" + @Tools.Native.Name;
+    OutputRoot: @Tools.OutputRoot + "/X11Examples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
     FPC KeyboardMap {
         CompilerPath: @Tools.Native.FPCCompiler;
         SourceFiles: ["../nexus-lab/examples/gui/x11/KeyboardMap.pas"];
@@ -18,7 +18,6 @@ Project X11Examples {
         Assembler Native TargetOS[linux] { OutputFormat: "as-clang"; }
         Files Paths {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
-            UnitPaths: [@Tools.Native.RTLPath];
         }
     }
 }

@@ -7,9 +7,9 @@ module "../../../../nexus/projects/nxbuild/nxbuild.environment.nxscript";
 
 Project HashExamples {
     Id: "NXRP.Examples.HashExamples";
-    Requires: [@Projects.HashLib4Pascal, @Projects.FCLBase, @Projects.Pthreads];
+    Requires: [@Projects.NexusRTL, @Projects.RTLObjPas, @Projects.RTLGenerics, @Projects.HashLib4Pascal, @Projects.FCLBase, @Projects.Pthreads];
     RootDirectory: "../../../../nexus";
-    OutputRoot: @Tools.OutputRoot + "/HashExamples/" + @Tools.Native.Name;
+    OutputRoot: @Tools.OutputRoot + "/HashExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
     FPC Tests {
         CompilerPath: @Tools.Native.FPCCompiler;
         SourceFiles: [
@@ -28,16 +28,6 @@ Project HashExamples {
         Assembler Native TargetOS[linux] { OutputFormat: "as-clang"; }
         Files Paths {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
-            UnitPaths: [
-                @Tools.Native.RTLPath,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src"
-            ];
-            IncludePaths: [
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-generics/src/inc"
-            ];
         }
     }
 }

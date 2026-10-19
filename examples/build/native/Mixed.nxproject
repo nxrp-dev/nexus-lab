@@ -7,10 +7,10 @@ module Projects "../../../../nexus/projects/nxbuild/Projects.nxscript";
 
 Project Mixed {
     Id: "Examples.Mixed";
-    Requires: [@Projects.MixedNative];
+    Requires: [@Projects.NexusRTL, @Projects.MixedNative];
     RootDirectory: "../../../../nexus";
     SourceRoot: "../nexus-lab/examples/build/native";
-    OutputRoot: @Tools.OutputRoot + "/mixed/" + @Tools.Native.Name + "/application";
+    OutputRoot: @Tools.OutputRoot + "/mixed/" + @Tools.Native.Name + "/application" + "/" + $BuildConfiguration;
     FPC Applications {
         CompilerPath: @Tools.Native.FPCCompiler;
         SourceFiles: [@Mixed.SourceRoot + "/Mixed.lpr", @Mixed.SourceRoot + "/Hello.lpr"];
@@ -20,7 +20,6 @@ Project Mixed {
         Assembler Native TargetOS[linux] { OutputFormat: "as-clang"; }
         Files Paths {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
-            UnitPaths: [@Tools.Native.RTLPath];
         }
     }
 }
