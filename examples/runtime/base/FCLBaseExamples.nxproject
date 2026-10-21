@@ -10,8 +10,8 @@ Project FCLBaseExamples {
     Requires: [@Projects.NexusRTL, @Projects.FCLBase];
     RootDirectory: "../../../../nexus";
     OutputRoot: @Tools.OutputRoot + "/FCLBaseExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
-    FPC Examples {
-        CompilerPath: @Tools.Native.FPCCompiler;
+    NXPC Examples {
+        CompilerPath: @Tools.Native.NXPCCompiler;
         SourceFiles: [
             "../nexus-lab/examples/runtime/base/cachetest.pas",
             "../nexus-lab/examples/runtime/base/encodeascii85.pas",

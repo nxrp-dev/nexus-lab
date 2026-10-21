@@ -12,5 +12,4 @@ The Forge Examples group registers this as `Resources`. The imported
 and does not depend on fcl-res at runtime.
 
 Original notices remain under `notices`. See
-[Nexus ATTRIBUTIONS.md](../../../../nexus/ATTRIBUTIONS.md#fcl-res) for attribution
-and the package's `CODE_REVIEW.md` for reader regression results.
+[Nexus ATTRIBUTIONS.md](../../../../nexus/ATTRIBUTIONS.md#fcl-res) for attribution.

@@ -17,5 +17,4 @@ Run examples in a disposable working directory; several write local files or
 read command-line filenames. `example` and the mini tools retain interactive
 prompts from their original demonstrations.
 
-See [central attribution](../../../../../nexus/ATTRIBUTIONS.md#paszlib) and the
-[official reconciliation record](../../../../../nexus-fpc/packages/paszlib/CONSOLIDATION.md).
+See [central attribution](../../../../../nexus/ATTRIBUTIONS.md#paszlib).

@@ -12,8 +12,8 @@ Project NexusVirtualTreeViewDemo {
     SourceRoot: "../nexus-lab/examples/gui/virtual-tree";
     OutputRoot: @Tools.OutputRoot + "/NexusVirtualTreeViewDemo/" + @Tools.Native.Name + "/" + $BuildConfiguration;
 
-    FPC Application {
-        CompilerPath: @Tools.Native.FPCCompiler;
+    NXPC Application {
+        CompilerPath: @Tools.Native.NXPCCompiler;
         SourceFiles: [@NexusVirtualTreeViewDemo.SourceRoot + "/NexusVirtualTreeViewDemo.lpr"];
         OutputPath: @NexusVirtualTreeViewDemo.OutputRoot;
         Target Platform { OperatingSystem: @Tools.Native.OS; }

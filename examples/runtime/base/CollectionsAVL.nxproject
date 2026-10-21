@@ -10,8 +10,8 @@ Project CollectionsAVL {
     Requires: [@Projects.NexusRTL, @Projects.RTLObjPas, @Projects.RTLGenerics];
     RootDirectory: "../../../../nexus";
     OutputRoot: @Tools.OutputRoot + "/CollectionsAVL/" + @Tools.Native.Name + "/" + $BuildConfiguration;
-    FPC Example {
-        CompilerPath: @Tools.Native.FPCCompiler;
+    NXPC Example {
+        CompilerPath: @Tools.Native.NXPCCompiler;
         SourceFiles: ["../nexus-lab/examples/runtime/base/avltreetest.pas"];
         OutputPath: @CollectionsAVL.OutputRoot;
         Config Options { DisableDefaultConfigFiles: True; }

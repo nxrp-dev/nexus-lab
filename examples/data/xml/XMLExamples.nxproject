@@ -12,8 +12,8 @@ Project XMLExamples {
     SourceRoot: "../nexus-lab/examples/data/xml";
     OutputRoot: @Tools.OutputRoot + "/XMLExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
 
-    FPC Application {
-        CompilerPath: @Tools.Native.FPCCompiler;
+    NXPC Application {
+        CompilerPath: @Tools.Native.NXPCCompiler;
         SourceFiles: [
             @XMLExamples.SourceRoot + "/htmlwithsax.lpr",
             @XMLExamples.SourceRoot + "/reducexml.pas",

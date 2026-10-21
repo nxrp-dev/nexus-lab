@@ -10,8 +10,8 @@ Project RTTIExamples {
     Requires: [@Projects.NexusRTL, @Projects.RTLObjPas, @Projects.RTLGenerics, @Projects.LibFFI];
     RootDirectory: "../../../../nexus";
     OutputRoot: @Tools.OutputRoot + "/RTTIExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
-    FPC Example {
-        CompilerPath: @Tools.Native.FPCCompiler;
+    NXPC Example {
+        CompilerPath: @Tools.Native.NXPCCompiler;
         SourceFiles: ["../nexus-lab/examples/runtime/object-pascal/vmidemo.pas"];
         OutputPath: @RTTIExamples.OutputRoot;
         Config Options { DisableDefaultConfigFiles: True; }

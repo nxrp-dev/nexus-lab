@@ -12,8 +12,8 @@ Project Hello {
     SourceRoot: "../nexus-lab/examples/build/native";
     OutputRoot: @Tools.OutputRoot + "/Hello/" + @Tools.Native.Name + "/" + $BuildConfiguration;
 
-    FPC Application {
-        CompilerPath: @Tools.Native.FPCCompiler;
+    NXPC Application {
+        CompilerPath: @Tools.Native.NXPCCompiler;
         SourceFiles: [@Hello.SourceRoot + "/Hello.lpr"];
         OutputPath: @Hello.OutputRoot;
         Target Platform { OperatingSystem: @Tools.Native.OS; }

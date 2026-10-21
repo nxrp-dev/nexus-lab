@@ -10,8 +10,8 @@ Project UsersExamples {
     Requires: [@Projects.NexusRTL, @Projects.Users];
     RootDirectory: "../../../../nexus";
     OutputRoot: @Tools.OutputRoot + "/UsersExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
-    FPC Application {
-        CompilerPath: @Tools.Native.FPCCompiler;
+    NXPC Application {
+        CompilerPath: @Tools.Native.NXPCCompiler;
         SourceFiles: ["../nexus-lab/examples/system/users/testuser.pas"];
         OutputPath: @UsersExamples.OutputRoot;
         Config Options { DisableDefaultConfigFiles: True; }

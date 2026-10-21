@@ -12,8 +12,8 @@ Project ProcessExamples {
     SourceRoot: "../nexus-lab/examples/system/processes";
     OutputRoot: @Tools.OutputRoot + "/ProcessExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
 
-    FPC Application {
-        CompilerPath: @Tools.Native.FPCCompiler;
+    NXPC Application {
+        CompilerPath: @Tools.Native.NXPCCompiler;
         SourceFiles: [
             @ProcessExamples.SourceRoot + "/checkipcserver.lpr",
             @ProcessExamples.SourceRoot + "/dbugsrv.pas",

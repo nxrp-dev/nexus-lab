@@ -12,8 +12,8 @@ Project FCLImageExamples {
     SourceRoot: "../nexus-lab/examples/graphics/images";
     OutputRoot: @Tools.OutputRoot + "/FCLImageExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
 
-    FPC Application {
-        CompilerPath: @Tools.Native.FPCCompiler;
+    NXPC Application {
+        CompilerPath: @Tools.Native.NXPCCompiler;
         SourceFiles: [
             @FCLImageExamples.SourceRoot + "/createbarcode.lpr",
             @FCLImageExamples.SourceRoot + "/createqrcode.pas",

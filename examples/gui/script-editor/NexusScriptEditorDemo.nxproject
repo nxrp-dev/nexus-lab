@@ -12,8 +12,8 @@ Project NexusScriptEditorDemo {
     SourceRoot: "../nexus-lab/examples/gui/script-editor";
     OutputRoot: @Tools.OutputRoot + "/NexusScriptEditorDemo/" + @Tools.Native.Name + "/" + $BuildConfiguration;
 
-    FPC Application {
-        CompilerPath: @Tools.Native.FPCCompiler;
+    NXPC Application {
+        CompilerPath: @Tools.Native.NXPCCompiler;
         SourceFiles: [@NexusScriptEditorDemo.SourceRoot + "/NexusScriptEditorDemo.lpr"];
         OutputPath: @NexusScriptEditorDemo.OutputRoot;
         Target Platform { OperatingSystem: @Tools.Native.OS; }

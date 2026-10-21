@@ -9,8 +9,8 @@ Project HelloForge {
     SourceRoot: "examples/build/orchestration";
     OutputRoot: @Tools.OutputRoot + "/HelloForge/" + @Tools.Native.Name;
 
-    FPC Application {
-        CompilerPath: @Tools.Native.FPCCompiler;
+    NXPC Application {
+        CompilerPath: @Tools.Native.NXPCCompiler;
         SourceFiles: [
             @HelloForge.SourceRoot + "/hello world & test.lpr"
         ];
@@ -22,25 +22,25 @@ Project HelloForge {
         Files Paths {
             CompilerUtilitiesPath: @Tools.Native.CompilerUtilitiesPath;
             UnitPaths: [
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
+                @Tools.NXPC.SourcePath + "/packages/rtl-extra/src/inc",
+                @Tools.NXPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
                 "../nexus/packages/nexus-packages/pthreads/src",
                 "../nexus/packages/nexus-packages/graphics/x11/src",
                 @Tools.Native.RTLPath,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
+                @Tools.NXPC.SourcePath + "/packages/rtl-objpas/src/inc",
+                @Tools.NXPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
                 "packages/nexus-packages/fcl-base/src",
-                @Tools.NexusFPC.SourcePath + "/rtl/objpas",
+                @Tools.NXPC.SourcePath + "/rtl/objpas",
                 "../nexus/packages/nexus-packages/iconvenc/src",
                 @HelloForge.SourceRoot,
                 @HelloForge.OutputRoot
             ];
             IncludePaths: [
                 "../nexus/packages/nexus-packages/pthreads/src",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/inc",
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
-                @Tools.NexusFPC.SourcePath + "/packages/rtl-objpas/src/x86_64",
+                @Tools.NXPC.SourcePath + "/packages/rtl-extra/src/inc",
+                @Tools.NXPC.SourcePath + "/packages/rtl-extra/src/" + @Tools.Native.PascalPlatform,
+                @Tools.NXPC.SourcePath + "/packages/rtl-objpas/src/" + @Tools.Native.PascalPlatform,
+                @Tools.NXPC.SourcePath + "/packages/rtl-objpas/src/x86_64",
                 "packages/nexus-packages/fcl-base/src/" + @Tools.Native.PascalPlatform,
                 "packages/nexus-packages/fcl-base/src/dummy",
                 "../nexus/packages/nexus-packages/graphics/pasjpeg/src"

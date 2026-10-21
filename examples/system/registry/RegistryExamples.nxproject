@@ -10,8 +10,8 @@ Project RegistryExamples {
     Requires: [@Projects.NexusRTL, @Projects.RTLObjPas, @Projects.FCLRegistry, @Projects.FCLXML, @Projects.Iconv, @Projects.FCLBase];
     RootDirectory: "../../../../nexus";
     OutputRoot: @Tools.OutputRoot + "/RegistryExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
-    FPC Application TargetOS[linux] {
-        CompilerPath: @Tools.Native.FPCCompiler;
+    NXPC Application TargetOS[linux] {
+        CompilerPath: @Tools.Native.NXPCCompiler;
         SourceFiles: [
             "../nexus-lab/examples/runtime/base/txmlreg.pas",
             "../nexus-lab/examples/runtime/base/testreg.pas",

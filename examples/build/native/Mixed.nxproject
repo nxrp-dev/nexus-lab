@@ -11,8 +11,8 @@ Project Mixed {
     RootDirectory: "../../../../nexus";
     SourceRoot: "../nexus-lab/examples/build/native";
     OutputRoot: @Tools.OutputRoot + "/mixed/" + @Tools.Native.Name + "/application" + "/" + $BuildConfiguration;
-    FPC Applications {
-        CompilerPath: @Tools.Native.FPCCompiler;
+    NXPC Applications {
+        CompilerPath: @Tools.Native.NXPCCompiler;
         SourceFiles: [@Mixed.SourceRoot + "/Mixed.lpr", @Mixed.SourceRoot + "/Hello.lpr"];
         OutputPath: @Mixed.OutputRoot;
         Target Platform { OperatingSystem: @Tools.Native.OS; }

@@ -10,8 +10,8 @@ Project ResourceExamples {
     Requires: [@Projects.NexusRTL, @Projects.FCLRes, @Projects.FCLBase];
     RootDirectory: "../../../../nexus";
     OutputRoot: @Tools.OutputRoot + "/ResourceExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
-    FPC ResourceTool {
-        CompilerPath: @Tools.Native.FPCCompiler;
+    NXPC ResourceTool {
+        CompilerPath: @Tools.Native.NXPCCompiler;
         SourceFiles: ["../nexus-lab/examples/system/resources/restool.lpr"];
         OutputPath: @ResourceExamples.OutputRoot;
         Config Options { DisableDefaultConfigFiles: True; }

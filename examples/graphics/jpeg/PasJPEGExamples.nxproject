@@ -10,8 +10,8 @@ Project PasJPEGExamples {
     RootDirectory: "../../../../nexus";
     SourceRoot: "../nexus-lab/examples/graphics/jpeg";
     OutputRoot: @Tools.OutputRoot + "/PasJPEGExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
-    FPC Applications {
-        CompilerPath: @Tools.Native.FPCCompiler;
+    NXPC Applications {
+        CompilerPath: @Tools.Native.NXPCCompiler;
         SourceFiles: [
             @PasJPEGExamples.SourceRoot + "/cjpeg.pas",
             @PasJPEGExamples.SourceRoot + "/djpeg.pas",

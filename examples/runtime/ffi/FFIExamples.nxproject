@@ -10,8 +10,8 @@ Project FFIExamples {
     Requires: [@Projects.NexusRTL, @Projects.RTLObjPas, @Projects.RTLGenerics, @Projects.LibFFI];
     RootDirectory: "../../../../nexus";
     OutputRoot: @Tools.OutputRoot + "/FFIExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
-    FPC Example {
-        CompilerPath: @Tools.Native.FPCCompiler;
+    NXPC Example {
+        CompilerPath: @Tools.Native.NXPCCompiler;
         SourceFiles: ["../nexus-lab/examples/runtime/ffi/simple.pas"];
         OutputPath: @FFIExamples.OutputRoot;
         Config Options { DisableDefaultConfigFiles: True; }

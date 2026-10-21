@@ -10,8 +10,8 @@ Project PasZLibExamples {
     Requires: [@Projects.NexusRTL, @Projects.RTLSystem, @Projects.RTLObjPas, @Projects.RTLExtra, @Projects.FCLXML, @Projects.FCLBase, @Projects.Pthreads];
     RootDirectory: "../../../../../nexus";
     OutputRoot: @Tools.OutputRoot + "/PasZLibExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
-    FPC Tests {
-        CompilerPath: @Tools.Native.FPCCompiler;
+    NXPC Tests {
+        CompilerPath: @Tools.Native.NXPCCompiler;
         SourceFiles: [
             "../nexus-lab/examples/data/compression/paszlib/example.pas",
             "../nexus-lab/examples/data/compression/paszlib/example2.pas",

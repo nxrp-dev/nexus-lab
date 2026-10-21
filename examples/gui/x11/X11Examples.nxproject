@@ -8,8 +8,8 @@ Project X11Examples {
     Requires: [@Projects.NexusRTL, @Projects.X11];
     RootDirectory: "../../../../nexus";
     OutputRoot: @Tools.OutputRoot + "/X11Examples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
-    FPC KeyboardMap {
-        CompilerPath: @Tools.Native.FPCCompiler;
+    NXPC KeyboardMap {
+        CompilerPath: @Tools.Native.NXPCCompiler;
         SourceFiles: ["../nexus-lab/examples/gui/x11/KeyboardMap.pas"];
         OutputPath: @X11Examples.OutputRoot;
         RawOptions: ["-Cr", "-Co", "-gl"];

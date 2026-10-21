@@ -10,8 +10,8 @@ Project NexusSynapseExamples {
     Requires: [@Projects.NexusRTL, @Projects.RTLObjPas, @Projects.RTLExtra, @Projects.OpenSSL, @Projects.Synapse, @Projects.NexusTest, @Projects.FCLBase, @Projects.Pthreads];
     RootDirectory: "../../../../nexus";
     OutputRoot: @Tools.OutputRoot + "/NexusSynapseExamples/" + @Tools.Native.Name + "/" + $BuildConfiguration;
-    FPC Tests {
-        CompilerPath: @Tools.Native.FPCCompiler;
+    NXPC Tests {
+        CompilerPath: @Tools.Native.NXPCCompiler;
         SourceFiles: [
             "packages/nexus-packages/network/openssl/src/fpopenssl.pp",
             "../nexus-lab/examples/network/sockets/isockcli.pas",

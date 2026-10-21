@@ -15,8 +15,8 @@ Build the compiler with Forge, then build the shared RTL package and per-image
 startup units and run both example applications:
 
 ```powershell
-& ..\..\nexus\output\NexusForge-next\x86_64-win64\nxforge.exe /input=NexusFPC.Forge.nxscript /targets=Build:Bootstrap
-./tests/dynamic-packages/Build-NexusFPCPackageSDK.ps1 -RunExamples
+& ..\..\nexus\output\NexusForge-next\x86_64-win64\nxforge.exe /input=NXPC.Forge.nxscript /targets=Build:Bootstrap
+./tests/dynamic-packages/Build-NXPCPackageSDK.ps1 -RunExamples
 ```
 
 Run this from an isolated `nexus-fpc` checkout under `dev/worktree` so generated
@@ -27,7 +27,7 @@ and LLVM `clang.exe` and `lld-link.exe` on PATH. The initial Forge bootstrap use
 FPC 3.2.2 Win32 at `C:\fpc\3.2.2\bin\i386-win32`. SDK construction reuses that
 completed bootstrap's native Win64 compiler, compiled RTL and staged sources.
 It invokes no make and needs no seed installation once Bootstrap is complete.
-See the [Forge build guide](../../../../nexus-fpc/NexusFPC.Forge.md#runtime-package-sdk).
+See the [Forge build guide](../../../../nexus-fpc/NXPC.Forge.md#runtime-package-sdk).
 
 The script delegates to Forge's `Build:PackageSDK` target and prints its SDK
 directory at `build/forge-bootstrap/package-sdk`. Set `-Forge` to select the
@@ -154,7 +154,7 @@ Use the generation reported by Forge when running or copying an application.
 Existing source-tree example/test callers retain a thin PowerShell adapter:
 
 ```powershell
-./tests/dynamic-packages/Invoke-NexusFPCPackageCompile.ps1 -SdkRoot C:\project\sdk -Kind Package `
+./tests/dynamic-packages/Invoke-NXPCPackageCompile.ps1 -SdkRoot C:\project\sdk -Kind Package `
     -Source C:\project\mypackage.nxpk -OutputDirectory C:\project\distribution
 ```
 
@@ -182,7 +182,7 @@ Do not add ordinary-build RTL unit directories to a package application's path.
 Build a real plugin example against an existing SDK:
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File tests\dynamic-packages\Build-NexusFPCLatePackageExamples.ps1 -SdkRoot C:\project\sdk -OutputRoot C:\project\late-examples -RunExamples
+powershell -NoProfile -ExecutionPolicy Bypass -File tests\dynamic-packages\Build-NXPCLatePackageExamples.ps1 -SdkRoot C:\project\sdk -OutputRoot C:\project\late-examples -RunExamples
 ```
 
 This additionally requires `llvm-rc.exe`. The console and GUI hosts import a
